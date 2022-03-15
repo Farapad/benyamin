@@ -24,7 +24,6 @@ import ToastService from 'primevue/toastservice';
 import '../src/assets/style/iziToast.min.css'
 import '../src/assets/style/nprogress.css'
 import '../src/assets/style/bootstrap.css'
-import '../src/assets/style/fontello.css'
 import 'swiper/swiper-bundle.css';
 import '@/styles.scss'
 import 'primevue/resources/themes/bootstrap4-light-blue/theme.css';

@@ -1,5 +1,8 @@
 <template>
-  <div class="footer mx-auto d-flex justify-content-center align-items-center" id="uper-form-footer">
+  <div
+    class="footer mx-auto d-flex justify-content-center align-items-center"
+    id="form-footer"
+  >
     <slot></slot>
   </div>
 </template>
@@ -8,23 +11,23 @@
 import { onBeforeUnmount, onMounted } from "vue";
 export default {
   name: "bottomBar",
-  props: ['bgcolor'],
+  props: ["bgcolor"],
   setup(props) {
     onMounted(() => {
-      let bottomBar = document.getElementById("uper-bottom-bar");
+      let bottomBar = document.getElementById("bottom-bar");
       if (bottomBar) {
         bottomBar.style.display = "none";
         bottomBar.style.visibility = "hidden";
-        bottomBar.style.zIndex = '100';
+        bottomBar.style.zIndex = "100";
       }
     });
 
     onBeforeUnmount(() => {
-      let bottomBar = document.getElementById("uper-bottom-bar");
+      let bottomBar = document.getElementById("bottom-bar");
       if (bottomBar) {
         bottomBar.style.display = "flex";
         bottomBar.style.visibility = "visible";
-        bottomBar.style.zIndex = '100';
+        bottomBar.style.zIndex = "100";
       }
     });
   },

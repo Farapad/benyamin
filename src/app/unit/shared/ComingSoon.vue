@@ -2,11 +2,8 @@
   <div class="d-flex h-100 align-items-center justify-content-center">
     <div class="card custom-notfound w-75">
       <div class="d-flex justify-content-center">
-        <img
-          alt=""
-          class="image-uper uper-shadow translate-x"
-          src="@/assets/img/uper.png"
-        />
+        <img alt="" class="translate-x" src="" />
+        <!-- <img alt="" class="translate-x" src="@/assets/img/image.png" /> -->
       </div>
       <div class="d-flex justify-content-center">
         <span class="nf404">4 0 4</span>
@@ -64,19 +61,9 @@ export default defineComponent({
   color: #2c5a31;
 }
 
-.uper-shadow {
-  box-shadow: 2px 2px 4px rgba(64, 64, 64, 0.5);
-}
-
 .font-large-nf {
   font-size: 16px;
   text-align: center;
   padding: 10px;
-}
-
-.image-uper {
-  border-radius: 50%;
-  width: 7rem;
-  height: 7rem;
 }
 </style>

@@ -1,10 +1,9 @@
 export class Constant {
-    public static readonly ApiPrefix_Setting = 'http://api.setting.uper-me.com/api/v1/setting/'
-    public static readonly ApiPrefix_User = 'http://api.user.uper-me.com/api/v1/user/'
+    public static readonly ApiPrefix = 'http://sandbox.farapod.ir/api/'
 
-    public static readonly UrlUpload_File = 'http://upstatics.uper-me.com/v2/file/';
+    public static readonly UrlUpload_File = ''; // Upload File
 
-    public static readonly ApiCheckRefreshToken = 'http://api.user.uper-me.com/api/v1/user/MainPage/CheckRefreshToken';
+    public static readonly ApiCheckRefreshToken = '';// RefreshToken
 }
 
 export enum EnumKeys {
