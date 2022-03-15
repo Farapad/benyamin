@@ -1,0 +1,30 @@
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../src/assets/font/text/IRANSansWeb.eot');
+    src: url('../src/assets/font/text/IRANSansWeb.eot?#iefix') format('embedded-opentype'), url('../src/assets/font/text/IRANSansWeb.woff2') format('woff2'), url('../src/assets/font/text/IRANSansWeb.woff') format('woff'), url('../src/assets/font/text/IRANSansWeb.ttf') format('truetype');
+}
+
+:root {
+    --bg-color: #f2f3f5;
+    // define global varaible colors
+}
+
+body {
+    background: var(--bg-color) !important;
+    font-family: IRANSans, serif !important;
+    text-align: unset;
+}
+
+.hover-pointer:hover {
+    cursor: pointer !important;
+}
+
+.rtl {
+    direction: rtl !important;
+}
+
+.ltr {
+    direction: ltr !important;
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.527" height="23.236" viewBox="0 0 20.527 23.236">
+  <g id="unPaid" transform="translate(0 0.53)">
+    <path id="Path_7802" data-name="Path 7802" d="M-549.4,4479.053v4.528" transform="translate(553.444 -4479.053)" fill="none" stroke="#121212" stroke-linecap="round" stroke-width="0.75"/>
+    <path id="Path_7803" data-name="Path 7803" d="M-545.93,4478.669l2.014,2.014,2.014-2.014,2.014,2.014,2.014-2.014,2.014,2.014,2.014-2.014v14.289" transform="translate(554 -4478.669)" fill="none" stroke="#121212" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75"/>
+    <path id="Path_7804" data-name="Path 7804" d="M-533.848,4484.838v8.12l-2.014-2.014-2.014,2.014-2.014-2.014-2.014,2.014-2.014-2.014-2.014,2.014-2.014-2.014-2.014,2.014v-5.4" transform="translate(554 -4470.627)" fill="none" stroke="#121212" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75"/>
+    <g id="Ellipse_337" data-name="Ellipse 337" transform="translate(0 5.331)" fill="none" stroke="#121212" stroke-width="0.75">
+      <circle cx="6" cy="6" r="6" stroke="none"/>
+      <circle cx="6" cy="6" r="5.625" fill="none"/>
+    </g>
+    <path id="Path_7805" data-name="Path 7805" d="M-517.666,4002.83a1.593,1.593,0,0,0-1.794-1.643c-1.859.043-2.269,2.032-.929,2.594s2.81.323,2.723,1.944-3.662,1.459-3.7-.312" transform="translate(525.517 -3992.654)" fill="none" stroke="#121212" stroke-linecap="round" stroke-width="1"/>
+    <path id="Path_7806" data-name="Path 7806" d="M-520,4000.266v1.028" transform="translate(526.122 -3992.76)" fill="none" stroke="#121212" stroke-linecap="round" stroke-width="1"/>
+    <path id="Path_7807" data-name="Path 7807" d="M-520,4000.442v.8" transform="translate(526.122 -3986.091)" fill="none" stroke="#121212" stroke-linecap="round" stroke-width="1"/>
+    <line id="Line_949" data-name="Line 949" x2="4" transform="translate(12.5 5.831)" fill="none" stroke="#121212" stroke-linecap="round" stroke-width="0.75"/>
+    <line id="Line_950" data-name="Line 950" x2="3" transform="translate(13.5 8.831)" fill="none" stroke="#121212" stroke-linecap="round" stroke-width="0.75"/>
+    <line id="Line_951" data-name="Line 951" x2="2" transform="translate(14.5 11.364)" fill="none" stroke="#121212" stroke-linecap="round" stroke-width="0.75"/>
+    <line id="Line_952" data-name="Line 952" x2="5" transform="translate(11.5 14.364)" fill="none" stroke="#121212" stroke-linecap="round" stroke-width="0.75"/>
+    <line id="Line_953" data-name="Line 953" x2="4.5" transform="translate(10 16.896)" fill="none" stroke="#121212" stroke-linecap="round" stroke-width="0.75"/>
+    <line id="Line_954" data-name="Line 954" x2="0.5" transform="translate(16.5 16.896)" fill="none" stroke="#121212" stroke-linecap="round" stroke-width="0.75"/>
+  </g>
+</svg>
