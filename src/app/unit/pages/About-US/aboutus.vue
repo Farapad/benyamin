@@ -1,14 +1,18 @@
 <template>
-    CKLSDMVPK
+    test
 </template>
 ,<script>
-// import { defineComponent } from '@vue/composition-api'
+import { useRoute } from "vue-router";
 
-export default defineComponent({
-    setup() {
+export default {
+  setup() {
+    const route = useRoute();
 
-    },
-})
+    return {
+      route,
+    };
+  },
+};
 </script>
 <style lang="sass">
 
