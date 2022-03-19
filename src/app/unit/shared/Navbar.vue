@@ -1,16 +1,10 @@
 <template>
-  <Navbar/>
-  <div>
-    <router-view></router-view>
-  </div>
+    test
 </template>
-
-<script>
+,<script>
 import { useRoute } from "vue-router";
-import Navbar from '@/app/unit/shared/Navbar'
 
 export default {
-  components:{Navbar},
   setup() {
     const route = useRoute();
 
@@ -20,6 +14,6 @@ export default {
   },
 };
 </script>
+<style lang="sass">
 
-<style scoped>
 </style>
