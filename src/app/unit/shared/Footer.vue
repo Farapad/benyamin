@@ -1,0 +1,19 @@
+<template>
+    test
+</template>
+,<script>
+import { useRoute } from "vue-router";
+
+export default {
+  setup() {
+    const route = useRoute();
+
+    return {
+      route,
+    };
+  },
+};
+</script>
+<style lang="sass">
+
+</style>
