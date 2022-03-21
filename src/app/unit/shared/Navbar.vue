@@ -62,7 +62,7 @@
                     </div>
              </div>
         </div>
-        <img @click="closehamburger" id="close" class="close hover-pointer" src="@/assets/img/svg/close.svg" alt="close">
+        <img @click="closehamburger()" id="close" class="close hover-pointer" src="@/assets/img/svg/close.svg" alt="close">
    </div>
 </template>
 <script>
