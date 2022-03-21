@@ -40,7 +40,7 @@
         </div>
      </div>
          <div id="hamberger" class="box-responsive-controller">
-       
+              <img class="logo" alt="logo" src="@/assets/img/svg/png/logo-daneshyad.png">
         </div>
         <img @click="closehamburger" id="close" class="close" src="@/assets/img/svg/close.svg" alt="close">
    </div>
