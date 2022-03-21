@@ -21,7 +21,7 @@
         <div>
            <div></div>
            <div>
-                  <span class="p-input-icon-left">
+                  <span  class="p-input-icon-left">
                     <i class="pi pi-search" />
                     <InputText type="text" v-model="Search" placeholder="جستجو کنید..." />
                   </span>
@@ -30,15 +30,19 @@
      </div>
      <div class="controller-responsive">
         <div>
-            <img class="res-ham" alt="logo" src="@/assets/img/svg/hamburger.svg">
+            <img @click="hamburgerbar" class="res-ham hover-pointer" alt="logo" src="@/assets/img/svg/hamburger.svg">
         </div> 
         <div>
             <img class="res-logo" alt="logo" src="@/assets/img/svg/png/logo-daneshyad.png">
         </div>
         <div>
-            <i class="pi text-color pi-search" />
+            <i id="search" class="pi text-color pi-search" />
         </div>
      </div>
+         <div id="hamberger" class="box-responsive-controller">
+       
+        </div>
+        <img @click="closehamburger" id="close" class="close" src="@/assets/img/svg/close.svg" alt="close">
    </div>
 </template>
 <script>
@@ -52,9 +56,22 @@ export default {
     const route = useRoute();
     const Search = ref()
 
+    function hamburgerbar(){
+        document.getElementById("hamberger").style.right = "-12%";
+        document.getElementById("close").style.display = "block";
+        document.getElementById("search").style.display = "none";
+    }
+    function closehamburger(){
+        document.getElementById("hamberger").style.right = "-100%";
+        document.getElementById("close").style.display = "none";
+        document.getElementById("search").style.display = "block";
+    }
+
     return {
       route,
-      Search
+      Search,
+      hamburgerbar,
+      closehamburger
     };
   },
 };
@@ -70,14 +87,40 @@ export default {
     .res-logo{
         width:100px !important;
     }
-    .pi-search{
+     .pi-search{
         color: rgba(55, 65, 81, 1) !important;
+        background: rgba(246, 246, 246, 1) !important;
+        padding: 8px !important;
+        border-radius: 50%;
+        top: 30% !important;
+        left: 2%  !important;
+    }
+    .box-responsive-controller{
+        background-color: red;
+        height: 1000px;
+        z-index: 10;
+        position: relative;
+        top: -80px;
+        max-width: 304px;
+        right: -100%;
+        transition: 0.9s;
+    }
+    .close{
+        position: absolute;
+        top: 40px;
+        right: 343px;
+        width: 36px;
+        display: none;
+        z-index: 10;
     }
 }
 
 @media only screen and  (min-width:450px) {
 .controller-responsive{
     display: none  !important;
+}
+.box-responsive-controller{
+   display: none;
 }
 }
 
@@ -106,18 +149,18 @@ export default {
 .logo{
     width:135px;
 }
-.pi-search{
+.p-input-icon-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .pi-search{
         color: rgba(87, 204, 153, 1) !important;
         background: rgba(246, 246, 246, 1) !important;
         padding: 8px !important;
         border-radius: 50%;
         top: 30% !important;
         left: 2%  !important;
-}
-.p-input-icon-left{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    }
 }
 .box-navbar{
     width: 50%;
