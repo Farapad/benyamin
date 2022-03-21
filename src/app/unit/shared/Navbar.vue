@@ -96,7 +96,7 @@ export default {
         left: 2%  !important;
     }
     .box-responsive-controller{
-        background-color: red;
+        background-color: rgba(244, 244, 244, 1)red;
         height: 1000px;
         z-index: 10;
         position: relative;
@@ -116,12 +116,20 @@ export default {
 }
 
 @media only screen and  (min-width:450px) {
-.controller-responsive{
-    display: none  !important;
-}
-.box-responsive-controller{
-   display: none;
-}
+        .controller-responsive{
+            display: none  !important;
+        }
+    .box-responsive-controller{
+            display: none;
+        }
+    .close{
+        position: absolute;
+        top: 40px;
+        right: 343px;
+        width: 36px;
+        display: none;
+        z-index: 10;
+    }
 }
 
 .controller-responsive{
