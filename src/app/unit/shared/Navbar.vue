@@ -40,9 +40,29 @@
         </div>
      </div>
          <div id="hamberger" class="box-responsive-controller">
-              <img class="logo" alt="logo" src="@/assets/img/svg/png/logo-daneshyad.png">
+             <div class="child">
+                    <div>
+                        <img class="logo-icon" alt="logo" src="@/assets/img/svg/png/logo-daneshyad.png">
+                    </div>
+                    <div class="mt-3">
+                        <img class="icon"  alt="logo" src="@/assets/img/svg/letters-icon.svg">
+                        <span class="text-color font-16 hover-pointer px-2">دوره ها / درس ها</span>
+                    </div>
+                    <div class="mt-3">
+                        <img class="icon" alt="logo" src="@/assets/img/svg/news-icon.svg">
+                        <span class="text-color font-16 hover-pointer px-2">خبر ها</span>
+                    </div>
+                    <div class="mt-3">
+                        <img class="icon" alt="logo" src="@/assets/img/svg/etelaye-icon.svg">
+                        <span class="text-color font-16 hover-pointer px-2">اطلاعیه ها</span>
+                    </div>
+                    <div class="mt-3 d-flex">
+                        <img class="icon" alt="logo" src="@/assets/img/svg/about-us-icon.svg">
+                        <span class="text-color font-16 hover-pointer px-1">درباره ما</span>
+                    </div>
+             </div>
         </div>
-        <img @click="closehamburger" id="close" class="close" src="@/assets/img/svg/close.svg" alt="close">
+        <img @click="closehamburger" id="close" class="close hover-pointer" src="@/assets/img/svg/close.svg" alt="close">
    </div>
 </template>
 <script>
@@ -96,14 +116,18 @@ export default {
         left: 2%  !important;
     }
     .box-responsive-controller{
-        background-color: rgba(244, 244, 244, 1)red;
-        height: 1000px;
+        background-color: rgba(244, 244, 244, 1);
         z-index: 10;
         position: relative;
         top: -80px;
         max-width: 304px;
         right: -100%;
         transition: 0.9s;
+        .child{
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+        }
     }
     .close{
         position: absolute;
@@ -112,6 +136,7 @@ export default {
         width: 36px;
         display: none;
         z-index: 10;
+        transition: 0.5s;
     }
 }
 
@@ -181,5 +206,11 @@ export default {
 .nav-item:hover:before{
      content: url('../../../../src/assets/img/svg/Arrow.svg');
      transition: 0.9s;
+}
+.icon{
+    width: 20px;
+}
+.logo-icon{
+    width: 93px;
 }
 </style>
