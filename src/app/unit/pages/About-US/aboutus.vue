@@ -1,5 +1,5 @@
 <template>
-  <div class="main-background">
+  <div class="main">
     <h2>درباره محصول دانش یاد</h2>
     <p class="outcard">
       «دانشیاد» درگاهی است برای ورود به فضای عملیاتی و بهره گیری از قابلیت های یک سامانه جامع خدماتی در حوزه «آموزش/یادگیری الکترونیکی»؛متشکل از اعضای یکپارچه ای<br> چون سیستم مدیریت یادگیری
@@ -44,10 +44,10 @@ export default {
 </script>
 <style lang="scss" >
 
-:root {
-  --bg-color: #f2f3f5;
-  // define global variable colors
-}
+// :root {
+//   --bg-color: #f2f3f5;
+//   // define global variable colors
+// }
 
 body {
   background: var(--bg-color) !important;

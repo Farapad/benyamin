@@ -1,19 +1,26 @@
 <template>
    <div class="main-controller">
     <div class="controller">
-        <div>
+        <div>   
             <img class="logo" alt="logo" src="@/assets/img/svg/png/logo-daneshyad.png">
         </div>
         <div class="d-flex box-navbar">
-          <div>
-            <span class="text-color font-16 hover-pointer nav-item">دوره ها / درس ها</span>
+          <div>   
+            <span class="text-color font-16 hover-pointer nav-item">
+                <template class="d-flex">
+		        	<div>
+		        		<Menubar class="text-color" :model="items">
+		        		</Menubar>
+		        	</div>
+		        </template>
+            </span>
           </div>
-          <div>
+          <div>  
              <span class="text-color font-16 hover-pointer nav-item">خبر ها</span>
-          </div>
-          <div>
+          </div> 
+          <div>  
              <span class="text-color font-16 hover-pointer nav-item">اطلاعیه ها</span>
-          </div>
+          </div> 
           <div>
              <span class="text-color font-16 hover-pointer nav-item">درباره ما</span>
           </div>
@@ -67,11 +74,13 @@
 </template>
 <script>
 
-import { ref } from 'vue';
 import { useRoute } from "vue-router";
-
+import { ref, onMounted } from "vue";
+// import NodeService from '@/core/service/nodeServise';
+import Menubar from 'primevue/menubar';
+``
 export default {
-  components:{},
+  components:{Menubar},
   setup() {
     const route = useRoute();
     const Search = ref()
@@ -81,23 +90,84 @@ export default {
         document.getElementById("close").style.display = "block";
         document.getElementById("search").style.display = "none";
     }
+
     function closehamburger(){
         document.getElementById("hamberger").style.right = "-100%";
         document.getElementById("close").style.display = "none";
         document.getElementById("search").style.display = "block";
     }
 
+        const items = ref([
+					{
+						label:'دوره ها و درس ها',
+						items:[
+							{
+								label:'امور حقوقی ',
+								icon:'pi pi-fw pi-user-plus',
+							},
+                            	{
+								label:'ایمنی',
+								icon:'pi pi-fw pi-user-plus',
+							},
+                            	{
+								label:'بازاریابی و فروش',
+								icon:'pi pi-fw pi-user-plus',
+							},
+                            	{
+								label:'زبان',
+								icon:'pi pi-fw pi-user-plus',
+							},
+                            	{
+								label:'سلامت',
+								icon:'pi pi-fw pi-user-plus',
+							},
+                            	{
+								label:'کسب و کار',
+								icon:'pi pi-fw pi-user-plus',
+							},
+							{
+								label:'فناوری اطلاعات و ارتباطات',
+								icon:'pi pi-fw pi-users',
+								items:[
+									{
+										label:'Filter',
+										icon:'pi pi-fw pi-filter',
+									},
+									{
+										icon:'pi pi-fw pi-bars',
+										label:'List'
+									}
+								]
+							},
+                            	{
+								label:'مالی و حسابداری',
+								icon:'pi pi-fw pi-user-plus',
+							},
+                            	{
+								label:'مدیریت',
+								icon:'pi pi-fw pi-user-plus',
+							},
+                            	{
+								label:'مهندسی',
+								icon:'pi pi-fw pi-user-plus',
+							}
+						]
+					},
+				]);
+    
+
     return {
       route,
       Search,
       hamburgerbar,
-      closehamburger
+      closehamburger,
+      items
     };
   },
 };
 </script>
-<style lang="scss" scoped>
-@media only screen and  (max-width:450px) {
+<style lang="scss"  scoped>
+@media  (max-width:450px) {
     .controller{
         display: none !important;
     }
@@ -198,19 +268,66 @@ export default {
 .box-navbar{
     width: 50%;
     justify-content: space-evenly;
+    align-items: center;
 }
 .nav-item:hover{
     color:rgba(87, 204, 153, 1);
     transition: 0.7s;
 }
-.nav-item:hover:before{
-     content: url('../../../../src/assets/img/svg/Arrow.svg');
-     transition: 0.9s;
-}
+/* // .nav-item:hover:before{
+//      content: url('../../../../src/assets/img/svg/Arrow.svg');
+//      transition: 0.9s;
+// } */
 .icon{
     width: 20px;
 }
 .logo-icon{
     width: 93px;
+}
+
+::v-deep(.p-treeselect .p-treeselect-trigger)
+    {
+     background: transparent;
+     color: #495057;
+     width: 2.357rem;
+     border-top-right-radius: 4px;
+     border-bottom-right-radius: 4px;
+     position: absolute;
+     left: 127px;
+     top: 15px;
+    }
+::v-deep(.p-menubar){
+    background:none;
+    padding: 0px;
+    color:blue ;
+}
+::v-deep(.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text){
+    color: #495057;
+}
+::v-deep(.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link){
+    padding: 14px 2px;
+    padding-right: 36px;
+}
+::v-deep(.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:focus){
+    box-shadow: none;
+}
+::v-deep(.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover .p-menuitem-text){
+   color: rgba(87, 204, 153, 1) !important;
+}
+::v-deep(.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-submenu-icon){
+    position: absolute;
+    left: 127px;
+    top: 19px;
+}
+::v-deep(.p-menubar .p-submenu-list){
+    width: 300px;
+}
+::v-deep(.p-menubar .p-submenu-list > .p-menuitem-active > .p-submenu-list){
+    right: 100%;
+    left: 0%;
+}
+::v-deep(.p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon){
+    transform: rotate(180deg);
+    margin-right: 20px;
 }
 </style>
