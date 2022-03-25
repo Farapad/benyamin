@@ -7,9 +7,11 @@ import { pageRoutes } from "@/core/router/page.route";
 const ComingSoon = () => import("@/app/unit/shared/ComingSoon.vue");
 const Pages = () => import("@/app/unit/pages/Pages.vue");
 const About = () => import("@/app/unit/pages/About-US/aboutus.vue");
+const news = () => import("@/app/unit/pages/NewsScreen/newsScreen.vue");
 
 const routes: Array<RouteRecordRaw> = [
   { path: "", component: Pages },
+  { path: "/news", component: news },
   { path: "/about", component: About },
   ...authRoutes,
   ...pageRoutes,
