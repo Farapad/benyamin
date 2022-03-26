@@ -25,15 +25,24 @@
             </Carousel>
         </div>
   </div>
+  <div class="bottom-bar w-100 px-5 mb-5 d-flex">
+    <Button label="ورود به سامانه"/>
+    <span  class="font-16 font-weight-bold text-color px-3">فراگیر</span>
+    <span class="font-16 font-weight-bold text-color px-3">مدرس</span>
+    <span class="font-16 font-weight-bold text-color px-3">مدبریت</span>
+    <span class="font-16 font-weight-bold text-color px-3">ادمین</span>
+    <span class="font-16 font-weight-bold text-color px-3">متقاضی برگزاری دوره یا درس</span>
+  </div>
  </div>  
 </template>
 
 <script>
 // import { ApiService } from "@/core/repository/api.service";
 import Carousel from 'primevue/carousel';
-import {ref} from 'vue'
+import {ref} from 'vue';
+import Button from 'primevue/button';
 export default {
-  components:{Carousel},
+  components:{Carousel,Button},
   setup() {
     // function apiCall() {
     //   ApiService.getInstance().business({
@@ -106,6 +115,22 @@ export default {
   transform: rotate(180deg);
   cursor: pointer;
 }
+::v-deep(.p-carousel .p-carousel-content .p-carousel-prev, .p-carousel .p-carousel-content .p-carousel-next){
+  background: white;
+  position: relative;
+  right: 4%;
+  z-index: 100;
+  padding: 20px;
+  border-radius: 11px;
+}
+::v-deep(.p-carousel .p-carousel-content .p-carousel-next){
+  background: white;
+  position: relative;
+  z-index: 100;
+  left: 4%;
+  padding: 20px;
+  border-radius: 11px;
+}
 ::v-deep(.p-carousel-next){
    transform: rotate(180deg);
    cursor: pointer;
@@ -115,5 +140,22 @@ export default {
     width:300px;
     border-radius: 47px;
     }
+}
+::v-deep(.p-button){
+  background: rgba(87, 204, 153, 1);
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+}
+::v-deep(.p-button:hover){
+  background: rgba(87, 204, 153, 1);
+  border: none;
+}
+.bottom-bar{
+  align-items: center;
 }
 </style>
