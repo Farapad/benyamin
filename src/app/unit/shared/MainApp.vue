@@ -1,9 +1,11 @@
 <template>
+<div class="controller">
   <Navbar/>
   <div>
     <router-view></router-view>
   </div>
   <FOOTER/>
+</div>  
 </template>
 
 <script>
@@ -24,4 +26,7 @@ export default {
 </script>
 
 <style scoped>
+.controller{
+  overflow-x: hidden;
+}
 </style>
