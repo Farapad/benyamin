@@ -1,5 +1,5 @@
 <template>
-    <div class="main-controller">
+    <div class="controller">
             <p class="label">{{label}}</p>
             <img class="w-100" src="@/assets/img/svg/png/loginscreen.png" alt="login-image">
     </div>
@@ -16,7 +16,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.main-controller{
+.controller{
     display: flex;
     flex-direction: column;
     justify-content: center;
