@@ -89,12 +89,14 @@ export default {
         document.getElementById("hamberger").style.right = "-12%";
         document.getElementById("close").style.display = "block";
         document.getElementById("search").style.display = "none";
+        document.getElementById("hamberger").style.display = "block";
     }
 
     function closehamburger(){
         document.getElementById("hamberger").style.right = "-100%";
         document.getElementById("close").style.display = "none";
         document.getElementById("search").style.display = "block";
+        document.getElementById("hamberger").style.display = "none";
     }
 
         const items = ref([
@@ -193,10 +195,12 @@ export default {
         max-width: 304px;
         right: -100%;
         transition: 0.9s;
+        display: none;
         .child{
             display: flex;
             flex-direction: column;
             padding: 25px;
+            transition: 0.9s;
         }
     }
     .close{
