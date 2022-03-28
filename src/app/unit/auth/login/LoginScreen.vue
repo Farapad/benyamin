@@ -5,11 +5,15 @@
       <span class="mobile-text">موبایل / ایمیل</span>
       <InputText placeholder="موبایل / ایمیل خود را وارد کنید" class="my-3" type="text" v-model="username" />
       <span class="mobile-text">رمز عبور</span>
-      <Password class="my-3 w-100" v-model="value3" placeholder="رمز عبور خود را وارد کنید" toggleMask></Password>
+      <Password class="my-3 w-100" v-model="password" placeholder="رمز عبور خود را وارد کنید" toggleMask></Password>
       <span class="forgot">رمز عبور خود را فراموش کرده اید؟</span>
     </div>
     <div class="child3">
-      <Button label="ورود به سامانه" class="p-button-success" />
+      <Button label="ورود به سامانه" class="p-button-raised p-button-success" />
+      <Button  class="p-button-raised p-button-success google my-3" ><img class="px-2" src="@/assets/img/svg/google.svg" alt="google">با گوگل وارد شوید</Button>
+    </div>
+    <div class="bottom-text">
+      <span>هنوز ثبت نام نکرده اید؟</span><span class="child px-1">ثبت نام</span>
     </div>
   </div>
 </template>
@@ -88,5 +92,40 @@ export default {
   border: none;
   border-radius: 8px;
   padding:13px 50px ;
+  width: 254px;
+
+}
+.p-button-success:hover{
+  font-size: 12px !important;
+  background: rgba(87, 204, 153, 1) !important;
+  border: none !important;
+  border-radius: 8px;
+  padding:13px 50px ;
+  width: 254px;
+
+}
+.google{
+  background: #fff;
+  font-size: 12px;
+  color: rgba(156, 163, 175, 1);
+  width: 254px;
+}
+.google:hover{
+  background: #fff !important;
+  font-size: 12px !important;
+  color: rgba(156, 163, 175, 1) !important;
+}
+.bottom-text{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 12px;
+  margin-top: 15px;
+  color: rgba(156, 163, 175, 1);
+  .child{
+    text-decoration: underline #3b82f6;
+    color:#3b82f6;
+    cursor: pointer;
+  }
 }
 </style>
