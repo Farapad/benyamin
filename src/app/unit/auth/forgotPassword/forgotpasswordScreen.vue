@@ -5,20 +5,39 @@
         </div>
         <div class="second-child">
             <span class="mobile-text">موبایل / ایمیل</span>
-            <InputText placeholder="موبایل / ایمیل خود را وارد کنید" class="my-2" type="text" v-model="username" />
+            <Password :class=" validation == true ? 'p-invalid' : ''"  class="my-3 w-100" v-model="password" placeholder="رمز عبور خود را وارد کنید" toggleMask></Password>
         </div>
         <div class="third-child">
-         <Button label="بازیابی رمز عبور" class="p-button-raised p-button-success" />
+         <Button @click="apply()" label="بازیابی رمز عبور" class="p-button-raised p-button-success" />
          <span class="bottom-text">بازگشت به صفحه ورود</span>
         </div>
     </div>
 </template>
 <script>
-import topscreen from '@/app/unit/auth/topscreen.vue'
+import topscreen from '@/app/unit/auth/topscreen.vue';
+import Password from 'primevue/password';
+import {ref} from 'vue';
 export default {
-    components:{topscreen},
+    components:{
+        topscreen,
+        Password
+    },
     setup() {
-        
+       const validation = ref(null);
+       const password = ref(null);
+       function apply(){
+          if (password.value == null){
+              validation.value = true;
+          }
+          else {
+              validation.value = false;
+          }
+       }  
+       return { 
+           validation,
+           password,
+           apply
+       }
     },
 }
 </script>
@@ -30,16 +49,25 @@ export default {
   width: 100%;
   padding: 56px;
 }
-::v-deep(.p-inputtext){
-    width: 100%;
-    border: none;
-    border-radius: 12px;
-    font-size: 12px;
-    padding: 12px;
-}
-.mobile-text{
-  color: rgba(75, 85, 99, 1);
-  font-size: 12px;
+.second-child {
+
+      ::v-deep(.p-inputtext){
+        width: 100%;
+        border-radius: 12px;
+        font-size: 12px;
+        padding: 12px;
+      }
+
+       ::v-deep(.p-input-icon-right > i:last-of-type){
+            left: 0.75rem !important;
+            right: auto  !important;
+        }
+
+       .mobile-text{
+        color: rgba(75, 85, 99, 1);
+        font-size: 12px;
+       }
+
 }
 .third-child{
     display: flex;
