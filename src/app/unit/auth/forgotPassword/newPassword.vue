@@ -5,25 +5,42 @@
     </div>
     <div class="second-child">
         <span class="mobile-text">رمز عبور جدید</span>
-        <Password class="my-3 w-100" v-model="password" placeholder="رمز عبور خود را وارد کنید" toggleMask></Password>
+        <Password :class=" validation == true ? 'p-invalid' : ''"  class="my-3 w-100" v-model="password" placeholder="رمز عبور خود را وارد کنید" toggleMask></Password>
         <span class="mobile-text my-1">تکرار رمز عبور جدید </span>
-        <Password class="my-3 w-100" v-model="password" placeholder="رمز عبور خود را وارد کنید" toggleMask></Password>
+        <Password :class=" validation == true ? 'p-invalid' : ''" class="my-3 w-100" v-model="confirmPassword" placeholder="رمز عبور خود را وارد کنید" toggleMask></Password>
     </div>
     <div class="third-child">
-        <Button label="بازیابی رمز عبور" class="p-button-raised p-button-success" />
+        <Button @click="apply()" label="بازیابی رمز عبور" class="p-button-raised p-button-success" />
     </div>
 </div>    
 </template>
 <script>
 import topscreen from '@/app/unit/auth/topscreen.vue';
 import Password from 'primevue/password';
+import {ref} from 'vue';
 export default {
     components:{
         topscreen,
         Password
     },
     setup() {
-        
+       const validation = ref(null);
+       const password = ref(null);
+       const confirmPassword = ref(null);
+       function apply(){
+          if (confirmPassword.value == null && password.value == null){
+              validation.value = true;
+          }
+          else {
+              validation.value = false;
+          }
+       }        
+       return {
+           validation,
+           password,
+           confirmPassword,
+           apply 
+       } 
     },
 }
 </script>
@@ -39,7 +56,6 @@ export default {
       flex-direction: column;
       ::v-deep(.p-inputtext){
         width: 100%;
-        border: none;
         border-radius: 12px;
         font-size: 12px;
         padding: 12px;
