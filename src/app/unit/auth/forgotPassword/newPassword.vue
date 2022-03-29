@@ -1,14 +1,13 @@
 <template>
 <div class="main-controller">
     <div class="first-child">
-        <topscreen :label="'کد تایید'"/> 
+        <topscreen :label="'بازیابی رمز عبور'"/>
     </div>
     <div class="second-child">
-        <span class="mobile-text">کد تایید برای شماره 0903434549 ارسال گردید</span>
-        <InputText placeholder="لطفا کد تایید را وارد کنید" class="my-2" type="text" v-model="username" />
-        <div class="text">
-            <span>ارسال مجدد کد تایید</span>
-        </div>
+        <span class="mobile-text">رمز عبور جدید</span>
+        <Password class="my-3 w-100" v-model="password" placeholder="رمز عبور خود را وارد کنید" toggleMask></Password>
+        <span class="mobile-text my-1">تکرار رمز عبور جدید </span>
+        <Password class="my-3 w-100" v-model="password" placeholder="رمز عبور خود را وارد کنید" toggleMask></Password>
     </div>
     <div class="third-child">
         <Button label="بازیابی رمز عبور" class="p-button-raised p-button-success" />
@@ -16,10 +15,12 @@
 </div>    
 </template>
 <script>
-import topscreen from '@/app/unit/auth/topscreen.vue'
+import topscreen from '@/app/unit/auth/topscreen.vue';
+import Password from 'primevue/password';
 export default {
     components:{
-        topscreen
+        topscreen,
+        Password
     },
     setup() {
         
@@ -33,11 +34,7 @@ export default {
   justify-content: center;
   width: 100%;
   padding: 56px;
-  .first-child{
-      display: flex;
-      flex-direction: column;
-  }
-  .second-child{
+   .second-child{
       display: flex;
       flex-direction: column;
       ::v-deep(.p-inputtext){
@@ -51,15 +48,8 @@ export default {
         color:rgba(75, 85, 99, 1);
         font-size: 12px;
       }
-      .text{
-          display: flex;
-          justify-content: flex-end;
-          color: rgba(59, 130, 246, 1);
-          text-decoration: underline rgba(59, 130, 246, 1);
-          font-size: 12px;
-      }
-  }
-  .third-child{
+   }
+   .third-child{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,6 +79,10 @@ export default {
         padding: 9px 2px;
         cursor: pointer;
     }
+   }
   }
-}
+  ::v-deep(.p-input-icon-right > i:last-of-type){
+  left: 0.75rem !important;
+  right: auto  !important;
+  }
 </style>
