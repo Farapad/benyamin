@@ -13,7 +13,7 @@
       <div v-show='isCollapsed' class="outcard" >
         <p class="outcard">
         و سیستم مدیریت محتوای یادگیری ("Learning Content Management System – “LCMS”)،از یک سو،و ابزار های ارتباطی و تعاملی بر خط و غیر برخط ("Online and Offline Communication and Collaboration Tools) و طیفی از امکانات و ویژگی های تکمیلی،از سویی دیگر.
-        از جمله امکانات فراهم آماده قابلیت تولید،استاندارد سازی واجرای محتوا های الکترونیکی در تطبیق با آخرین اصلاحیه استاندارد جهانی «اسکرم»("SCORM 2004, 4Th Edition) قابل ذکر است.انتظار میرود این سامانه که به واسطه تشریک مساعی و هم افزایی بین شرکت های «فناوری اطلاعات و ارتباطات پاسارگاد آریان»(«شرکت فناپ»،وابسته به «بانک پاسارگاد»)و«شرکت داده ورزی سامانه»(به نمایندگی از جانب جمعی از خبرگان کشور)ایجاد و راه اندازی گشته بتواند بر بسیاری ازدغدغه ها،چالش ها و موانع فراوری این صنعت پایدار فائق آید.افزایش میزان اثر بخشی ،کاهش چشم گیر هزینه ها،تسهیل درامر آموزش /یادگیری و مهیا نمودن یک محیط امن و یک پارچه،از جمله ویژگی های بارز این سامانه است.نقش فناپ در تولید سامانه مذکور که مبنی بر فناوری «رایانش ابری یا کلاود»("Cloud Technology)توسعه یافته و ماهیت کاربری آن از نوع«بنگاه به بنگاه»(B2B)قابل توصیف است،به عنوان فراهم کننده سرویس دهنده های زیر ساختی(Infrastructure as a Service – “IaaS)و پلتفرمی("Platform as a Service – “PaaS)مورد نیاز ،و نقش داده ورزی سامانه به عنوان تامین کننده«سرویس دهنده نرم افزاری("Software as a Service – “SaaS)و طرف تعامل با جامعه هدف
+        از جمله امکانات فراهم آماده قابلیت تولید،استاندارد سازی واجرای محتوا های الکترونیکی در تطبیق با آخرین اصلاحیه استاندارد جهانی «اسکرم»("SCORM 2004, 4Th Edition) قابل ذکر است.انتظار میرود این سامانه که به واسطه تشریک مساعی و هم افزایی بین شرکت های «فناوری اطلاعات و ارتباطات پاسارگاد آریان»(«شرکت فناپ»،وابسته به «بانک پاسارگاد»)و«شرکت داده ورزی سامانه»(به نمایندگی از جانب جمعی از خبرگان کشور)ایجاد و راه اندازی گشته بتواند بر بسیاری ازدغدغه ها،چالش ها و موانع فراوری این صنعت پایدار فائق آید.افزایش میزان اثر بخشی ،کاهش چشمگیر هزینه ها،تسهیل درامر آموزش /یادگیری و مهیا نمودن یک محیط امن و یک پارچه،از جمله ویژگی های بارز این سامانه است.نقش فناپ در تولید سامانه مذکور که مبنی بر فناوری «رایانش ابری یا کلاود»("Cloud Technology)توسعه یافته و ماهیت کاربری آن از نوع«بنگاه به بنگاه»(B2B)قابل توصیف است،به عنوان فراهم کننده سرویس دهنده های زیر ساختی(Infrastructure as a Service – “IaaS)و پلتفرمی("Platform as a Service – “PaaS)مورد نیاز ،و نقش داده ورزی سامانه به عنوان تامین کننده«سرویس دهنده نرم افزاری("Software as a Service – “SaaS)و طرف تعامل با جامعه هدف
         قابل تعریف است.
         </p> </div>
 
@@ -24,17 +24,17 @@
       <div class="card">
         <img src="@/assets/img/svg/aboutuspic2.svg" alt="image">
         <div class="card-content">
-          <p class="incard">شرکت «داده ورزی سامانه» با پشتوانه تحلیل،طراحی و پیاده سازی پروژه سیستم جامع اطلاعات در چند شرکت بزرگ تولیدی و انتقال دانش فنی و کارشناسان پروژه مربوطه در سال 1376 تاسیس گردید</p>
-          <a v-bind:href="dadevarzi" class="buttonlink" style="display: flex;align-items: center;justify-content: center;padding-top: 20px;text-decoration: none"><button>دانلود PDF فایل های داده ورزی سامانه</button></a>
+          <p class="incard">شرکت «داده ورزی سامانه» با پشتوانه تحلیل،طراحی و پیاده سازی پروژه سیستم جامع اطلاعات در چند شرکت بزرگ تولیدی و انتقال دانش فنی و کارشناسان پروژه مربوطه در سال 1376 تاسیس گردید.</p>
+          <a v-bind:href="dadevarzi" class="buttonlink" style="display: flex;align-items: center;justify-content: center;padding-top: 20px;text-decoration: none"><button>دانلود فایل PDF معرفی داده ورزی سامانه</button></a>
         </div>
       </div>
 
       <div class="card">
         <img src="@/assets/img/svg/aboutuspic1.svg" alt="image2">
         <div class="card-content">
-          <p>  شرکت فناوری اطلاعات وارتباطات پاسارگادآرین(فن آپ)در24 دی ماه سال1384 با سرمایه گذاری گروه ملی پاسارگاد وهمکاری جمعی از نخبگان و فارغ التحصیلان دانشگاه های برتر کشور تاسیس شد
+          <p>  شرکت فناوری اطلاعات وارتباطات پاسارگادآرین(فناپ)در24 دی ماه سال1384 با سرمایه گذاری گروه ملی پاسارگاد وهمکاری جمعی از نخبگان و فارغ التحصیلان دانشگاه های برتر کشور تاسیس شد.
           </p>
-          <a v-bind:href="Fanap" class="buttonlink" style="display: flex;align-items: center;justify-content: center;padding-top: 20px;text-decoration: none"><button type="button" >دانلود PDF فایل های فن آپ</button></a>
+          <a v-bind:href="Fanap" class="buttonlink" style="display: flex;align-items: center;justify-content: center;padding-top: 20px;text-decoration: none"><button type="button" >دانلود فایل PDF معرفی فناپ</button></a>
 
         </div>
       </div>
@@ -155,7 +155,10 @@ padding: 20px;
   }
   h2{
     font-size: 16px;
-    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
   }
   .buttonlink{
     font-size: 12px;
