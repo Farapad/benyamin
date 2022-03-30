@@ -200,6 +200,7 @@ export class Repository {
 }
 
 export class ReturnResponse {
+    mainUrl?: string;
     url?: string;
     urlContent?: any;
     dontShowError?: boolean;

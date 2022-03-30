@@ -10,8 +10,12 @@ export class ApiService extends Repository {
         return ApiService.instance
     }
 
+    private compeleteUrl(data: ReturnResponse, apiUrl: string): string {
+        return `${data.mainUrl ?? Constant.ApiPrefix}/${apiUrl}`
+    }
+
     public business(data: ReturnResponse) {
-        data.url = `${this.baseUrl}user/business`;
+        data.url = this.compeleteUrl(data, 'user/business');
         this.post(data)
     }
 
