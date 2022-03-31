@@ -10,12 +10,11 @@
                     <div class="product-item">
                         <div class="product-item-content">
                             <div class="mb-3">
-                                <img src="slotProps.image" :alt="slotProps.name" class="product-image" />
-                                {{slotProps.image}}
+                                <img :src="slotProps.data.image"  :alt="slotProps.data.name" class="product-image" />
                             </div>
                             <div>
-                                <h4 class="mb-1">{{slotProps.name}}</h4>
-                                <h6 class="mt-0 mb-3">{{slotProps.price}}</h6>
+                                <h4 class="mb-1">{{products.name}}</h4>
+                                <h6 class="mt-0 mb-3">{{products.price}}</h6>
                                 <!-- <span :class="'product-badge status-'+slotProps.data.inventoryStatus.toLowerCase()">{{slotProps.data.inventoryStatus}}</span> -->
                                 <!-- <div class="car-buttons mt-5">
                                 </div> -->
@@ -30,7 +29,7 @@
     <Button label="ورود به سامانه"/>
     <span  class="font-16 font-weight-bold text-color px-3">فراگیر</span>
     <span class="font-16 font-weight-bold text-color px-3">مدرس</span>
-    <span class="font-16 font-weight-bold text-color px-3">مدبریت</span>
+    <span class="font-16 font-weight-bold text-color px-3">مدیریت</span>
     <span class="font-16 font-weight-bold text-color px-3">ادمین</span>
     <span class="font-16 font-weight-bold text-color px-3">متقاضی برگزاری دوره یا درس</span>
   </div>
@@ -52,22 +51,24 @@ export default {
     //     },
     //   });
     // }
-      const picture = ref(require('@/assets/img/svg/png/main-page.png'))
+      const picture = ref(require('../../../assets/img/svg/png/main-page.png'));
+      const picturee = ref(require('../../../assets/img/svg/png/page.png'));
       const products = [
         {id:1000,code: "f230fh0g3",name: 'Bamboo Watch',image: picture.value ,description: 'Product Description'},
+        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picture.value ,description: 'Product Description'},
       ];
       // const productService = ref(new ProductService());  
-      console.log(products[0].image,'sss');
+      console.log(products[1].image,'sss');
 		  const responsiveOptions = ref([
 			{
 				breakpoint: '1024px',
-				numVisible: 3,
-				numScroll: 3
+				numVisible: 1,
+				numScroll: 1
 			},
 			{
 				breakpoint: '600px',
-				numVisible: 2,
-				numScroll: 2
+				numVisible: 1,
+				numScroll: 1
 			},
 			{
 				breakpoint: '480px',
