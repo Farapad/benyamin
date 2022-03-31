@@ -1,30 +1,17 @@
 <template>
  <div class="main-controller">
-      <div>
-        <div class="card">
-            <Carousel :value="products" :numVisible="1" :numScroll="1" :responsiveOptions="responsiveOptions">
-                <!-- <template #header>
-                    <h5>Basic</h5>
-                </template> -->
-                <template #item="slotProps">
-                    <div class="product-item">
-                        <div class="product-item-content">
-                            <div class="mb-3">
-                                <img :src="slotProps.data.image"  :alt="slotProps.data.name" class="product-image" />
-                            </div>
-                            <div>
-                                <h4 class="mb-1">{{products.name}}</h4>
-                                <h6 class="mt-0 mb-3">{{products.price}}</h6>
-                                <!-- <span :class="'product-badge status-'+slotProps.data.inventoryStatus.toLowerCase()">{{slotProps.data.inventoryStatus}}</span> -->
-                                <!-- <div class="car-buttons mt-5">
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-                </template>
-            </Carousel>
-        </div>
-  </div>
+  <div>
+   <carousel :items-to-show="1">
+    <slide v-for="slide in products" :key="slide">
+      <img class="w-100" :src="slide.image">
+    </slide>
+
+    <template #addons>
+      <navigation />
+      <pagination />
+    </template>
+  </carousel>    
+  </div>   
   <div class="bottom-bar w-100 px-5 mb-5 d-flex">
     <Button label="ورود به سامانه"/>
     <span  class="font-16 font-weight-bold text-color px-3">فراگیر</span>
@@ -38,11 +25,17 @@
 
 <script>
 // import { ApiService } from "@/core/repository/api.service";
-import Carousel from 'primevue/carousel';
+import 'vue3-carousel/dist/carousel.css';
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+// import Carousel from 'primevue/carousel';
 import {ref} from 'vue';
 import Button from 'primevue/button';
 export default {
-  components:{Carousel,Button},
+  components:{  
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,},
   setup() {
     // function apiCall() {
     //   ApiService.getInstance().business({
@@ -55,10 +48,10 @@ export default {
       const picturee = ref(require('../../../assets/img/svg/png/page.png'));
       const products = [
         {id:1000,code: "f230fh0g3",name: 'Bamboo Watch',image: picture.value ,description: 'Product Description'},
-        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picture.value ,description: 'Product Description'},
+        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
       ];
       // const productService = ref(new ProductService());  
-      console.log(products[1].image,'sss');
+      // console.log(products[1].image,'sss');
 		  const responsiveOptions = ref([
 			{
 				breakpoint: '1024px',
@@ -86,7 +79,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-
+.main-controller{
+  padding: 30px;
+}
 .product-item {
     .product-item-content {
         border: 1px solid var(--surface-border);
@@ -161,5 +156,33 @@ export default {
 }
 .bottom-bar{
   align-items: center;
+}
+
+// .carousel__item {
+//   min-height: 200px;
+//   width: 100%;
+//   background-color: var(--vc-clr-primary);
+//   color:  var(--vc-clr-white);
+//   font-size: 20px;
+//   border-radius: 8px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .carousel__slide {
+//   padding: 10px;
+// }
+
+// .carousel__prev,
+// .carousel__next {
+//   box-sizing: content-box;
+//   border: 5px solid white;
+// }
+::v-deep(.carousel__slide){
+  width: 100% !important;
+}
+::v-deep(.carousel__track){
+  transform: translateX(-100%); transition: all 0ms ease 0s;
 }
 </style>
