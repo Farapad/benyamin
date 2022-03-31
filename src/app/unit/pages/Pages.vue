@@ -10,7 +10,8 @@
                     <div class="product-item">
                         <div class="product-item-content">
                             <div class="mb-3">
-                                <img src="@/assets/img/svg/png/main-page.png" :alt="slotProps.name" class="product-image" />
+                                <img src="slotProps.image" :alt="slotProps.name" class="product-image" />
+                                {{slotProps.image}}
                             </div>
                             <div>
                                 <h4 class="mb-1">{{slotProps.name}}</h4>
@@ -51,10 +52,12 @@ export default {
     //     },
     //   });
     // }
+      const picture = ref(require('@/assets/img/svg/png/main-page.png'))
       const products = [
-        {id:1000,code: "f230fh0g3",name: 'Bamboo Watch',description: 'Product Description'},
+        {id:1000,code: "f230fh0g3",name: 'Bamboo Watch',image: picture.value ,description: 'Product Description'},
       ];
       // const productService = ref(new ProductService());  
+      console.log(products[0].image,'sss');
 		  const responsiveOptions = ref([
 			{
 				breakpoint: '1024px',
