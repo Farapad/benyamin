@@ -11,14 +11,21 @@
       <pagination />
     </template>
   </carousel>    
+  </div>
+  <div>
+    <p class="text-between">
+      سامانه جامع آموزش و یادگیری الکترونیکی      
+      ثمره هم افزایی بین شرکت های فناپ و داده ورزی سامانه      
+      آمیزه ای از فناوری ها و قابلیت ها در قالب یک نظام یک پارچه     
+    </p>
   </div>   
   <div class="bottom-bar w-100 px-5 mb-5 d-flex">
-    <Button label="ورود به سامانه"/>
-    <span  class="font-16 font-weight-bold text-color px-3">فراگیر</span>
-    <span class="font-16 font-weight-bold text-color px-3">مدرس</span>
-    <span class="font-16 font-weight-bold text-color px-3">مدیریت</span>
-    <span class="font-16 font-weight-bold text-color px-3">ادمین</span>
-    <span class="font-16 font-weight-bold text-color px-3">متقاضی برگزاری دوره یا درس</span>
+    <Button class="child-one" label="ورود به سامانه"/>
+    <span  class="child-two font-16 font-weight-bold text-color px-3">فراگیر</span>
+    <span class="child-two font-16 font-weight-bold text-color px-3">مدرس</span>
+    <span class="child-two font-16 font-weight-bold text-color px-3">مدیریت</span>
+    <span class="child-two font-16 font-weight-bold text-color px-3">ادمین</span>
+    <span class="child-two font-16 font-weight-bold text-color px-3">متقاضی برگزاری دوره یا درس</span>
   </div>
  </div>  
 </template>
@@ -157,6 +164,16 @@ export default {
 .bottom-bar{
   align-items: center;
 }
+@media (max-width:450px) {
+  .bottom-bar{
+    .child-one{
+      font-size: 14px;
+    }
+    .child-two{
+      font-size: 14px;
+    }
+  }
+}
 
 // .carousel__item {
 //   min-height: 200px;
@@ -184,5 +201,26 @@ export default {
 }
 ::v-deep(.carousel__track){
   transform: translateX(-100%); transition: all 0ms ease 0s;
+}
+::v-deep(.carousel__pagination){
+  display: none;
+}
+::v-deep(.carousel__next){
+  color: black;
+  background: #fff;
+  width: 46px;
+  height:46px;
+  border-radius: 12px;
+  font-size: 26px;
+}
+.text-between{
+  color: #475569;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  padding: 31px;
+  text-align: center;
 }
 </style>
