@@ -22,7 +22,7 @@
              <span class="text-color font-16 hover-pointer nav-item">اطلاعیه ها</span>
           </div> 
           <div>
-             <span class="text-color font-16 hover-pointer nav-item">درباره ما</span>
+             <span @click="about()" class="text-color font-16 hover-pointer nav-item">درباره ما</span>
           </div>
         </div>  
         <div>
@@ -78,6 +78,7 @@ import { useRoute } from "vue-router";
 import { ref, onMounted } from "vue";
 // import NodeService from '@/core/service/nodeServise';
 import Menubar from 'primevue/menubar';
+import router from '@/core/router/router';
 ``
 export default {
   components:{Menubar},
@@ -98,6 +99,11 @@ export default {
         document.getElementById("search").style.display = "block";
         document.getElementById("hamberger").style.display = "none";
     }
+
+    // function about(){
+    //   router.push('/my-profile');
+    //   console.log('sss');
+    // }
 
         const items = ref([
 					{
@@ -163,7 +169,8 @@ export default {
       Search,
       hamburgerbar,
       closehamburger,
-      items
+      items,
+      about
     };
   },
 };
