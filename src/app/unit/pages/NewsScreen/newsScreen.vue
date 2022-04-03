@@ -25,11 +25,14 @@
           </p>
 
         </div>
+
+
+
       </div>
     </div>
 
 
-
+   <button class="newsbtn" style="width:228px;height:48px;background-color:#57CC99;color:#F4F4F4;border-radius:5px;border:#F4F4F4">خبر ها و اطلاعیه های گذشته</button>
 
 
   </div>
@@ -87,6 +90,61 @@ a{
     font-size: 20px;
     padding-right: 15px;
 
+  }
+}
+.newsbtn{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-right: 600px;
+  margin-bottom: 30px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 30px;
+
+  }
+
+  .card {
+    width: 374px;
+    height: 550px;
+  }
+  .card-content {
+    line-height: 1.5rem;
+    padding: 15px;
+    width: 342px;
+    height: 119px;
+
+    p {
+      color: #475569;
+      font-size: 12px;
+      padding-right: 15px;
+    }
+  }
+  h1 {
+    align-items: center;
+    justify-content: center;
+  }
+  .newsbtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 100px;
+    margin-bottom: 30px;
+  }
+  a {
+    display: none;
+  }
+  h5 {
+    font-size: 14px;
+    font-weight: bold;
   }
 }
 </style>
