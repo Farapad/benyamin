@@ -3,14 +3,20 @@
   <div>
    <carousel :items-to-show="1">
     <slide v-for="slide in products" :key="slide">
-      <img class="w-100" :src="slide.image">
+      <img class="w-100" :src="slide.image"> 
     </slide>
-
     <template #addons>
       <navigation />
       <pagination />
     </template>
-  </carousel>    
+  </carousel>
+      <div class="card-carousel">
+          <div class="card-1">
+         سامانه جامع آموزش و یادگیری الکترونیکی            
+      ثمره هم افزایی بین شرکت های فناپ و داده ورزی سامانه            
+      آمیزه ای از فناوری ها و قابلیت ها در قالب یک نظام یک پارچه            
+          </div>
+      </div>    
   </div>
   <div>
     <p class="text-between">
@@ -19,7 +25,7 @@
       آمیزه ای از فناوری ها و قابلیت ها در قالب یک نظام یک پارچه     
     </p>
   </div>   
-  <div class="bottom-bar w-100 px-5 mb-5 d-flex">
+  <div class="bottom-bar w-100 px-5 mb-3 mt-3 d-flex">
     <Button class="child-one" label="ورود به سامانه"/>
     <span  class="child-two font-16 font-weight-bold text-color px-3">فراگیر</span>
     <span class="child-two font-16 font-weight-bold text-color px-3">مدرس</span>
@@ -173,6 +179,9 @@ export default {
       font-size: 14px;
     }
   }
+  .card-carousel{
+    display: none  !important;
+  }
 }
 
 // .carousel__item {
@@ -213,6 +222,14 @@ export default {
   border-radius: 12px;
   font-size: 26px;
 }
+::v-deep(.carousel__prev){
+   color: black;
+   background: #fff;
+   width: 46px;
+   height:46px;
+   border-radius: 12px;
+   font-size: 26px;
+}
 .text-between{
   color: #475569;
   font-size: 16px;
@@ -222,5 +239,27 @@ export default {
   font-weight: 800;
   padding: 31px;
   text-align: center;
+}
+@media (min-width: 450px){
+    .text-between{
+      display: none;
+    }
+}
+.card-carousel{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -310px;
+  .card-1{
+    max-width: 528px;
+    background: rgba(244, 244, 244, 0.75);
+    color: rgba(22, 101, 52, 1);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+  }
 }
 </style>
