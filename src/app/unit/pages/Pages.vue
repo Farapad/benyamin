@@ -39,10 +39,8 @@
 </template>
 
 <script>
-// import { ApiService } from "@/core/repository/api.service";
 import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
-// import Carousel from 'primevue/carousel';
 import {ref} from 'vue';
 import Button from 'primevue/button';
 export default {
@@ -50,7 +48,8 @@ export default {
     Carousel,
     Slide,
     Pagination,
-    Navigation,},
+    Navigation,
+    Button},
   setup() {
     // function apiCall() {
     //   ApiService.getInstance().business({
@@ -65,30 +64,8 @@ export default {
         {id:1000,code: "f230fh0g3",name: 'Bamboo Watch',image: picture.value ,description: 'Product Description'},
         {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
       ];
-      // const productService = ref(new ProductService());  
-      // console.log(products[1].image,'sss');
-		  const responsiveOptions = ref([
-			{
-				breakpoint: '1024px',
-				numVisible: 1,
-				numScroll: 1
-			},
-			{
-				breakpoint: '600px',
-				numVisible: 1,
-				numScroll: 1
-			},
-			{
-				breakpoint: '480px',
-				numVisible: 1,
-				numScroll: 1
-			}
-		]);
-
     return {
       products,
-      // productService,
-      responsiveOptions
     };
   },
 };
@@ -191,27 +168,6 @@ export default {
   }
 }
 
-// .carousel__item {
-//   min-height: 200px;
-//   width: 100%;
-//   background-color: var(--vc-clr-primary);
-//   color:  var(--vc-clr-white);
-//   font-size: 20px;
-//   border-radius: 8px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .carousel__slide {
-//   padding: 10px;
-// }
-
-// .carousel__prev,
-// .carousel__next {
-//   box-sizing: content-box;
-//   border: 5px solid white;
-// }
 ::v-deep(.carousel__slide){
   width: 100% !important;
 }
