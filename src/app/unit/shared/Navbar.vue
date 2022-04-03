@@ -16,13 +16,16 @@
             </span>
           </div>
           <div>  
-             <span class="text-color font-16 hover-pointer nav-item">خبر ها</span>
+               <router-link to="/news">
+               <span class="text-color font-16 hover-pointer nav-item">خبر ها</span>
+               </router-link>
           </div> 
           <div>  
              <span class="text-color font-16 hover-pointer nav-item">اطلاعیه ها</span>
           </div> 
           <div>
-             <span @click="about()" class="text-color font-16 hover-pointer nav-item">درباره ما</span>
+               <router-link to="/about"><span class="text-color font-16 hover-pointer nav-item">درباره ما</span></router-link>
+             
           </div>
         </div>  
         <div>
@@ -169,8 +172,7 @@ export default {
       Search,
       hamburgerbar,
       closehamburger,
-      items,
-      about
+      items
     };
   },
 };

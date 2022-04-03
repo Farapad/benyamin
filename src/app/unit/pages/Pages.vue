@@ -26,12 +26,14 @@
     </p>
   </div>   
   <div class="bottom-bar w-100 px-5 mb-3 mt-3 d-flex">
-    <Button class="child-one" label="ورود به سامانه"/>
+    <Button class="  child-one" label="ورود به سامانه"/>
+    <div class="py-2">
     <span  class="child-two font-16 font-weight-bold text-color px-3">فراگیر</span>
     <span class="child-two font-16 font-weight-bold text-color px-3">مدرس</span>
     <span class="child-two font-16 font-weight-bold text-color px-3">مدیریت</span>
     <span class="child-two font-16 font-weight-bold text-color px-3">ادمین</span>
     <span class="child-two font-16 font-weight-bold text-color px-3">متقاضی برگزاری دوره یا درس</span>
+     </div>
   </div>
  </div>  
 </template>
@@ -172,11 +174,16 @@ export default {
 }
 @media (max-width:450px) {
   .bottom-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px !important;
     .child-one{
-      font-size: 14px;
+      font-size: 14px !important;
+      padding: 10px 20px;
     }
     .child-two{
-      font-size: 14px;
+      font-size: 14px !important;
     }
   }
   .card-carousel{
