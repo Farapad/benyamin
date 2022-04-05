@@ -9,7 +9,7 @@
             <span class="text-color font-16 hover-pointer nav-item">
                 <template class="d-flex">
 		        	<div>
-		        		<Menubar class="text-color" :model="items">
+		        		<Menubar v-model="menuvalue" class="text-color" :model="items">
 		        		</Menubar>
 		        	</div>
 		        </template>
@@ -87,7 +87,8 @@ export default {
   components:{Menubar},
   setup() {
     const route = useRoute();
-    const Search = ref()
+    const Search = ref();
+    const menuvalue = ref(null)
 
     function hamburgerbar(){
         document.getElementById("hamberger").style.right = "-12%";
@@ -103,6 +104,8 @@ export default {
         document.getElementById("hamberger").style.display = "none";
     }
 
+    const icon = ref(require('../../../assets/img/svg/png/main-page.png'));
+
     // function about(){
     //   router.push('/my-profile');
     //   console.log('sss');
@@ -114,65 +117,82 @@ export default {
 						items:[
 							{
 								label:'امور حقوقی ',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
                             	{
 								label:'ایمنی',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
                             	{
 								label:'بازاریابی و فروش',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
                             	{
 								label:'زبان',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'fa fa-language',
 							},
                             	{
 								label:'سلامت',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
                             	{
 								label:'کسب و کار',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
 							{
 								label:'فناوری اطلاعات و ارتباطات',
-								icon:'pi pi-fw pi-users',
+								// icon:'pi pi-fw pi-users',
 								items:[
 									{
-										label:'Filter',
-										icon:'pi pi-fw pi-filter',
+										label:'نرم افزار',
+										// icon:'pi pi-fw pi-filter',
+                                        
 									},
 									{
-										icon:'pi pi-fw pi-bars',
-										label:'List'
-									}
+										// icon:'pi pi-fw pi-user-plus',
+										label:'سخت افزار'
+									},
+                                    {
+                                        label:'شبکه'
+                                    },
+                                    {
+                                        label:'علوم داده'
+                                    },
+                                    {
+                                        label:'امنیت'
+                                    },
+                                    {
+                                        label:'طراحی وب'
+                                    },
+                                    {
+                                        label:'انیمیشن'
+                                    }
 								]
 							},
                             	{
 								label:'مالی و حسابداری',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
                             	{
 								label:'مدیریت',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
                             	{
 								label:'مهندسی',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							}
 						]
 					},
 				]);
     
-
+    console.log(menuvalue , 'ssss');
     return {
       route,
       Search,
       hamburgerbar,
       closehamburger,
-      items
+      items,
+      menuvalue
     };
   },
 };
@@ -342,5 +362,8 @@ export default {
 ::v-deep(.p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon){
     transform: rotate(180deg);
     margin-right: 20px;
+}
+.icon-about-us-icon:before {
+  content: "\e900";
 }
 </style>

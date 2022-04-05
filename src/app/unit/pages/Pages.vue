@@ -214,12 +214,12 @@ export default {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: -310px;
+  top: -340px;
   .card-1{
     max-width: 528px;
     background: rgba(244, 244, 244, 0.75);
     color: rgba(22, 101, 52, 1);
-    padding: 20px;
+    padding: 30px;
     border-radius: 12px;
     text-align: center;
     font-weight: 600;
