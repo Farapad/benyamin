@@ -185,7 +185,7 @@ export default {
 					},
 				]);
     
-    console.log(menuvalue , 'ssss');
+    // console.log(menuvalue , 'ssss');
     return {
       route,
       Search,
