@@ -150,19 +150,19 @@ export default {
 }
 
 ::v-deep(.p-paginator .p-paginator-first:not(.p-disabled):not(.p-highlight):hover){
-  color: black;
+  color: rgba(71, 85, 105, 1);
 }
 
 ::v-deep(.p-paginator .p-paginator-first:not(.p-disabled):not(.p-highlight)){
-  color: black;
+  color: rgba(71, 85, 105, 1);
 }
 
 ::v-deep(.p-paginator .p-paginator-prev){
-  color: black;
+  color: rgba(71, 85, 105, 1);
 }
 
 ::v-deep(.p-paginator .p-paginator-next){
-  color: black;
+  color: rgba(71, 85, 105, 1);
 }
 
 
