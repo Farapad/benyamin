@@ -15,7 +15,17 @@
       <div class="m-3 card-controller">
           <img class="card-controller-img" :src="slotProps.data.image" :alt="slotProps.data.name"/>
           <div class="card-controller-bottom">
-
+            <div class="first-child">
+              <span class="mx-3 text">{{slotProps.data.name}}</span>
+              <Button class="p-button-success mx-3" :label="'آفلاین'"/>
+            </div>
+            <div class="last-child">
+               <span class="last-child-text">HTML ﯽﺗﺎﻣﺪﻘﻣ هرود ﺮﺼﺘﺨﻣ تﺎﺤﻴﺿﻮﺗ</span>
+               <div class="last-child-bottom">
+                  <Button class=" " :label="'ثبت نام فردی'"/>
+                   <Button class=" " :label="'ثبت نام گروهی'"/>
+               </div>
+            </div>
           </div>
       </div>    	
 			</template>
@@ -96,12 +106,99 @@ export default {
 ::v-deep(.card){
   border: none;
 }
+::v-deep(.p-button.p-button-success){
+  background:  #F3F4F6;
+  color: rgba(87, 204, 153, 1);
+  border: none;
+  font-size: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 8px 22px;
+}
+::v-deep(.p-button){
+ border: none;
+ font-size: 14px;
+ font-weight: 700;
+ border: 1px solid rgba(87, 204, 153, 1);
+ background: #fff;
+ color: rgba(71, 85, 105, 1);
+}
+
+::v-deep(.p-button:hover){
+   border: none;
+ font-size: 14px;
+ font-weight: 700;
+ border: 1px solid rgba(87, 204, 153, 1);
+ background: rgba(87, 204, 153, 1);
+ color: rgba(238, 255, 240, 1);
+}
+
+::v-deep(.p-paginator .p-paginator-pages .p-paginator-page){
+  border-radius: 50%;
+  color:rgba(156, 163, 175, 1);
+}
+
+::v-deep(.p-paginator .p-paginator-pages .p-paginator-page:hover){
+  border-radius: 50%;
+  color:rgba(156, 163, 175, 1);
+}
+
+::v-deep(.p-paginator .p-paginator-pages .p-paginator-page.p-highlight){
+  background: rgba(87, 204, 153, 1);
+  border-color: rgba(87, 204, 153, 1);
+  color: #fff;
+}
+
+::v-deep(.p-paginator .p-paginator-first:not(.p-disabled):not(.p-highlight):hover){
+  color: black;
+}
+
+::v-deep(.p-paginator .p-paginator-first:not(.p-disabled):not(.p-highlight)){
+  color: black;
+}
+
+::v-deep(.p-paginator .p-paginator-prev){
+  color: black;
+}
+
+::v-deep(.p-paginator .p-paginator-next){
+  color: black;
+}
+
+
 .card-controller{
   display: flex;
   flex-direction: column;
+  background: #fff;
  .card-controller-bottom{
    display: flex;
-   justify-content: space-between;
+   flex-direction: column;
+   margin-top: 15px;
+  .first-child{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .text{
+      font-weight: 700;
+    }
+  }
+  .last-child{
+    display: flex;
+    flex-direction: column;
+    .last-child-text{
+      font-size: 14px;
+      margin-right: 12px;
+      margin-top: 10px;
+    }
+    .last-child-bottom{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 28px;
+      margin-bottom: 24px;
+    }
+  }
+   
  }
 }
 </style>
