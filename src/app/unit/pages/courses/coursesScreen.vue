@@ -1,16 +1,7 @@
 <template>
  <div class="card">
-  <!-- <carousel :items-to-show="2">
-    <slide v-for="slide in products" :key="slide">
-      <img class="w-50" :src="slide.image"> 
-    </slide>
-    <template #addons>
-      <navigation />
-      <pagination />
-    </template>
-  </carousel> -->
-    <DataView :value="products"  :paginator="true" :layout="layout"  :rows="12" :sortOrder="sortOrder" :sortField="sortField">
-    <template #header>
+  <DataView :value="products"  :paginator="true" :layout="layout"  :rows="12" :sortOrder="sortOrder" :sortField="sortField">
+    <!-- <template #header>
                 <div class="grid grid-nogutter">
                     <div class="col-6" style="text-align: left">
                         <Dropdown v-model="sortKey" :options="sortOptions" optionLabel="label" placeholder="Sort By Price" @change="onSortChange($event)"/>
@@ -19,24 +10,23 @@
                         <DataViewLayoutOptions v-model="layout" />
                     </div>
                 </div>
-	</template>
+	  </template> -->
       <template #grid="slotProps">
-			<img :src="slotProps.data.image" :alt="slotProps.data.name"/>	
+      <div class="m-3 card-controller">
+          <img class="card-controller-img" :src="slotProps.data.image" :alt="slotProps.data.name"/>
+          <div class="card-controller-bottom">
+
+          </div>
+      </div>    	
 			</template>
 		</DataView>
     </div> 
 </template>
 <script>
 import DataView from 'primevue/dataview';
-// import 'vue3-carousel/dist/carousel.css';
-// import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 import {ref} from 'vue';
 export default {
     components:{  
-    // Carousel,
-    // Slide,
-    // Pagination,
-    // Navigation
     DataView
     },
     setup() {
@@ -96,106 +86,22 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-// ::v-deep(.grid){
-//     display:flex;
-//     flex-wrap: wrap;
-// }
-// .p-dropdown {
-//     width: 14rem;
-//     font-weight: normal;
-// }
-// .product-name {
-// 	font-size: 1.5rem;
-// 	font-weight: 700;
-// }
-// .product-description {
-// 	margin: 0 0 1rem 0;
-// }
-// .product-category-icon {
-// 	vertical-align: middle;
-// 	margin-right: .5rem;
-// }
-// .product-category {
-// 	font-weight: 600;
-// 	vertical-align: middle;
-// }
-// ::v-deep(.product-list-item) {
-// 	display: flex;
-// 	align-items: center;
-// 	padding: 1rem;
-// 	width: 100%;
-// 	img {
-// 		width: 150px;
-// 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-// 		margin-right: 2rem;
-// 	}
-// 	.product-list-detail {
-// 		flex: 1 1 0;
-// 	}
-// 	.p-rating {
-// 		margin: 0 0 .5rem 0;
-// 	}
-// 	.product-price {
-// 		font-size: 1.5rem;
-// 		font-weight: 600;
-// 		margin-bottom: .5rem;
-// 		align-self: flex-end;
-// 	}
-// 	.product-list-action {
-// 		display: flex;
-// 		flex-direction: column;
-// 	}
-// 	.p-button {
-// 		margin-bottom: .5rem;
-// 	}
-// }
-// ::v-deep(.product-grid-item) {
-// 	margin: .5rem;
-// 	border: 1px solid var(--surface-border);
-// 	.product-grid-item-top,
-// 	.product-grid-item-bottom {
-// 		display: flex;
-// 		align-items: center;
-// 		justify-content: space-between;
-// 	}
-// 	img {
-// 		width: 75%;
-// 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-// 		margin: 2rem 0;
-// 	}
-// 	.product-grid-item-content {
-// 		text-align: center;
-// 	}
-// 	.product-price {
-// 		font-size: 1.5rem;
-// 		font-weight: 600;
-// 	}
-// }
-// @media screen and (max-width: 576px) {
-// 	.product-list-item {
-// 		flex-direction: column;
-// 		align-items: center;
-// 		img {
-// 			width: 75%;
-// 			margin: 2rem 0;
-// 		}
-// 		.product-list-detail {
-// 			text-align: center;
-// 		}
-// 		.product-price {
-// 			align-self: center;
-// 		}
-// 		.product-list-action {
-// 			display: flex;
-// 			flex-direction: column;
-// 		}
-// 		.product-list-action {
-// 			margin-top: 2rem;
-// 			flex-direction: row;
-// 			justify-content: space-between;
-// 			align-items: center;
-// 			width: 100%;
-// 		}
-// 	}
-// }
+::v-deep(.p-grid){
+  display: flex;
+  flex-wrap: wrap;
+}
+::v-deep(.p-dataview .p-dataview-content){
+  background:#f2f3f5;
+}
+::v-deep(.card){
+  border: none;
+}
+.card-controller{
+  display: flex;
+  flex-direction: column;
+ .card-controller-bottom{
+   display: flex;
+   justify-content: space-between;
+ }
+}
 </style>
