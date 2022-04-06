@@ -99,6 +99,7 @@ export default {
 ::v-deep(.p-grid){
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 ::v-deep(.p-dataview .p-dataview-content){
   background:#f2f3f5;
@@ -161,10 +162,32 @@ export default {
   color: rgba(71, 85, 105, 1);
 }
 
-::v-deep(.p-paginator .p-paginator-next){
+::v-deep(.p-paginator .p-paginator-prev:hover){
   color: rgba(71, 85, 105, 1);
 }
 
+::v-deep(.p-paginator .p-paginator-next){
+  color: rgba(71, 85, 105, 1) !important;
+}
+
+::v-deep(.p-paginator .p-paginator-next:hover){
+  color: rgba(71, 85, 105, 1) !important;
+}
+
+::v-deeP(.p-paginator .p-paginator-last:not(.p-disabled):not(.p-highlight):hover){
+  color: rgba(71, 85, 105, 1);
+}
+
+::v-deeP(.p-paginator .p-paginator-last:not(.p-disabled):not(.p-highlight)){
+  color: rgba(71, 85, 105, 1);
+}
+::v-deep(.p-paginator .p-paginator-last){
+   color: rgba(71, 85, 105, 1);
+}
+
+::v-deep(.p-paginator .p-paginator-first){
+     color: rgba(71, 85, 105, 1);
+}
 
 .card-controller{
   display: flex;

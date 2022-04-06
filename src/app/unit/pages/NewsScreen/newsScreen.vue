@@ -1,8 +1,8 @@
 <template>
   <div class="parent">
-  <div class="head">   <h1 style="font-size:24px;color:#1F2937;padding-right: 30px;
+  <div class="head">   <h1 style="font-size:18px;color:#1F2937;padding-right: 30px;
 ">آخرین اخبار و اطلاعیه ها</h1>
-    <a href="#" style="color: #475569;text-decoration: none;font-size:20px;">خبر ها و اطلاعیه های گذشته<img src="@/assets/img/svg/LeftArrow.svg"> </a>
+    <a href="#" style="color: #475569;text-decoration: none;font-size:18px;">خبر ها و اطلاعیه های گذشته<img src="@/assets/img/svg/LeftArrow.svg"> </a>
    </div>
 
 
@@ -32,7 +32,7 @@
     </div>
 
 
-   <button class="newsbtn" style="width:228px;height:48px;background-color:#57CC99;color:#F4F4F4;border-radius:5px;border:#F4F4F4">خبر ها و اطلاعیه های گذشته</button>
+   <!-- <button class="newsbtn" style="width:228px;height:48px;background-color:#57CC99;color:#F4F4F4;border-radius:5px;border:#F4F4F4">خبر ها و اطلاعیه های گذشته</button> -->
 
 
   </div>
