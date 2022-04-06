@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <h2 style="padding-top: 20px">درباره دانش یاد</h2>
+    <h2 style="padding-top: 20px;font-size:24px;padding-right:15px">درباره دانش یاد</h2>
 
     <div class="wrap-collabsible" id="collapse">
       <p  class="outcard">
@@ -20,23 +20,24 @@
         </div>
 
     <div class="cards">
+      <div class="col"><h1>درباره شرکت داده ورزی سامانه</h1>
+        <div class="card">
+          <img src="@/assets/img/svg/aboutuspic2.svg" alt="image">
+          <div class="card-content">
+            <p class="incard">شرکت «داده ورزی سامانه» با پشتوانه تحلیل،طراحی و پیاده سازی پروژه سیستم جامع اطلاعات در چند شرکت بزرگ تولیدی و انتقال دانش فنی و کارشناسان پروژه مربوطه در سال 1376 تاسیس گردید.</p>
+            <button v-bind:href="dadevarzi">دانلود فایل PDF معرفی داده ورزی سامانه</button>
+          </div>
+        </div></div>
+<div class="col"><h1 >درباره شرکت فن آپ</h1>
+  <div class="card">
+    <img src="@/assets/img/svg/aboutuspic1.svg" alt="image2">
+    <div class="card-content">
+      <p>  شرکت فناوری اطلاعات وارتباطات پاسارگادآرین (فناپ) در24 دی ماه سال1384 با سرمایه گذاری گروه ملی پاسارگاد وهمکاری جمعی از نخبگان و فارغ التحصیلان دانشگاه های برتر کشور تاسیس شد.
+      </p>
+      <button v-bind:href="Fanap" >دانلود فایل PDF معرفی فناپ</button>
 
-      <div class="card">
-        <img src="@/assets/img/svg/aboutuspic2.svg" alt="image">
-        <div class="card-content">
-          <p class="incard">شرکت «داده ورزی سامانه» با پشتوانه تحلیل،طراحی و پیاده سازی پروژه سیستم جامع اطلاعات در چند شرکت بزرگ تولیدی و انتقال دانش فنی و کارشناسان پروژه مربوطه در سال 1376 تاسیس گردید.</p>
-          <a v-bind:href="dadevarzi" class="buttonlink" style="display: flex;align-items: center;justify-content: center;padding-top: 20px;text-decoration: none"><button>دانلود فایل PDF معرفی داده ورزی سامانه</button></a>
-        </div>
-      </div>
+    </div></div>
 
-      <div class="card">
-        <img src="@/assets/img/svg/aboutuspic1.svg" alt="image2">
-        <div class="card-content">
-          <p>  شرکت فناوری اطلاعات وارتباطات پاسارگادآرین(فناپ)در24 دی ماه سال1384 با سرمایه گذاری گروه ملی پاسارگاد وهمکاری جمعی از نخبگان و فارغ التحصیلان دانشگاه های برتر کشور تاسیس شد.
-          </p>
-          <a v-bind:href="Fanap" class="buttonlink" style="display: flex;align-items: center;justify-content: center;padding-top: 20px;text-decoration: none"><button type="button" >دانلود فایل PDF معرفی فناپ</button></a>
-
-        </div>
       </div>
       </div>
     </div>
@@ -50,8 +51,8 @@ export default {
     const route = useRoute();
     return {
       isCollapsed:'false',
-      Fanap:'https://www.google.com',
-      dadevarzi:'https://www.google.com'
+      Fanap:'',
+      dadevarzi:''
     };
   },
 };
@@ -70,14 +71,21 @@ body {
 }
 .cards {
   display: flex;
-justify-content: space-evenly;
+justify-content:flex-start;
   flex-wrap: nowrap;
-  gap: 30px;
-padding: 20px;
+  margin-top: 64px;
+  margin-bottom: 56px;
+  margin-right:10px;
 }
 .card{
-  width:594px;
+  width: 594px;
   height: 703px;
+  border: 1px solid #D2D2D2;
+  border-radius: 18px
+}
+h1{
+  font-weight: 500;
+  font-size: 24px;
 }
 
   img{
@@ -86,7 +94,7 @@ padding: 20px;
 
   .card-content {
     line-height: 1.5rem;
-    padding: 15px;
+    padding: 20px 32px 20px 32px;
     width: 530px;
     height: 139px;
 
@@ -95,6 +103,7 @@ padding: 20px;
       color: #475569;
       font-size:20px;
       padding-right: 15px;
+      font-weight: 500;
   }
 .text-show{
   color: #2F80ED;
@@ -104,15 +113,17 @@ padding: 20px;
 
 }
   button{
-    width:464px;
-    height:100px;
+    width: 500px;
+    height: 100px;
     cursor: pointer;
     color:white;
+    border:white;
+    background: #57CC99;
     border-radius: 18px;
-    border-color: #57CC99;
     align-items: center;
     justify-content: center;
-    background-color:#57CC99;
+    margin-top:25px;
+    margin-right:10px;
   }
 
 .outcard{
@@ -123,21 +134,39 @@ padding: 20px;
   color: #57CC99;
   text-decoration: none;
 }
+.col{
+  display:flex;
+  flex-direction: column;
+}
+h1{
+  margin-bottom:20px;font-weight: 500;
+  font-size: 24px;
+}
 @media only screen and (max-width: 768px) {
   .cards {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    gap: 30px;
-    padding: 20px;
+  margin-left:40px;
+gap:20px;
   }
   .card {
     width: 374px;
-    height: 473px;
+    height: 463px;
+    margin-bottom:20px;
   }
   button {
-    width: 228px;
+    width: 250px;
     height: 46px;
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background: #57CC99;
+    border-radius: 6px;
+    margin-right: 40px;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight:Bold;
 
   }
   .card-content {
@@ -162,6 +191,11 @@ padding: 20px;
   }
   .buttonlink{
     font-size: 12px;
+  }
+  h1{
+    font-weight:500;
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
