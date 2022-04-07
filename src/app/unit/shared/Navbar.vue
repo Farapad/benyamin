@@ -162,7 +162,8 @@ export default {
                                         label:'امنیت'
                                     },
                                     {
-                                        label:'طراحی وب'
+                                        label:'طراحی وب',
+                                        route:"/courses"
                                     },
                                     {
                                         label:'انیمیشن'
