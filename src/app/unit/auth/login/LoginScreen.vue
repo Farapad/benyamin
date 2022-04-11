@@ -7,7 +7,7 @@
       <InputText placeholder="موبایل / ایمیل خود را وارد کنید" class="my-3" type="text" v-model="username" />
       <span class="mobile-text">رمز عبور</span>
       <Password class="my-3 w-100" v-model="password" placeholder="رمز عبور خود را وارد کنید" toggleMask></Password>
-      <span class="forgot">رمز عبور خود را فراموش کرده اید؟</span>
+      <span @click="nextStep" class="forgot">رمز عبور خود را فراموش کرده اید؟</span>
     </div>
     <div class="child3">
       <Button label="ورود به سامانه" class="p-button-raised p-button-success" />
@@ -29,9 +29,13 @@ export default {
   setup(){
     const username = null;
     const password = null;
+    function nextStep(){
+
+    }
     return {
       username,
-      password
+      password,
+      nextStep
     }
   }
 
