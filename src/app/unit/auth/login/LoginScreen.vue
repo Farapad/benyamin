@@ -1,6 +1,7 @@
 <template>
   <div class="main-controller">
-    <div><topscreen :label="'ورود به سامانه'"/></div>
+    <div class=""><topscreen :label="'ورود به سامانه'"/></div>
+   <div class="box"> 
     <div class="child2">
       <span class="mobile-text">موبایل / ایمیل</span>
       <InputText placeholder="موبایل / ایمیل خود را وارد کنید" class="my-3" type="text" v-model="username" />
@@ -15,6 +16,7 @@
     <div class="bottom-text">
       <span>هنوز ثبت نام نکرده اید؟</span><span class="child px-1">ثبت نام</span>
     </div>
+   </div>
   </div>
 </template>
 <script lang="ts">
@@ -126,6 +128,14 @@ export default {
     text-decoration: underline #3b82f6;
     color:#3b82f6;
     cursor: pointer;
+  }
+}
+@media (min-width:750px) {
+  .main-controller{
+    flex-direction:row;
+  }
+  .box{
+    width: 50%;
   }
 }
 </style>
