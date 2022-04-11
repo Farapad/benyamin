@@ -100,5 +100,12 @@ export default {
         cursor: pointer;
     }
 }
-
+@media (min-width:750px) {
+  .main-controller{
+    flex-direction:row;
+  }
+  .box{
+    width: 50%;
+  }
+}
 </style>
