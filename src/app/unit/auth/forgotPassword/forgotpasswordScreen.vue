@@ -1,16 +1,19 @@
 <template>
     <div class="main-controller">
-        <div class="first-child">
+        <div class="box">
             <topscreen :label="'بازیابی رمز عبور'"/>
         </div>
+        <div class="box">
         <div class="second-child">
             <span class="mobile-text">موبایل / ایمیل</span>
             <Password :class=" validation == true ? 'p-invalid' : ''"  class="my-3 w-100" v-model="password" placeholder="رمز عبور خود را وارد کنید" toggleMask></Password>
+            <div class="third-child">
+                <Button @click="apply()" label="بازیابی رمز عبور" class="p-button-raised p-button-success" />
+                <span class="bottom-text" @click="backstep">بازگشت به صفحه ورود</span>
+            </div>
         </div>
-        <div class="third-child">
-         <Button @click="apply()" label="بازیابی رمز عبور" class="p-button-raised p-button-success" />
-         <span class="bottom-text" @click="backstep">بازگشت به صفحه ورود</span>
         </div>
+     
     </div>
 </template>
 <script>
@@ -27,7 +30,7 @@ export default {
        const validation = ref(null);
        const password = ref(null);
        function backstep(){
-           router.push("/login")
+           router.push("");
        }
        function apply(){
           if (password.value == null){
@@ -108,9 +111,23 @@ export default {
 @media (min-width:750px) {
   .main-controller{
     flex-direction:row;
+    align-items: center;
   }
   .box{
     width: 50%;
   }
 }
+@media (min-width:750px) {
+  .main-controller{
+    flex-direction:row;
+  }
+  .box{
+    width: 50%;
+  }
+  ::v-deep(.label){
+  position: relative;
+  right:50%;
+  }
+}
+
 </style>

@@ -8,7 +8,7 @@ const newPassword = () =>
   import("@/app/unit/auth/forgotPassword/newPassword.vue");
 
 export const authRoutes: Array<RouteRecordRaw> = [
-  { path: "/login", component: LoginScreen },
+  { path: "", component: LoginScreen },
   { path: "/forgotpassword", component: forgotPassword },
   { path: "/otpcode", component: code },
   { path: "/newPassword", component: newPassword },

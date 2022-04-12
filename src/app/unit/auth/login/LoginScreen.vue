@@ -1,6 +1,6 @@
 <template>
   <div class="main-controller">
-    <div class=""><topscreen :label="'ورود به سامانه'"/></div>
+    <div class="box"><topscreen :label="'ورود به سامانه'"/></div>
    <div class="box"> 
     <div class="child2">
       <span class="mobile-text">موبایل / ایمیل</span>
@@ -10,7 +10,7 @@
       <span @click="nextStep" class="forgot">رمز عبور خود را فراموش کرده اید؟</span>
     </div>
     <div class="child3">
-      <Button label="ورود به سامانه" class="p-button-raised p-button-success" />
+      <Button @click="EnterToSystem" label="ورود به سامانه" class="p-button-raised p-button-success" />
       <Button  class="p-button-raised p-button-success google my-3" ><img class="px-2" src="@/assets/img/svg/google.svg" alt="google">با گوگل وارد شوید</Button>
     </div>
     <div class="bottom-text">
@@ -33,10 +33,14 @@ export default {
     function nextStep(){
           router.push("/forgotpassword");
     }
+    function EnterToSystem(){
+      router.push("/pages")
+    }
     return {
       username,
       password,
-      nextStep
+      nextStep,
+      EnterToSystem
     }
   }
 
@@ -49,6 +53,7 @@ export default {
   justify-content: center;
   width: 100%;
   padding: 56px;
+  align-items: center;
 }
 .child2{
   display: flex;
@@ -142,5 +147,10 @@ export default {
   .box{
     width: 50%;
   }
+  ::v-deep(.label){
+  position: relative;
+  right:46%;
+ }
 }
+
 </style>
