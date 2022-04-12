@@ -10,9 +10,6 @@
                 <template class="d-flex">
 		        	<div>
 		        		<Menubar v-model="menuvalue" class="text-color" :model="items">
-                               <template #item="{item}">
-                                    <a :href="item.url">{{item.label}}</a>
-                               </template>
 		        		</Menubar>
 		        	</div>
 		        </template>
@@ -82,14 +79,13 @@
 
 import { useRoute } from "vue-router";
 import { ref, onMounted } from "vue";
-// import NodeService from '@/core/service/nodeServise';
 import Menubar from 'primevue/menubar';
 import router from '@/core/router/router';
-``
+
 export default {
   components:{Menubar},
   setup() {
-    const route = useRoute();
+    const route = router;
     const Search = ref();
     const menuvalue = ref(null)
 
@@ -121,6 +117,7 @@ export default {
 							{
 								label:'امور حقوقی ',
 								// icon:'pi pi-fw pi-user-plus',
+                                path:"/news"
 							},
                             	{
 								label:'ایمنی',
@@ -149,6 +146,7 @@ export default {
 									{
 										label:'نرم افزار',
 										// icon:'pi pi-fw pi-filter',
+                                        // router.push("/register"),
                                         
 									},
 									{

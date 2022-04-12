@@ -24,13 +24,14 @@ import topscreen from '@/app/unit/auth/topscreen.vue'
 import InputText from 'primevue/inputtext';
 import Password from 'primevue/password';
 import Button from 'primevue/button';
+import router from '@/core/router/router';
 export default {
   components:{topscreen,InputText,Password,Button},
   setup(){
     const username = null;
     const password = null;
     function nextStep(){
-        
+          router.push("/forgotpassword");
     }
     return {
       username,

@@ -43,6 +43,7 @@
         "vue3-persian-datepicker": "^0.1.7",
         "vue3-persian-datetime-picker": "^1.0.0",
         "vue3-qr-reader": "^1.0.0",
+        "vue3-router-tree": "^0.2.4",
         "vuex": "^4.0.0-0",
         "webpack": "^4.46.0",
         "yup": "^0.32.9"
