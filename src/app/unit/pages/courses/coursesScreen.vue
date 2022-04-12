@@ -20,7 +20,7 @@
               <Button class="p-button-success mx-3" :label="'آفلاین'"/>
             </div>
             <div class="last-child">
-               <span class="last-child-text">HTML ﯽﺗﺎﻣﺪﻘﻣ هرود ﺮﺼﺘﺨﻣ تﺎﺤﻴﺿﻮﺗ</span>
+               <span class="last-child-text">اموزش مقدماتی تا پیشرفته زبان های برنامه نویسی</span>
                <div class="last-child-bottom">
                   <Button class=" " :label="'ثبت نام فردی'"/>
                    <Button class=" " :label="'ثبت نام گروهی'"/>
@@ -44,21 +44,21 @@ export default {
       const layout = ref('grid');
 
       const picture = ref(require('../../../../assets/img/svg/png/html.png'));
-      const picturee = ref(require('../../../../assets/img/svg/png/html.png'));
+      const picturee = ref(require('../../../../assets/img/svg/png/js.png'));
       const products = [
         {id:1000,code: "f230fh0g3",name: 'Bamboo Watch',image: picture.value ,description: 'Product Description'},
         {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
+        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picture.value ,description: 'Product Description'},
+        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
+        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picture.value ,description: 'Product Description'},
+        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
+        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picture.value ,description: 'Product Description'},
         {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
         {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
+        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picture.value ,description: 'Product Description'},
+        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picture.value ,description: 'Product Description'},
         {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
-        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
-        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
-        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
-        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
-        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
-        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
-        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
-        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
+        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picture.value ,description: 'Product Description'},
         {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
       ];
            const sortKey = ref();

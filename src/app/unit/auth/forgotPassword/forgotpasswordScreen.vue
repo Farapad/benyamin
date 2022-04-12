@@ -27,11 +27,15 @@ export default {
         Password
     },
     setup() {
+
        const validation = ref(null);
+
        const password = ref(null);
+
        function backstep(){
-           router.push("");
+           router.push("/pages");
        }
+
        function apply(){
           if (password.value == null){
               validation.value = true;
@@ -40,6 +44,7 @@ export default {
               validation.value = false;
           }
        }  
+
        return { 
            validation,
            password,

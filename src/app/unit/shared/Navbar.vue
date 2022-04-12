@@ -10,6 +10,9 @@
                 <template class="d-flex">
 		        	<div>
 		        		<!-- <Menubar v-model="menuvalue" class="text-color" :model="items">
+                    <template #item="{item}">
+        <a :href="item.to">{{item.label}}</a>
+    </template>
 		        		</Menubar> -->
                          <router-link to="/courses">
                             <span class="text-color font-16 hover-pointer nav-item">دوره ها و درس ها</span>
@@ -113,82 +116,97 @@ export default {
     //   console.log('sss');
     // }
 
-        const items = ref([
-					{
-						label:'دوره ها و درس ها',
-						items:[
-							{
-								label:'امور حقوقی ',
-								// icon:'pi pi-fw pi-user-plus',
-                                path:"/news"
-							},
-                            	{
-								label:'ایمنی',
-								// icon:'pi pi-fw pi-user-plus',
-							},
-                            	{
-								label:'بازاریابی و فروش',
-								// icon:'pi pi-fw pi-user-plus',
-							},
-                            	{
-								label:'زبان',
-								// icon:'fa fa-language',
-							},
-                            	{
-								label:'سلامت',
-								// icon:'pi pi-fw pi-user-plus',
-							},
-                            	{
-								label:'کسب و کار',
-								// icon:'pi pi-fw pi-user-plus',
-							},
-							{
-								label:'فناوری اطلاعات و ارتباطات',
-								// icon:'pi pi-fw pi-users',
-								items:[
-									{
-										label:'نرم افزار',
-										// icon:'pi pi-fw pi-filter',
-                                        // router.push("/register"),
+    const items = ref([
+    {
+        label: 'Options',
+        items: [{label: 'New', icon: 'pi pi-fw pi-plus', command:() => {} },
+                {label: 'Delete', icon: 'pi pi-fw pi-trash', url: 'http://primetek.com.tr'}]
+    },
+    // {
+    //     label: 'Account',
+    //     items: [{label: 'Options', icon: 'pi pi-fw pi-cog', to: '/options'},
+    //             {label: 'Sign Out', icon: 'pi pi-fw pi-power-off', to: '/logout'} ]
+    // }
+    ]);
+
+        // const items = ref([
+		// 			{
+		// 				label:'دوره ها و درس ها',
+        //                 icon: 'pi pi-plus',
+		// 				items:[
+		// 					{
+		// 						label:'امور حقوقی ',
+		// 						// icon:'pi pi-fw pi-user-plus',
+        //                         path:"/news"
+		// 					},
+        //                     	{
+		// 						label:'ایمنی',
+		// 						// icon:'pi pi-fw pi-user-plus',
+		// 					},
+        //                     	{
+		// 						label:'بازاریابی و فروش',
+		// 						// icon:'pi pi-fw pi-user-plus',
+		// 					},
+        //                     	{
+		// 						label:'زبان',
+		// 						// icon:'fa fa-language',
+		// 					},
+        //                     	{
+		// 						label:'سلامت',
+		// 						// icon:'pi pi-fw pi-user-plus',
+		// 					},
+        //                     	{
+		// 						label:'کسب و کار',
+		// 						// icon:'pi pi-fw pi-user-plus',
+		// 					},
+		// 					{
+		// 						label:'فناوری اطلاعات و ارتباطات',
+		// 						// icon:'pi pi-fw pi-users',
+		// 						items:[
+		// 							{
+		// 								label:'نرم افزار',
+		// 								// icon:'pi pi-fw pi-filter',
+        //                                 // router.push("/register"),
                                         
-									},
-									{
-										// icon:'pi pi-fw pi-user-plus',
-										label:'سخت افزار'
-									},
-                                    {
-                                        label:'شبکه'
-                                    },
-                                    {
-                                        label:'علوم داده'
-                                    },
-                                    {
-                                        label:'امنیت'
-                                    },
-                                    {
-                                        label:'طراحی وب',
-                                        route:"/courses"
-                                    },
-                                    {
-                                        label:'انیمیشن'
-                                    }
-								]
-							},
-                            	{
-								label:'مالی و حسابداری',
-								// icon:'pi pi-fw pi-user-plus',
-							},
-                            	{
-								label:'مدیریت',
-								// icon:'pi pi-fw pi-user-plus',
-							},
-                            	{
-								label:'مهندسی',
-								// icon:'pi pi-fw pi-user-plus',
-							}
-						]
-					},
-				]);
+		// 							},
+		// 							{
+		// 								// icon:'pi pi-fw pi-user-plus',
+		// 								label:'سخت افزار'
+		// 							},
+        //                             {
+        //                                 label:'شبکه'
+        //                             },
+        //                             {
+        //                                 label:'علوم داده'
+        //                             },
+        //                             {
+        //                                 label:'امنیت'
+        //                             },
+        //                             {
+        //                                 label:'طراحی وب',
+        //                                 route:"/courses"
+        //                             },
+        //                             {
+        //                                 label:'انیمیشن'
+        //                             }
+		// 						]
+		// 					},
+        //                     	{
+		// 						label:'مالی و حسابداری',
+		// 						// icon:'pi pi-fw pi-user-plus',
+		// 					},
+        //                     	{
+		// 						label:'مدیریت',
+		// 						// icon:'pi pi-fw pi-user-plus',
+		// 					},
+        //                     	{
+		// 						label:'مهندسی',
+		// 						// icon:'pi pi-fw pi-user-plus',
+        //                         to:"/login"
+		// 					}
+		// 				]
+		// 			},
+		// 		]);
     
     // console.log(menuvalue , 'ssss');
     return {
