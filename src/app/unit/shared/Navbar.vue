@@ -10,6 +10,9 @@
                 <template class="d-flex">
 		        	<div>
 		        		<Menubar v-model="menuvalue" class="text-color" :model="items">
+                               <template #item="{item}">
+                                    <a :href="item.url">{{item.label}}</a>
+                               </template>
 		        		</Menubar>
 		        	</div>
 		        </template>
