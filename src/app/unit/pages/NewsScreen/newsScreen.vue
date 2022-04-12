@@ -9,7 +9,7 @@
     <div class="cards">
 
       <div class="card">
-        <img class="imgcard" src="@/assets/img/svg/news1.svg" alt="image">
+        <img class="imgcard"  v-lazy="image2"  alt="image">
         <h5 style="color:#1F2937;font-size: 20px;font-weight:500;padding-right:37px;padding-top:18px">شروع دوره برنامه نویسی موبایل IOS از 24 اسفند </h5>
         <div class="card-content">
           <p class="incard">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد</p>
@@ -17,8 +17,7 @@
       </div>
 
       <div class="card">
-
-        <img src="@/assets/img/svg/news2.svg" alt="image2">
+        <img v-lazy="image"  >
         <h5 style="color:#1F2937;font-size: 20px;font-weight:500;padding-right:37px;padding-top:18px">شروع دوره برنامه نویسی PHP از 20 اسفند </h5>
         <div class="card-content">
           <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
@@ -34,9 +33,15 @@
   </div>
 </template>
 <script>
+import {ref} from "vue"
 export default {
     setup() {
-        
+        const image = ref(require("@/assets/img/svg/news2.svg"))
+        const image2 = ref(require("@/assets/img/svg/news1.svg"))
+        return{
+          image,
+          image2
+        }
     },
 }
 </script>
