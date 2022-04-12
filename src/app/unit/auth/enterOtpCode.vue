@@ -22,7 +22,10 @@ export default {
         topscreen
     },
     setup() {
-        
+        const username = null
+        return {
+            username
+        }
     },
 }
 </script>

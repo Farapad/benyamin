@@ -9,7 +9,7 @@
         </div>
         <div class="third-child">
          <Button @click="apply()" label="بازیابی رمز عبور" class="p-button-raised p-button-success" />
-         <span class="bottom-text">بازگشت به صفحه ورود</span>
+         <span class="bottom-text" @click="backstep">بازگشت به صفحه ورود</span>
         </div>
     </div>
 </template>
@@ -17,6 +17,7 @@
 import topscreen from '@/app/unit/auth/topscreen.vue';
 import Password from 'primevue/password';
 import {ref} from 'vue';
+import router from '@/core/router/router';
 export default {
     components:{
         topscreen,
@@ -25,6 +26,9 @@ export default {
     setup() {
        const validation = ref(null);
        const password = ref(null);
+       function backstep(){
+           router.push("/login")
+       }
        function apply(){
           if (password.value == null){
               validation.value = true;
@@ -36,7 +40,8 @@ export default {
        return { 
            validation,
            password,
-           apply
+           apply,
+           backstep
        }
     },
 }
