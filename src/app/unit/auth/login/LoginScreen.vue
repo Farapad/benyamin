@@ -30,7 +30,7 @@ export default {
     const username = null;
     const password = null;
     function nextStep(){
-
+        
     }
     return {
       username,
