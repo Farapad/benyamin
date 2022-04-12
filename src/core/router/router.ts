@@ -10,7 +10,7 @@ const news = () => import("@/app/unit/pages/NewsScreen/newsScreen.vue");
 const Test = () => import("@/app/unit/shared/Test.vue");
 
 const routes: Array<RouteRecordRaw> = [
-  { path: "", component: Pages },
+  { path: "/pages", component: Pages },
   { path: "/news", component: news },
   { path: "/test", component: Test },
   ...authRoutes,
