@@ -14,7 +14,7 @@
       <Button  class="p-button-raised p-button-success google my-3" ><img class="px-2" src="@/assets/img/svg/google.svg" alt="google">با گوگل وارد شوید</Button>
     </div>
     <div class="bottom-text">
-      <span>هنوز ثبت نام نکرده اید؟</span><span class="child px-1">ثبت نام</span>
+      <span>هنوز ثبت نام نکرده اید؟</span><span @click="signstep" class="child px-1">ثبت نام</span>
     </div>
    </div>
   </div>
@@ -33,6 +33,9 @@ export default {
     function nextStep(){
           router.push("/forgotpassword");
     }
+    function signstep(){
+       router.push("/signup");
+    }
     function EnterToSystem(){
       router.push("/pages")
     }
@@ -40,7 +43,8 @@ export default {
       username,
       password,
       nextStep,
-      EnterToSystem
+      EnterToSystem,
+      signstep
     }
   }
 
