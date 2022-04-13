@@ -6,10 +6,12 @@ const forgotPassword = () =>
 const code = () => import("@/app/unit/auth/enterOtpCode.vue");
 const newPassword = () =>
   import("@/app/unit/auth/forgotPassword/newPassword.vue");
+const signup = () => import("@/app/unit/auth/signUp/signScreen.vue");
 
 export const authRoutes: Array<RouteRecordRaw> = [
   { path: "", component: LoginScreen },
   { path: "/forgotpassword", component: forgotPassword },
   { path: "/otpcode", component: code },
   { path: "/newPassword", component: newPassword },
+  { path: "/signup", component: signup },
 ];
