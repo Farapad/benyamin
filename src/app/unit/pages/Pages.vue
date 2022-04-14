@@ -11,16 +11,17 @@
     </template>
   </carousel>
       <div class="card-carousel">
-          <div class="card-1">
+          <!-- <div class="card-1">
          سامانه جامع آموزش و یادگیری الکترونیکی            
       ثمره هم افزایی بین شرکت های فناپ و داده ورزی سامانه            
       آمیزه ای از فناوری ها و قابلیت ها در قالب یک نظام یک پارچه            
-          </div>
+          </div> -->
+            <img src="@/assets/img/svg/png/pages-text.png">
       </div>    
   </div>
   <div>
 
-    <img src="@/assets/img/svg/png/logo-d">
+    <img src="@/assets/img/svg/png/pages-text.png">
     <!-- <p class="text-between">
     <br>  <span style="font-weight:700;">سامانه جامع آموزش \ یادگیری الکترونیکی</span> <br>   <br>  
       ثمره هم افزایی بین شرکت های فناپ و داده ورزی سامانه      
