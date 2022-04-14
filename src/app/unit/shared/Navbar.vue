@@ -76,7 +76,6 @@
 
 import { useRoute } from "vue-router";
 import { ref, onMounted } from "vue";
-// import NodeService from '@/core/service/nodeServise';
 import Menu from 'primevue/menu';
 
 import Menubar from 'primevue/menubar';
@@ -107,56 +106,79 @@ export default {
 						items:[
 							{
 								label:'امور حقوقی ',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
                                  command: () => {
                                     router.push('/news')
                                 }
 							},
                             	{
 								label:'ایمنی',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
                             	{
 								label:'بازاریابی و فروش',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
                             	{
 								label:'زبان',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
                             	{
 								label:'سلامت',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
                             	{
 								label:'کسب و کار',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
 							{
 								label:'فناوری اطلاعات و ارتباطات',
-								icon:'pi pi-fw pi-users',
+								// icon:'pi pi-fw pi-users',
 								items:[
 									{
-										label:'Filter',
-										icon:'pi pi-fw pi-filter',
+										label:'نرم افزار',
+										// icon:'pi pi-fw pi-filter',
 									},
 									{
-										icon:'pi pi-fw pi-bars',
-										label:'List'
+										// icon:'pi pi-fw pi-bars',
+										label:'سخت افزار'
+									},
+									{
+										// icon:'pi pi-fw pi-bars',
+										label:'شبکه'
+									},
+									{
+										// icon:'pi pi-fw pi-bars',
+										label:'علوم داده'
+									},
+									{
+										// icon:'pi pi-fw pi-bars',
+										label:'امنیت'
+									},
+									{
+										// icon:'pi pi-fw pi-bars',
+										label:'طراحی وب',
+                                            command: () => {
+                                    router.push('/courses')
+                                }
+									},
+									{
+										// icon:'pi pi-fw pi-bars',
+										label:'انیمیشن'
 									}
 								]
 							},
                             	{
 								label:'مالی و حسابداری',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
                             	{
 								label:'مدیریت',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
                             	{
 								label:'مهندسی',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							}
 						]
 					},
