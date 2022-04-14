@@ -9,29 +9,20 @@
             <span class="text-color font-16 hover-pointer nav-item">
                 <template class="d-flex">
 		        	<div>
-		        		<Menubar v-model="menuvalue" class="text-color" :model="items">
-                                <!-- <template #item="{item}">
-                             <a :href="item.to">{{item.label}}</a>
-                                </template> -->
+		        		<Menubar class="text-color" :model="items">
 		        		</Menubar>
-                         <!-- <router-link to="/courses">
-                            <span class="text-color font-16 hover-pointer nav-item">دوره ها و درس ها</span>
-                         </router-link> -->
 		        	</div>
 		        </template>
             </span>
           </div>
           <div>  
-               <router-link to="/news">
-               <span class="text-color font-16 hover-pointer nav-item">خبر ها</span>
-               </router-link>
+             <span class="text-color font-16 hover-pointer nav-item">خبر ها</span>
           </div> 
           <div>  
              <span class="text-color font-16 hover-pointer nav-item">اطلاعیه ها</span>
           </div> 
           <div>
-               <router-link to="/about"><span class="text-color font-16 hover-pointer nav-item">درباره ما</span></router-link>
-             
+             <span class="text-color font-16 hover-pointer nav-item">درباره ما</span>
           </div>
         </div>  
         <div>
@@ -82,18 +73,20 @@
    </div>
 </template>
 <script>
-import Menubar from 'primevue/menubar';
+
 import { useRoute } from "vue-router";
 import { ref, onMounted } from "vue";
+// import NodeService from '@/core/service/nodeServise';
+import Menu from 'primevue/menu';
+
 import Menubar from 'primevue/menubar';
 import router from '@/core/router/router';
-
+``
 export default {
-  components:{Menubar},
+  components:{Menubar,Menu},
   setup() {
-    const route = router;
-    const Search = ref();
-    const menuvalue = ref(null)
+    const route = useRoute();
+    const Search = ref()
 
     function hamburgerbar(){
         document.getElementById("hamberger").style.right = "-12%";
@@ -108,114 +101,74 @@ export default {
         document.getElementById("search").style.display = "block";
         document.getElementById("hamberger").style.display = "none";
     }
-
-    const icon = ref(require('../../../assets/img/svg/png/main-page.png'));
-
-    // function about(){
-    //   router.push('/my-profile');
-    //   console.log('sss');
-    // }
-
-    const items = ref([
-    {
-        label: 'Options',
-        items: [{label: 'New', icon: 'pi pi-fw pi-plus', command:() => {} },
-                {label: 'Delete', icon: 'pi pi-fw pi-trash', url: 'http://primetek.com.tr'}]
-    },
-    // {
-    //     label: 'Account',
-    //     items: [{label: 'Options', icon: 'pi pi-fw pi-cog', to: '/options'},
-    //             {label: 'Sign Out', icon: 'pi pi-fw pi-power-off', to: '/logout'} ]
-    // }
-    ]);
-
-        // const items = ref([
-		// 			{
-		// 				label:'دوره ها و درس ها',
-        //                 icon: 'pi pi-plus',
-		// 				items:[
-		// 					{
-		// 						label:'امور حقوقی ',
-		// 						// icon:'pi pi-fw pi-user-plus',
-        //                         path:"/news"
-		// 					},
-        //                     	{
-		// 						label:'ایمنی',
-		// 						// icon:'pi pi-fw pi-user-plus',
-		// 					},
-        //                     	{
-		// 						label:'بازاریابی و فروش',
-		// 						// icon:'pi pi-fw pi-user-plus',
-		// 					},
-        //                     	{
-		// 						label:'زبان',
-		// 						// icon:'fa fa-language',
-		// 					},
-        //                     	{
-		// 						label:'سلامت',
-		// 						// icon:'pi pi-fw pi-user-plus',
-		// 					},
-        //                     	{
-		// 						label:'کسب و کار',
-		// 						// icon:'pi pi-fw pi-user-plus',
-		// 					},
-		// 					{
-		// 						label:'فناوری اطلاعات و ارتباطات',
-		// 						// icon:'pi pi-fw pi-users',
-		// 						items:[
-		// 							{
-		// 								label:'نرم افزار',
-		// 								// icon:'pi pi-fw pi-filter',
-        //                                 // router.push("/register"),
-                                        
-		// 							},
-		// 							{
-		// 								// icon:'pi pi-fw pi-user-plus',
-		// 								label:'سخت افزار'
-		// 							},
-        //                             {
-        //                                 label:'شبکه'
-        //                             },
-        //                             {
-        //                                 label:'علوم داده'
-        //                             },
-        //                             {
-        //                                 label:'امنیت'
-        //                             },
-        //                             {
-        //                                 label:'طراحی وب',
-        //                                 route:"/courses"
-        //                             },
-        //                             {
-        //                                 label:'انیمیشن'
-        //                             }
-		// 						]
-		// 					},
-        //                     	{
-		// 						label:'مالی و حسابداری',
-		// 						// icon:'pi pi-fw pi-user-plus',
-		// 					},
-        //                     	{
-		// 						label:'مدیریت',
-		// 						// icon:'pi pi-fw pi-user-plus',
-		// 					},
-        //                     	{
-		// 						label:'مهندسی',
-		// 						// icon:'pi pi-fw pi-user-plus',
-        //                         to:"/login"
-		// 					}
-		// 				]
-		// 			},
-		// 		]);
+        const items = ref([
+					{
+						label:'دوره ها و درس ها',
+						items:[
+							{
+								label:'امور حقوقی ',
+								icon:'pi pi-fw pi-user-plus',
+                                 command: () => {
+                                    router.push('/news')
+                                }
+							},
+                            	{
+								label:'ایمنی',
+								icon:'pi pi-fw pi-user-plus',
+							},
+                            	{
+								label:'بازاریابی و فروش',
+								icon:'pi pi-fw pi-user-plus',
+							},
+                            	{
+								label:'زبان',
+								icon:'pi pi-fw pi-user-plus',
+							},
+                            	{
+								label:'سلامت',
+								icon:'pi pi-fw pi-user-plus',
+							},
+                            	{
+								label:'کسب و کار',
+								icon:'pi pi-fw pi-user-plus',
+							},
+							{
+								label:'فناوری اطلاعات و ارتباطات',
+								icon:'pi pi-fw pi-users',
+								items:[
+									{
+										label:'Filter',
+										icon:'pi pi-fw pi-filter',
+									},
+									{
+										icon:'pi pi-fw pi-bars',
+										label:'List'
+									}
+								]
+							},
+                            	{
+								label:'مالی و حسابداری',
+								icon:'pi pi-fw pi-user-plus',
+							},
+                            	{
+								label:'مدیریت',
+								icon:'pi pi-fw pi-user-plus',
+							},
+                            	{
+								label:'مهندسی',
+								icon:'pi pi-fw pi-user-plus',
+							}
+						]
+					},
+				]);
     
-    // console.log(menuvalue , 'ssss');
+
     return {
       route,
       Search,
       hamburgerbar,
       closehamburger,
       items,
-      menuvalue
     };
   },
 };
@@ -385,8 +338,5 @@ export default {
 ::v-deep(.p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon){
     transform: rotate(180deg);
     margin-right: 20px;
-}
-.icon-about-us-icon:before {
-  content: "\e900";
 }
 </style>
