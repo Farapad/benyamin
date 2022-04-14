@@ -19,11 +19,13 @@
       </div>    
   </div>
   <div>
-    <p class="text-between">
-      سامانه جامع آموزش و یادگیری الکترونیکی      
+
+    <img src="@/assets/img/svg/png/logo-d">
+    <!-- <p class="text-between">
+    <br>  <span style="font-weight:700;">سامانه جامع آموزش \ یادگیری الکترونیکی</span> <br>   <br>  
       ثمره هم افزایی بین شرکت های فناپ و داده ورزی سامانه      
       آمیزه ای از فناوری ها و قابلیت ها در قالب یک نظام یک پارچه     
-    </p>
+    </p> -->
   </div>   
   <div class="bottom-bar w-100 px-5 mb-3 mt-3 d-flex">
     <Button class="  child-one" label="ورود به سامانه"/>
