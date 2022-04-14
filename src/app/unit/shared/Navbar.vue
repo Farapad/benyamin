@@ -9,14 +9,14 @@
             <span class="text-color font-16 hover-pointer nav-item">
                 <template class="d-flex">
 		        	<div>
-		        		<!-- <Menubar v-model="menuvalue" class="text-color" :model="items">
-                    <template #item="{item}">
-        <a :href="item.to">{{item.label}}</a>
-    </template>
-		        		</Menubar> -->
-                         <router-link to="/courses">
+		        		<Menubar v-model="menuvalue" class="text-color" :model="items">
+                                <!-- <template #item="{item}">
+                             <a :href="item.to">{{item.label}}</a>
+                                </template> -->
+		        		</Menubar>
+                         <!-- <router-link to="/courses">
                             <span class="text-color font-16 hover-pointer nav-item">دوره ها و درس ها</span>
-                         </router-link>
+                         </router-link> -->
 		        	</div>
 		        </template>
             </span>
@@ -82,7 +82,7 @@
    </div>
 </template>
 <script>
-
+import Menubar from 'primevue/menubar';
 import { useRoute } from "vue-router";
 import { ref, onMounted } from "vue";
 import Menubar from 'primevue/menubar';
