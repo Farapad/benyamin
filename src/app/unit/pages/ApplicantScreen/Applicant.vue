@@ -44,7 +44,7 @@
 ساعت در خصوص هر درس طی یک بازه زمانی یک‏ماهه می‏باشد.</div>
                 </div>
             </div>
-              <div class="second-child-card ">
+            <div class="second-child-card">
                 <div class="child">
                     <div class="font-12 w-50  right-box">
                         <div class="text">به صورت تدریس ترکیبی (آنلاین و آفلاین)</div>
@@ -56,6 +56,19 @@
                 <div class="last-child">
                      <div class="text-p">کارمزد نشان داده شده شامل هزینه تعاملات آنلاین تا سقف ده (10) 
 ساعت در خصوص هر درس طی یک بازه زمانی یک‏ماهه می‏باشد.</div>
+                </div>
+            </div>
+            <div class="bottom-card my-4">
+                <div class="top-bar">
+                    <span>شروط و ضوابط حاکم بر استفاده از خدمات</span>
+                </div>
+                <div class="bottom-bar my-3">
+                    <div class="w-50 d-flex box">
+                        <Button class="bottom-btn">مورد تایید است</Button>
+                    </div>
+                    <div class="w-50 d-flex box">
+                       <Button class="bottom-btn-2">رویت</Button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -133,7 +146,41 @@ export default {
                   }
               }
           }
+          .bottom-card{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              border-radius:20px;
+              background: #ffff;
+              padding: 20px 50px;
+              .top-bar{
+                  color: rgba(55, 65, 81, 1);
+                  font-weight: bolder;
+              }
+              .bottom-bar{
+                  display: flex;
+                  justify-content: space-evenly;
+                  width: 100%;
+                  .bottom-btn{
+                      background: rgba(87, 204, 153, 1);
+                      color: #ffff;
+                      border: none;
+                      border-radius: 6px;
+                  }
+                  .bottom-btn-2{
+                        background: rgba(87, 204, 153, 1);
+                      color: #ffff;
+                      border: none;
+                      border-radius: 6px;
+                      padding:0px 45px;
+                  }
+              }
+          }
       }
   }
+}
+////
+.box{
+    justify-content: center;
 }
 </style>
