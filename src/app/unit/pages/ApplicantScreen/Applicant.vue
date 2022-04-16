@@ -23,7 +23,8 @@
                     </div>
                 </div>
                 <div class="last-child">
-
+                     <div class="text-p">کارمزد نشان داده شده شامل هزینه تعاملات آنلاین تا سقف ده (10) 
+ساعت در خصوص هر درس طی یک بازه زمانی یک‏ماهه می‏باشد.</div>
                 </div>
             </div>
         </div>
@@ -65,18 +66,34 @@ export default {
               align-items: center;
               border-radius:20px;
               width: 100%;
+              background: rgba(255, 255, 255, 1);
+              padding: 14px 12px;
               .child{
                   display:flex;
                   justify-content: space-around;
                   .right-box{
                       .text{
-                          padding: 12px 36px;
+                          padding: 12px 30px;
                       }
                   }
                   .left-box{
+                      background:rgba(238, 255, 240, 1);
+                      border-radius: 12px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
                       .text{
-                         padding: 12px 46px;
+                         padding: 12px 40px;
+                         color: rgba(22, 101, 52, 1);
+                         font-weight: 500;
                       }
+                  }
+              }
+              .last-child{
+                  .text-p{
+                      padding:16px 0px;
+                      color:rgba(75, 85, 99, 1);
+                      font-size: 12px;
                   }
               }
           }
