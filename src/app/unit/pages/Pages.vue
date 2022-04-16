@@ -32,7 +32,7 @@
     <span class="child-two font-16 font-weight-bold text-color px-3">مدرس</span>
     <span class="child-two font-16 font-weight-bold text-color px-3">مدیریت</span>
     <span class="child-two font-16 font-weight-bold text-color px-3">ادمین</span>
-    <span class="child-two font-16 font-weight-bold text-color px-3">متقاضی برگزاری دوره یا درس</span>
+    <span @click="Applicant" class="hover-pointer child-two font-16 font-weight-bold text-color px-3">متقاضی برگزاری دوره یا درس</span>
      </div>
   </div>
  </div>  
@@ -43,6 +43,7 @@ import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 import {ref} from 'vue';
 import Button from 'primevue/button';
+import router from '@/core/router/router';
 export default {
   components:{  
     Carousel,
@@ -58,6 +59,11 @@ export default {
     //     },
     //   });
     // }
+
+    function Applicant(){
+      router.push("/Applicant")
+    }
+
       const picture = ref(require('../../../assets/img/svg/png/main-page.png'));
       const picturee = ref(require('../../../assets/img/svg/png/page.png'));
       const products = [
@@ -66,6 +72,7 @@ export default {
       ];
     return {
       products,
+      Applicant
     };
   },
 };

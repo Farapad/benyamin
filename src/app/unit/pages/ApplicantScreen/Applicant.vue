@@ -71,6 +71,9 @@
                     </div>
                 </div>
             </div>
+            <div class="bottom-box px-5">
+                <Button class="btn">تایید</Button>
+            </div>
         </div>
       </div>
    </div>
@@ -174,6 +177,18 @@ export default {
                       border-radius: 6px;
                       padding:0px 45px;
                   }
+              }
+          }
+          .bottom-box{
+              display: flex;
+              justify-content: center;
+              width:100% ;
+              .btn{
+                  width: 100%;
+                  background: rgba(87, 204, 153, 1);
+                  border: none;
+                  display: flex;
+                  justify-content: center;
               }
           }
       }
