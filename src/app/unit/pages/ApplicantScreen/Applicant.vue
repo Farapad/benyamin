@@ -13,7 +13,38 @@
             </p>
         </div>
         <div class="second-child">
+            <span class="text my-2">
+                جدول هزینه ها
+            </span>
             <div class="second-child-card">
+                <div class="child">
+                    <div class="font-12 w-50  right-box">
+                        <div class="text">به صورت تدریس ترکیبی (آنلاین و آفلاین)</div>
+                    </div>
+                    <div class="font-12 w-50  left-box">
+                        <div class="text">400.000 ریال در ماه به ازای هر درس</div>
+                    </div>
+                </div>
+                <div class="last-child">
+                     <div class="text-p">کارمزد نشان داده شده شامل هزینه تعاملات آنلاین تا سقف ده (10) 
+ساعت در خصوص هر درس طی یک بازه زمانی یک‏ماهه می‏باشد.</div>
+                </div>
+            </div>
+            <div class="second-child-card my-4">
+                <div class="child">
+                    <div class="font-12 w-50  right-box">
+                        <div class="text">به صورت تدریس ترکیبی (آنلاین و آفلاین)</div>
+                    </div>
+                    <div class="font-12 w-50  left-box">
+                        <div class="text">400.000 ریال در ماه به ازای هر درس</div>
+                    </div>
+                </div>
+                <div class="last-child">
+                     <div class="text-p">کارمزد نشان داده شده شامل هزینه تعاملات آنلاین تا سقف ده (10) 
+ساعت در خصوص هر درس طی یک بازه زمانی یک‏ماهه می‏باشد.</div>
+                </div>
+            </div>
+              <div class="second-child-card ">
                 <div class="child">
                     <div class="font-12 w-50  right-box">
                         <div class="text">به صورت تدریس ترکیبی (آنلاین و آفلاین)</div>
@@ -60,6 +91,11 @@ export default {
       .second-child{
           display:flex;
           flex-direction: column;
+          .text{
+              font-size: 14px;
+              font-weight: bold;
+              color: rgba(75, 85, 99, 1);
+          }
           .second-child-card{
               display: flex;
               flex-direction: column;
@@ -85,7 +121,7 @@ export default {
                       .text{
                          padding: 12px 40px;
                          color: rgba(22, 101, 52, 1);
-                         font-weight: 500;
+                         font-weight: 700;
                       }
                   }
               }
