@@ -1,7 +1,7 @@
 <template>
     <div class="main-controller">
         <div class="controller">
-            <div class="header">
+            <div class="header"> 
                 <p>مشخصات متقاضی حقوقی</p>
             </div>
             <div class="child">
@@ -25,6 +25,13 @@ export default {
       display: flex;
       flex-direction:column;
       justify-content: center;
+      .header{
+          display: flex;
+          justify-content: center;
+          p {
+              font-weight: 700;
+          }
+      }
       .child{
           display: flex;
           flex-direction: column;
@@ -34,8 +41,9 @@ export default {
           margin-bottom: 24px;
           .label{
               font-size: 12px;
-              font-weight: 700;
+              font-weight: 600;
               margin-bottom: 8px;
+              color: rgba(75, 85, 99, 1);
           }
           .input{
             width: 100% ;
