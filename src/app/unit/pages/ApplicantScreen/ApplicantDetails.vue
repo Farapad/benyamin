@@ -1,6 +1,9 @@
 <template>
     <div class="main-controller">
         <div class="controller">
+            <div class="header">
+                <p>مشخصات متقاضی حقوقی</p>
+            </div>
             <div class="child">
                 <span class="label">نام متقاضی به فارسی</span>
                 <InputText  class="input"/>
@@ -27,6 +30,8 @@ export default {
           flex-direction: column;
           justify-content: center;
           align-items: flex-start;
+          margin-top: 24px;
+          margin-bottom: 24px;
           .label{
               font-size: 12px;
               font-weight: 700;
