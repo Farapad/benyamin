@@ -19,10 +19,10 @@
             <div class="second-child-card">
                 <div class="child">
                     <div class="font-12 w-50  right-box">
-                        <div class="text">به صورت تدریس ترکیبی (آنلاین و آفلاین)</div>
+                        <div class="text-right">به صورت تدریس ترکیبی (آنلاین و آفلاین)</div>
                     </div>
                     <div class="font-12 w-50  left-box">
-                        <div class="text">400.000 ریال در ماه به ازای هر درس</div>
+                        <div class="text-left">400.000 ریال در ماه به ازای هر درس</div>
                     </div>
                 </div>
                 <div class="last-child">
@@ -33,10 +33,11 @@
             <div class="second-child-card my-4">
                 <div class="child">
                     <div class="font-12 w-50  right-box">
-                        <div class="text">به صورت تدریس ترکیبی (آنلاین و آفلاین)</div>
+                        <div class="text-right">تدریس به صورت تمام آنلاین</div>
                     </div>
                     <div class="font-12 w-50  left-box">
-                        <div class="text">400.000 ریال در ماه به ازای هر درس</div>
+                        <div class="text-left">600.000 ریال در
+                            ماه به ازای هر درس </div>
                     </div>
                 </div>
                 <div class="last-child">
@@ -47,10 +48,11 @@
             <div class="second-child-card">
                 <div class="child">
                     <div class="font-12 w-50  right-box">
-                        <div class="text">به صورت تدریس ترکیبی (آنلاین و آفلاین)</div>
+                        <div class="text-right">صرفا جهت برگزاری آزمون</div>
                     </div>
                     <div class="font-12 w-50  left-box">
-                        <div class="text">400.000 ریال در ماه به ازای هر درس</div>
+                        <div class="text-left">50.000 ریال به ازای
+هر فرد (آزمون دهنده)</div>
                     </div>
                 </div>
                 <div class="last-child">
@@ -60,18 +62,18 @@
             </div>
             <div class="bottom-card my-4">
                 <div class="top-bar">
-                    <span>شروط و ضوابط حاکم بر استفاده از خدمات</span>
+                    <div>شروط و ضوابط حاکم بر استفاده از خدمات</div>
                 </div>
                 <div class="bottom-bar my-3">
                     <div class="w-50 d-flex box">
                         <Button class="bottom-btn">مورد تایید است</Button>
                     </div>
                     <div class="w-50 d-flex box">
-                       <Button class="bottom-btn-2">رویت</Button>
+                       <Button @click="show" class="bottom-btn-2">رویت</Button>
                     </div>
                 </div>
             </div>
-            <div class="text-bar">
+            <div v-if="showText" class="text-bar">
               <div class="main-box">
                  <p>
                    زا یریگ‏ هرهب و یتایلمع یاضف هب دورو یارب تسا یهاگرد «دای‏شناد» یریگدای/شزومآ» هزوح رد یتامدخ عماج هناماس کی یاه‏ تیلباق تیریدم متسیس نوچ یا‏هچراپکی یازجا زا لکشتم ؛«یکینورتکلا متسیس و (“LMS” – Learning Management System) یریگ‏دای Learning Content Management) یریگدای یاهاوتحم تیریدم طخرب  یلماعت و یطابترا یاهرازبا و ،وس کی زا ،(“LCMS” – System Online and Offline Communication and) طخرب ریغ و  زا ،یلیمکت یاه‏یگژیو و تاناکما زا یفیط و ( Collaboration Tools  درادناتسا ،دیلوت ‏تیلباق هدمآ مهارف تاناکما هلمج زا  .رگید ییوس هیحالصا نیرخآ اب قیبطت رد یکینورتکلا یاهاوتحم یارجا و یزاس رکذ لباق (4Th Edition ,SCORM 2004) «مرکسا» یناهج درادناتسا  مه و یعاسم کیرشت هطساو هب هک هناماس نیا دور‏ یم راظتنا .تسا
@@ -88,9 +90,19 @@
    </div>
 </template>
 <script>
+import { ref } from 'vue'
 export default {
     setup() {
-        
+        const showText = ref(false);
+
+        function show(){
+            showText.value = true
+        }
+
+        return {
+            showText,
+            show
+        }
     },
 }
 </script>
@@ -133,7 +145,10 @@ export default {
                   display:flex;
                   justify-content: space-around;
                   .right-box{
-                      .text{
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      .text-right{
                           padding: 12px 30px;
                       }
                   }
@@ -143,10 +158,11 @@ export default {
                       display: flex;
                       justify-content: center;
                       align-items: center;
-                      .text{
-                         padding: 12px 40px;
+                      .text-left{
+                         padding: 12px 25px;
                          color: rgba(22, 101, 52, 1);
-                         font-weight: 700;
+                         font-size: 12px;
+                         text-align: center !important;
                       }
                   }
               }
@@ -164,10 +180,12 @@ export default {
               align-items: center;
               border-radius:20px;
               background: #ffff;
-              padding: 20px 50px;
+              padding: 20px 30px;
               .top-bar{
                   color: rgba(55, 65, 81, 1);
-                  font-weight: bolder;
+                  font-weight:700;
+                  width: 100%;
+                  text-align: center;
               }
               .bottom-bar{
                   display: flex;
@@ -178,6 +196,7 @@ export default {
                       color: #ffff;
                       border: none;
                       border-radius: 6px;
+                      font-size: 12px;
                   }
                   .bottom-btn-2{
                         background: rgba(87, 204, 153, 1);
@@ -185,6 +204,7 @@ export default {
                       border: none;
                       border-radius: 6px;
                       padding:0px 45px;
+                      font-size: 12px;
                   }
               }
           }
@@ -198,6 +218,8 @@ export default {
                   border: none;
                   display: flex;
                   justify-content: center;
+                  font-size: 14px;
+                  border-radius: 10px;
               }
           }
       }
@@ -208,12 +230,23 @@ export default {
     justify-content: center;
 }
 .text-bar{
+  display: flex;  
   background:#fff ;
   max-height: 237px;
   border-radius: 18px;
   border: 1px solid rgba(209, 213, 219, 1);
   font-size: 12px;
   padding: 14px 16px;
+  margin-bottom: 20px;
+  transition:0.5s;
+  .main-box{
+       overflow:scroll ;
+       padding: 0px 20px;
   }
+
+  }
+.text-bar::-webkit-scrollbar {
+    width: 10px;
+}
 
 </style>
