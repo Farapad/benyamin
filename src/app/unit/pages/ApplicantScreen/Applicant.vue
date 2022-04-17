@@ -83,7 +83,7 @@
               </div>
             </div>
             <div class="bottom-box px-5">
-                <Button class="btn">تایید</Button>
+                <Button @click="nextStep" class="btn">تایید</Button>
             </div>
         </div>
       </div>
@@ -91,6 +91,7 @@
 </template>
 <script>
 import { ref } from 'vue'
+import router from '@/core/router/router';
 export default {
     setup() {
         const showText = ref(false);
@@ -99,8 +100,13 @@ export default {
             showText.value = true
         }
 
+        function nextStep () {
+            router.push("/Applicant/details")
+        }
+
         return {
             showText,
+            nextStep,
             show
         }
     },
