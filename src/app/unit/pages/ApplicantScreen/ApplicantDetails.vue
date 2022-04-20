@@ -156,4 +156,8 @@ export default {
     font-size: 14px;
     padding: 7px 30px;
 }
+::v-deep(.p-fileupload .p-fileupload-content){
+    border: 2px dashed  rgba(222, 222, 222, 1);
+    border-radius: 10px;
+}
 </style>
