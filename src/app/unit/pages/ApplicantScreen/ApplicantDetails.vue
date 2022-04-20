@@ -52,6 +52,9 @@
                       </template>
                  </FileUpload>
             </div>
+            <div class="bottom-box">
+                <img src="@/assets/img/svg/png/video-lab.png" >
+            </div>
         </div>
     </div>
 </template>
@@ -171,5 +174,14 @@ export default {
 ::v-deep(.p-fileupload-buttonbar) {
     height: 1px;
     // padding: 0px;
+}
+.bottom-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+    img{
+        width: 100%;
+    }
 }
 </style>
