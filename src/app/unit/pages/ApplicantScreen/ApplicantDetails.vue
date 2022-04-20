@@ -130,4 +130,7 @@ export default {
     border: none;
     background: #f2f3f5;
 }
+::v-deep(.p-fileupload .p-fileupload-content){
+    height: 200px;
+}
 </style>
