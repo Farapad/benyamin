@@ -133,4 +133,27 @@ export default {
 ::v-deep(.p-fileupload .p-fileupload-content){
     height: 200px;
 }
+::v-deep(.p-button.p-fileupload-choose){
+    position: relative;
+    overflow: hidden;
+    top: 178px;
+    z-index: 10;
+    background: rgba(253, 175, 59, 1);
+    border: none;
+    font-size: 14px;
+    padding: 7px 25px;
+ }
+::v-deep(.p-button .p-button-icon-left){
+    display: none;
+}
+::v-deep(.p-button:last-child) {
+    position: relative;
+    top: 178px;
+    z-index: 10;
+    margin-right: 70px;
+    background: rgba(87, 204, 153, 1);
+    border: none;
+    font-size: 14px;
+    padding: 7px 30px;
+}
 </style>
