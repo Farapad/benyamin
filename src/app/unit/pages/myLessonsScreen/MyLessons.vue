@@ -26,6 +26,8 @@ export default {
 .main-controller{
     .top-bar{
         .first-child {
+            margin-top: 40px;
+            margin-bottom: 12px;
            h1{
             display: flex;
             justify-content: center;
@@ -48,9 +50,9 @@ export default {
                     font-size: 12px;
                     padding: 8px 16px;
                     border-left: 1px solid  rgba(209, 213, 219, 1);
-                    :last-child{
-                        border: none !important;
-                    }
+                }
+                li:last-child{
+                    border: none;
                 }
             }
         }
