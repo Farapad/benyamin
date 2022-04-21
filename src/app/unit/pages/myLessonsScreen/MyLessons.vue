@@ -15,7 +15,12 @@
       </div>
       <div class="lessons-item">
           <div class="item">
-              
+              <ul>
+                  <li> معرفی مفاهیم پایه COBIT</li>
+                  <li>AHI001</li>
+                  <li>COBIT</li>
+                  <li>فناوری اطلاعات</li>
+              </ul>
           </div>
       </div>
   </div>
@@ -60,6 +65,32 @@ export default {
                     border: none;
                 }
             }
+        }
+    }
+    .lessons-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 4px;
+        .item {
+            ul {
+                display: flex;
+                list-style: none;
+                justify-content: center;
+                align-items: center;
+                padding: 0px !important;
+                background: rgba(87, 204, 153, 1);
+                border-radius: 8px;
+                color: #ffff;
+                li{
+                    font-size: 12px;
+                    padding: 18px 16px;
+                    cursor:pointer;
+                }
+                
+               }    
+
         }
     }
 }
