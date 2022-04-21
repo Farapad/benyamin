@@ -13,6 +13,11 @@
               </ul>
           </div>
       </div>
+      <div class="lessons-item">
+          <div class="item">
+              
+          </div>
+      </div>
   </div>
 </template>
 <script>
@@ -26,8 +31,8 @@ export default {
 .main-controller{
     .top-bar{
         .first-child {
-            margin-top: 40px;
-            margin-bottom: 12px;
+            margin-top: 30px;
+            margin-bottom: 16px;
            h1{
             display: flex;
             justify-content: center;
