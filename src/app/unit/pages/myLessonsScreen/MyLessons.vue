@@ -133,21 +133,25 @@ export default {
             .button{
                 font-size:12px;
                 color: rgba(71, 85, 105, 1);
-                border:1px solid rgba(87, 204, 153, 1);
+                border:2px solid rgba(87, 204, 153, 1);
                 background: #ffff;
-                padding: 14px 22px;
+                padding: 14px 16px;
+                width: 172px;
+                border-radius:6px;
             }
         }
         .last-child{
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             width: 50%;
             .button{
                 font-size:12px;
                 color: rgba(71, 85, 105, 1);
-                border:1px solid rgba(87, 204, 153, 1);
+                border:2px solid rgba(87, 204, 153, 1);
                 background: #ffff;
-                padding: 14px 22px;
+                padding: 14px 16px;
+                width: 172px;
+                border-radius:6px;
             }
         }
     }
