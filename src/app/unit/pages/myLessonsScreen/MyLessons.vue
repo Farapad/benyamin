@@ -22,6 +22,30 @@
                   <li>فناوری اطلاعات</li>
               </ul>
           </div>
+           <div class="item">
+              <ul>
+                  <li> معرفی مفاهیم پایه COBIT</li>
+                  <li>AHI001</li>
+                  <li>COBIT</li>
+                  <li>فناوری اطلاعات</li>
+              </ul>
+          </div>
+           <div class="item">
+              <ul>
+                  <li> معرفی مفاهیم پایه COBIT</li>
+                  <li>AHI001</li>
+                  <li>COBIT</li>
+                  <li>فناوری اطلاعات</li>
+              </ul>
+          </div>
+      </div>
+      <div class="between-bar">
+          <div class="first-child">
+            <Button label="مشاهده محتوای درسی"/>
+          </div>
+          <div class="last-child">
+             <Button label="ورود به محیط کلاس مجازی"/>
+          </div>
       </div>
   </div>
 </template>
@@ -80,17 +104,32 @@ export default {
                 justify-content: center;
                 align-items: center;
                 padding: 0px !important;
-                background: rgba(87, 204, 153, 1);
+                border:1px solid rgba(87, 204, 153, 1);
                 border-radius: 8px;
-                color: #ffff;
+                color: rgba(107, 114, 128, 1);
+               
                 li{
                     font-size: 12px;
                     padding: 18px 16px;
                     cursor:pointer;
-                }
-                
-               }    
+                } 
+            }  
+             ul:hover{
+                    background:rgba(87, 204, 153, 1) ;
+                    color: #ffff;
+                }  
 
+        }
+    }
+    .between-bar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .first-child{
+            width: 50%;
+        }
+        .last-child{
+            width: 50%;
         }
     }
 }
