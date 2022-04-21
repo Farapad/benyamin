@@ -41,10 +41,10 @@
       </div>
       <div class="between-bar">
           <div class="first-child">
-            <Button label="مشاهده محتوای درسی"/>
+            <Button class="button"  label="مشاهده محتوای درسی"/>
           </div>
           <div class="last-child">
-             <Button label="ورود به محیط کلاس مجازی"/>
+             <Button class="button" label="ورود به محیط کلاس مجازی"/>
           </div>
       </div>
   </div>
@@ -125,11 +125,30 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 28px 32px;
         .first-child{
             width: 50%;
+            display: flex;
+            justify-content: center;
+            .button{
+                font-size:12px;
+                color: rgba(71, 85, 105, 1);
+                border:1px solid rgba(87, 204, 153, 1);
+                background: #ffff;
+                padding: 14px 22px;
+            }
         }
         .last-child{
+            display: flex;
+            justify-content: center;
             width: 50%;
+            .button{
+                font-size:12px;
+                color: rgba(71, 85, 105, 1);
+                border:1px solid rgba(87, 204, 153, 1);
+                background: #ffff;
+                padding: 14px 22px;
+            }
         }
     }
 }
