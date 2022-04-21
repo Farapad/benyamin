@@ -47,6 +47,25 @@
              <Button class="button" label="ورود به محیط کلاس مجازی"/>
           </div>
       </div>
+      <div class="teacher-box">
+          <div class="first-child">
+              <h1>اطلاعات اصلی در رابطه با درس انتخاب شده</h1>
+          </div>
+          <div class="second-child">
+              <ul>
+                  <li>شخصیت حقوقی/حقیقی عرضه کننده درس</li>
+                  <li>نام مدرس</li>
+                  <li>سبک آموزشی </li>
+              </ul>
+          </div>
+          <div class="third-child">
+              <ul>
+                  <li>انجمن علمی حسابرسی فناوری اطلاعات ایران</li>
+                  <li>آقای مهندس محمد محمدی</li>
+                  <li>آنلاین وآفلاین،استادمحور</li>
+              </ul>
+          </div>
+      </div>
   </div>
 </template>
 <script>
@@ -125,11 +144,11 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 28px 32px;
+        padding: 28px 28px;
         .first-child{
             width: 50%;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             .button{
                 font-size:12px;
                 color: rgba(71, 85, 105, 1);
@@ -152,6 +171,63 @@ export default {
                 padding: 14px 16px;
                 width: 172px;
                 border-radius:6px;
+            }
+        }
+    }
+    .teacher-box{
+        .first-child {
+            margin-top: 30px;
+            margin-bottom: 16px;
+           h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgba(31, 41, 55, 1);
+            font-size: 12px  !important;
+            font-weight:bolder;
+           } 
+        }
+        .second-child{
+            ul {
+                display: flex;
+                list-style: none;
+                justify-content: center;
+                align-items: center;
+                padding: 0px !important;
+                background: rgba(229, 231, 235, 1);
+                margin-bottom: 0px;
+                li{
+                    width: 35%;
+                    font-size: 12px;
+                    padding: 8px 8px;
+                    border-left: 1px solid   rgba(209, 213, 219, 1);
+                    text-align: center
+;
+                }
+                li:last-child{
+                    border: none;
+                }
+            }
+        }
+        .third-child{
+            ul {
+                display: flex;
+                list-style: none;
+                justify-content: center;
+                align-items: center;
+                padding: 0px !important;
+                background:#ffff;
+                li{
+                    color: rgba(107, 114, 128, 1);
+                    width: 35%;
+                    font-size: 12px;
+                    padding: 8px 8px;
+                    text-align: center
+;
+                }
+                li:last-child{
+                    border: none;
+                }
             }
         }
     }
