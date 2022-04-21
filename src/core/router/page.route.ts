@@ -8,6 +8,8 @@ const Applicant = () =>
   import("@/app/unit/pages/ApplicantScreen/Applicant.vue");
 const ApplicantDetails = () =>
   import("@/app/unit/pages/ApplicantScreen/ApplicantDetails.vue");
+const mylessons = () =>
+  import("@/app/unit/pages/myLessonsScreen/MyLessons.vue");
 
 export const pageRoutes: Array<RouteRecordRaw> = [
   { path: "/pages", component: Pages, beforeEnter: [canActivatedGuard] },
@@ -15,4 +17,5 @@ export const pageRoutes: Array<RouteRecordRaw> = [
   { path: "/about", component: About },
   { path: "/Applicant", component: Applicant },
   { path: "/Applicant/details", component: ApplicantDetails },
+  { path: "/mylessons", component: mylessons },
 ];
