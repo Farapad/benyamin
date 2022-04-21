@@ -34,6 +34,7 @@
         "vue-jalali-moment": "^1.0.0",
         "vue-router": "^4.0.0-0",
         "vue-signature-pad": "^3.0.1",
+        "vue-star-rating": "^2.1.0",
         "vue-teatree": "^2.0.1",
         "vue3-carousel": "^0.1.38",
         "vue3-clock-countdown": "^0.0.5",
