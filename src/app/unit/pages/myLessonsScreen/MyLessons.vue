@@ -77,6 +77,17 @@
               <div>دو هفته</div>
           </div>
       </div>
+      <div class="discreption-box px-2">
+           <h1>اطلاعات تکمیلی مرتبط با درس انتخاب شده</h1>
+           <span class="header py-2">اهداف دوره</span> 
+           <span class="dicreption">این درس با هدف</span>
+      </div>
+       <div class="download-box px-2">
+           <span class="header py-2">منابع درسی</span> 
+           <a class="py-2" href="#">دانلود منبع درسی 1</a>
+           <a class="py-2" href="#">دانلود منبع درسی 2</a>
+           <a class="py-2" href="#">دانلود منبع درسی 3</a>
+      </div>
   </div>
 </template>
 <script>
@@ -280,6 +291,55 @@ export default {
                 font-size: 12px;
                 padding: 14px 40px;
             }
+        }
+    }
+    .discreption-box{
+        margin-top: 24px;
+        padding: 14px 20px !important;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #E5E7EB;
+        h1 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            color: rgba(31, 41, 55, 1);
+            font-size: 12px;
+            font-weight: bolder;
+        }
+        .header{
+            color:#1F2937 ;
+            font-size: 12px;
+        }
+        .dicreption{
+            color: #6B7280;
+            font-size: 12px;
+        }
+    }
+    .download-box{
+        padding: 14px 20px !important;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #E5E7EB;
+        h1 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            color: rgba(31, 41, 55, 1);
+            font-size: 12px;
+            font-weight: bolder;
+        }
+        a {
+            font-size: 12px;
+            text-decoration: underline;
+        }
+        .header{
+            color:#1F2937 ;
+            font-size: 12px;
+        }
+        .dicreption{
+            color: #6B7280;
+            font-size: 12px;
         }
     }
 }
