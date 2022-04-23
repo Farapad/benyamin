@@ -46,6 +46,7 @@
   </div>
 </template>
 <script>
+
 import {ref} from "vue";
 import TreeSelect from 'primevue/treeselect';
 import Rating from 'primevue/rating';
@@ -56,7 +57,6 @@ export default {components:{Rating,TreeSelect},
     const val1 = ref();
     const val2 = ref(0);
     const selectedRole1 = ref();
-    const selectedRole2 = ref();
     const role = ref([
       {
         name: 'سامانه',
@@ -66,7 +66,7 @@ export default {components:{Rating,TreeSelect},
         code: 'AD',},
       { name: 'مدیریت',
         code: 'MA',}]);
-    return {val1, val2 };
+    return {val1, val2,role,selectedRole1};
   }}
 </script>
 <style lang="scss" scoped>
