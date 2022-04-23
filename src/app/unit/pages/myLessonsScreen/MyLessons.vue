@@ -66,6 +66,15 @@
               </ul>
           </div>
       </div>
+      <div class="time-box">
+          <h1>مدت زمان کلاس</h1>
+          <div class="first-child">
+
+          </div>
+          <div class="last-child">
+
+          </div>
+      </div>
   </div>
 </template>
 <script>
