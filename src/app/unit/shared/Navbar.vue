@@ -15,7 +15,7 @@
 		        </template>
             </span>
           </div>
-          <div>  
+          <!-- <div>  
              <span class="text-color font-16 hover-pointer nav-item">خبر ها</span>
           </div> 
           <div>  
@@ -23,7 +23,7 @@
           </div> 
           <div>
              <span class="text-color font-16 hover-pointer nav-item">درباره ما</span>
-          </div>
+          </div> -->
         </div>  
         <div>
            <div></div>
@@ -101,7 +101,8 @@ export default {
         document.getElementById("hamberger").style.display = "none";
     }
         const items = ref([
-					{
+               
+					{   
 						label:'دوره ها و درس ها',
 						items:[
 							{
@@ -181,7 +182,22 @@ export default {
 								// icon:'pi pi-fw pi-user-plus',
 							}
 						]
-					},
+					},      
+                    {label:"خبر ها",
+                         command: () => {
+                                    router.push('/news')
+                                }
+                     },
+                    {label:"اطلاعیه ها",
+                     command: () => {
+                                    router.push('/news')
+                                }
+                    },
+                      {label:"درباره ما",
+                     command: () => {
+                                    router.push('/news')
+                                }
+                    },
 				]);
     
 
