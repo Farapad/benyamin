@@ -376,6 +376,7 @@ export default {
             font-size: 12px;
         }
     }
+    // .c{}
     .bottom-items{
         display: flex;
         flex-direction: column;
