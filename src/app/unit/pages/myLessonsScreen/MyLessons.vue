@@ -82,11 +82,45 @@
            <span class="header py-2">اهداف دوره</span> 
            <span class="dicreption">این درس با هدف</span>
       </div>
-       <div class="download-box px-2">
+      <div class="download-box px-2">
            <span class="header py-2">منابع درسی</span> 
            <a class="py-2" href="#">دانلود منبع درسی 1</a>
            <a class="py-2" href="#">دانلود منبع درسی 2</a>
            <a class="py-2" href="#">دانلود منبع درسی 3</a>
+      </div>
+      <div class="download-box px-2">
+           <span class="header py-2">دانلود گواهینامه</span> 
+           <a class="py-2" href="#">لینک دانلود گواهینامه باید در اینجا قرار گرفته شود</a>
+      </div>
+      <div class="bottom-items">
+          <div class="item">
+                <span>مشاهده سیلابس درسی</span>
+                <img src="@/assets/img/svg/arrow-icon.svg">
+          </div>
+             <div class="item">
+                <span>مشاهده نتایج آزمون ها</span>
+                <img src="@/assets/img/svg/arrow-icon.svg">
+          </div>
+             <div class="item">
+                <span>مشاهده تکالیف تعریف شده</span>
+                <img src="@/assets/img/svg/arrow-icon.svg">
+          </div>
+             <div class="item">
+                <span>مشاهده  اطلاعیه های دریافتی</span>
+                <img src="@/assets/img/svg/arrow-icon.svg">
+          </div>
+             <div class="item">
+                <span>ثبت نام فراگیر در دوره/درس جدید</span>
+                <img src="@/assets/img/svg/arrow-icon.svg">
+          </div>
+             <div class="item">
+                <span>ارسال پیام</span>
+                <img src="@/assets/img/svg/arrow-icon.svg">
+          </div>
+             <div class="item">
+                <span>نظر سنجی</span>
+                <img src="@/assets/img/svg/arrow-icon.svg">
+          </div>    
       </div>
   </div>
 </template>
@@ -340,6 +374,23 @@ export default {
         .dicreption{
             color: #6B7280;
             font-size: 12px;
+        }
+    }
+    .bottom-items{
+        display: flex;
+        flex-direction: column;
+        padding:32px 20px ;
+        .item{
+            background: #ffff;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 20px;
+            border-radius: 6px;
+            margin-top: 20px;
+            span {
+                color: rgba(55, 65, 81, 1);
+                font-size: 12px;
+            }
         }
     }
 }
