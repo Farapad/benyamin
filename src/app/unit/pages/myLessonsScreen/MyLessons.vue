@@ -69,7 +69,8 @@
       <div class="time-box">
           <h1>مدت زمان کلاس</h1>
           <div class="first-child">
-
+              <div>زمان سپری شده</div>
+              <div>زمان باقیمانده</div>
           </div>
           <div class="last-child">
 
@@ -237,6 +238,33 @@ export default {
                 li:last-child{
                     border: none;
                 }
+            }
+        }
+    }
+    .time-box{
+        display: flex;
+        flex-direction: column;
+        margin-top: 28px;
+        h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgba(31, 41, 55, 1);
+            font-size: 12px  !important;
+            font-weight:bolder; 
+        }
+        .first-child{
+            display: flex;
+            flex-direction:row;
+            background: rgba(229, 231, 235, 1);
+            margin-top: 12px;
+            div {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                color: rgba(75, 85, 99, 1);
+                font-size: 12px;
+                padding: 14px 40px;
             }
         }
     }
