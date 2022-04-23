@@ -73,7 +73,8 @@
               <div>زمان باقیمانده</div>
           </div>
           <div class="last-child">
-
+               <div>دو هفته</div>
+              <div>دو هفته</div>
           </div>
       </div>
   </div>
@@ -263,6 +264,19 @@ export default {
                 display: flex;
                 justify-content: center;
                 color: rgba(75, 85, 99, 1);
+                font-size: 12px;
+                padding: 14px 40px;
+            }
+        }
+        .last-child{     
+            display: flex;
+            flex-direction:row;
+            background: #ffff;
+            div {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                color: rgba(107, 114, 128, 1);
                 font-size: 12px;
                 padding: 14px 40px;
             }
