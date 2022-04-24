@@ -29,7 +29,7 @@
                           <div class="IR5" >
                           <div class="C1">
                           <h5>ارزیابی شما نسبت به:</h5>
-                            <TreeSelect class="Select" v-model="selectedRole1" :options="role" placeholder="سامانه" :optionGroupLabel="name"></TreeSelect>
+                            <Dropdown class="Select" v-model="selectedCity" :options="role" optionLabel="name" placeholder="سامانه" />
                              </div>
                             <div class="C2"> <Rating class="star" v-model="val2" :cancel="false" /></div>
 
@@ -48,25 +48,20 @@
 <script>
 
 import {ref} from "vue";
-import TreeSelect from 'primevue/treeselect';
 import Rating from 'primevue/rating';
-
-export default {components:{Rating,TreeSelect},
+import Dropdown from 'primevue/dropdown';
+export default {components:{Rating,Dropdown},
   setup() {
 
-    const val1 = ref();
     const val2 = ref(0);
-    const selectedRole1 = ref();
+    const selectedCity = ref();
     const role = ref([
-      {
-        name: 'سامانه',
-        code: 'SA',},{ name: 'مدرس',
-        code: 'MO',},
-      { name: 'ادمین',
-        code: 'AD',},
-      { name: 'مدیریت',
-        code: 'MA',}]);
-    return {val1, val2,role,selectedRole1};
+      {name: 'سامانه', code: 'NY'},
+      {name: 'مدرس', code: 'RM'},
+      {name: 'ادمین', code: 'LDN'},
+      {name: 'مدیریت', code: 'IST'}
+    ]);
+    return {val2,role,selectedCity};
   }}
 </script>
 <style lang="scss" scoped>
@@ -166,6 +161,13 @@ h5{
   width: 208px;
   height: 50px;
   border: 2px solid #57CC99;
+  font-style:normal;
+  font-weight: 500;
+  font-size: 16px;
+  color:#6B7280;
+}
+.Select:hover{
+  background-color:#57CC99;
 
 }
 .IR5{
@@ -267,6 +269,8 @@ width:350px;
   .Textarea{
     width:350px;
     height:98px;
+    font-weight: 500;
+    font-size: 12px;
     margin-right:32px;
   }
   h5{
@@ -283,6 +287,8 @@ width:350px;
 .Select{
   width:156px;
   height:36px;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 .C2{
@@ -293,6 +299,11 @@ width:350px;
 }
   .star{
     margin-bottom: 40px;
+    width:200px;
+    height:30px;
+  }
+  .star:hover{
+    color: #FACC15;
   }
 
 }
