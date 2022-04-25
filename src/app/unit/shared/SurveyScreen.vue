@@ -29,7 +29,7 @@
                           <div class="IR5" >
                           <div class="C1">
                           <h5>ارزیابی شما نسبت به:</h5>
-                            <TreeSelect class="Select" v-model="selectedRole1" :options="role" placeholder="سامانه" :optionGroupLabel="name"></TreeSelect>
+                            <!-- <TreeSelect class="Select" v-model="selectedRole1" :options="role" placeholder="سامانه" :optionGroupLabel="name"></TreeSelect> -->
                              </div>
                             <div class="C2"> <Rating class="star" v-model="val2" :cancel="false" /></div>
 

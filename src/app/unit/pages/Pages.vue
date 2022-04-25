@@ -21,7 +21,7 @@
   </div>
   <div>
 
-    <img src="@/assets/img/svg/png/pages-text.png">
+    <!-- <img src="@/assets/img/svg/png/pages-text.png"> -->
     <!-- <p class="text-between">
     <br>  <span style="font-weight:700;">سامانه جامع آموزش \ یادگیری الکترونیکی</span> <br>   <br>  
       ثمره هم افزایی بین شرکت های فناپ و داده ورزی سامانه      
