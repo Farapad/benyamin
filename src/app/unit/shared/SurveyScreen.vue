@@ -1,17 +1,17 @@
 <template>
   <div>
              <div class="header-s">
-             <a class="back" href="#"><img src="@/assets/img/svg/RAS.svg" alt="logo"></a>
+             <!-- <a class="back" href="#"><img src="@/assets/img/svg/RAS.svg" alt="logo"></a> -->
               <h1>نظرسنجی</h1>
              </div>
 
     <div class="IR1">
       <div style="display: flex;flex-direction: column">  <span class="mobile-text" >نام و نام خانوادگی</span>
-        <InputText  class="Inputtext"  type="text" v-model="name" /></div>
+        <InputText  class="Inputtext"  type="text"  /></div>
 
 
 <div style="display: flex;flex-direction: column"> <span class="mobile-text">ایمیل</span>
-  <InputText  class="Inputtext" type="Email"  v-model="Email" /></div>
+  <InputText  class="Inputtext" type="Email"   /></div>
 
     </div>
 
@@ -66,12 +66,12 @@ export default {components:{Rating,TreeSelect},
         code: 'AD',},
       { name: 'مدیریت',
         code: 'MA',}]);
-    return {val1, val2 };
+    return {val1, val2 ,selectedRole1 , selectedRole2, role};
   }}
 </script>
 <style lang="scss" scoped>
 
-.header-s{;
+.header-s{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
