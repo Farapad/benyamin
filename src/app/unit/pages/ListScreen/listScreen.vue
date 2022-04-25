@@ -13,8 +13,24 @@
                 </div>
             </AccordionTab>
             <AccordionTab header="گواهینامه محمد محمدی">
+                   <div class="d-flex">
+                    <div class="w-50 first-button">
+                        <Button :label="'پرینت گواهینامه'"/>
+                    </div>
+                    <div class="w-50 last-button">
+                        <Button :label="'بارگذاری گواهینامه'"/>
+                    </div>
+                </div>
             </AccordionTab>
-            <AccordionTab header="گواهینامه محمد محمدی">
+            <AccordionTab header="گواهینامه محمد صادقی">
+                   <div class="d-flex">
+                    <div class="w-50 first-button">
+                        <Button :label="'پرینت گواهینامه'"/>
+                    </div>
+                    <div class="w-50 last-button">
+                        <Button :label="'گواهینامه رضا رضایی '"/>
+                    </div>
+                </div>
             </AccordionTab>
         </Accordion>
     </div>    
@@ -73,5 +89,10 @@ export default {
 
 ::v-deep(.p-accordion-header-link) {
     background: #ffff !important;
+    border: none !important;
+}
+
+::v-deep(.p-accordion-content) {
+    border: none !important;
 }
 </style>
