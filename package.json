@@ -9,6 +9,8 @@
     },
     "dependencies": {
         "@fingerprintjs/fingerprintjs": "^3.3.0",
+        "@fortawesome/fontawesome-svg-core": "^6.1.1",
+        "@fortawesome/free-solid-svg-icons": "^6.1.1",
         "@ts-pro/vue-eternal-loading": "^1.2.0",
         "axios": "^0.21.1",
         "base64-rotate": "^1.0.1",
@@ -45,6 +47,7 @@
         "vue3-persian-datetime-picker": "^1.0.0",
         "vue3-qr-reader": "^1.0.0",
         "vue3-router-tree": "^0.2.4",
+        "vue3-star-ratings": "^1.1.0",
         "vuex": "^4.0.0-0",
         "webpack": "^4.46.0",
         "yup": "^0.32.9"
