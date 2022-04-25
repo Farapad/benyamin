@@ -31,17 +31,12 @@
                           <h5>ارزیابی شما نسبت به:</h5>
                             <!-- <TreeSelect class="Select" v-model="selectedRole1" :options="role" placeholder="سامانه" :optionGroupLabel="name"></TreeSelect> -->
                              </div>
-                            <div class="C2"> <Rating class="star" v-model="val2" :cancel="false" /></div>
+                            <div class="C2">
+                              <Rating v-model="val2" :cancel="false" :stars="7"/>
+                            </div>
 
                           </div>
-
               </div>
-
-
-
-
-
-
     <button class="newsbtn" >ثبت نظر</button>
   </div>
 </template>
@@ -50,11 +45,12 @@ import {ref} from "vue";
 import TreeSelect from 'primevue/treeselect';
 import Rating from 'primevue/rating';
 
-export default {components:{Rating,TreeSelect},
+export default {
+  components:{Rating,TreeSelect},
   setup() {
 
     const val1 = ref();
-    const val2 = ref(0);
+    const val2 = ref(null);
     const selectedRole1 = ref();
     const selectedRole2 = ref();
     const role = ref([
@@ -192,15 +188,15 @@ h5{
   align-items: center;
   justify-content: center;
 }
-.star{
+// .star{
 
-  width: 250px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+//   width: 250px;
+//   height: 50px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
 
-}
+// }
 .Select:hover{
   border: 2px solid #57CC99;
 }
@@ -292,9 +288,13 @@ width:350px;
   width:350px;
   height:121px;
 }
-  .star{
-    margin-bottom: 40px;
-  }
+  // .star{
+  //   margin-bottom: 40px;
+  // }
 
+}
+::v-deep(.p-rating-star-on) {
+  color: blue !important;
+  width: 20px;
 }
 </style>
