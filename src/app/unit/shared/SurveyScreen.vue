@@ -73,12 +73,13 @@ export default {components:{Rating,TreeSelect},
 
 .header-s{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   margin-top:30px;
   margin-bottom:70px;
   margin-left: 400px;
+  width: 100%;
 }
 .back{
   justify-content: start;
