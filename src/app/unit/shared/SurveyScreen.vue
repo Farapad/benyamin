@@ -175,9 +175,26 @@ export default {
     display: flex;
     flex-direction: column;
     .first-child{
+      width: 100% !important;
       .user-name{
-        width: 100%;
+        width: 100% !important;
       }
+    }
+     .last-child{
+      width: 100% !important;
+      .email{
+        width: 100% !important;
+      }
+    }
+  }
+  .user-rate{
+    display: flex;
+    flex-direction: column;
+    .first-child {
+      width: 100% !important;
+    }
+    .last-child {
+      width: 100% !important;
     }
   }
 }
