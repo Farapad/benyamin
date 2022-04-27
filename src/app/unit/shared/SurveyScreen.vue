@@ -155,7 +155,7 @@ export default {
   width: 50%;
   border: 2px solid rgba(87, 204, 153, 1)
 }
-::v-deep(.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight) {
+::v-deep(.p-dropdown-item.p-highlight) {
   background: rgba(87, 204, 153, 1) !important;
 }
 </style>
