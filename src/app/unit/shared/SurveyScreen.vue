@@ -16,14 +16,19 @@
     <div class="user-rate">
         <div class="first-child">
             <span class="py-2">پیام</span>
-            <Textarea class="text-area" :placeholder="'پیام خود را بنویسید'" v-model="userComment" :autoResize="true" rows="5" cols="50" />
+            <Textarea class="text-area" :placeholder="'پیام خود را بنویسید'" v-model="userComment" :autoResize="true" rows="6" cols="50" />
         </div>
         <div class="last-child">
-            <!-- <span class="py-2">نام و نام خانوادگی</span> -->
+          <div class="controller">
+            <div class="first-child">
+              <Rating class="star" v-model="val2" :cancel="false" />
+            </div>
+            <div class="last-child">
 
+            </div>
+          </div>
         </div>
     </div>
-    <Rating class="star" v-model="val2" :cancel="false" />
   </div>
 </template>
 <script>
@@ -96,6 +101,7 @@ export default {
       display: flex;
       flex-direction: column;
       padding: 20px;
+      width: 50%;
       span{
         color: rgba(75, 85, 99, 1);
       }
@@ -105,10 +111,18 @@ export default {
       }
     }
     .last-child{
-      display: flex;
-      flex-direction: column;
-      height:200px;
-      background: #ffff;
+      width: 50%;
+      padding-top: 57px;
+      padding-left: 20px;
+      padding-right: 20px;
+      .controller{
+        display: flex;
+        flex-direction: column;
+        height:162px;
+        background: #ffff;
+        width: 100%;
+        border-radius: 8px;
+      }
     }
   }
 }
