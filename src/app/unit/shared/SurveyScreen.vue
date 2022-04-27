@@ -107,6 +107,8 @@ export default {
     .last-child{
       display: flex;
       flex-direction: column;
+      height:200px;
+      background: #ffff;
     }
   }
 }
