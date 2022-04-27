@@ -16,7 +16,7 @@
     <div class="user-rate">
         <div class="first-child">
             <span class="py-2">پیام</span>
-            <Textarea v-model="userComment" :autoResize="true" rows="5" cols="30" />
+            <Textarea class="text-area" v-model="userComment" :autoResize="true" rows="5" cols="30" />
         </div>
         <div class="last-child">
             <!-- <span class="py-2">نام و نام خانوادگی</span> -->
@@ -97,6 +97,9 @@ export default {
       padding: 20px;
       span{
         color: rgba(75, 85, 99, 1);
+      }
+      .text-area{
+        border: none;
       }
     }
   }
