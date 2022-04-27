@@ -15,10 +15,11 @@
     </div>
     <div class="user-rate">
         <div class="first-child">
-            
+            <span class="py-2">پیام</span>
+            <Textarea v-model="userComment" :autoResize="true" rows="5" cols="30" />
         </div>
         <div class="last-child">
-
+            <!-- <span class="py-2">نام و نام خانوادگی</span> -->
         </div>
     </div>
     <Rating class="star" v-model="val2" :cancel="false" />
@@ -34,8 +35,7 @@ export default {
   setup() {
     const val1 = ref();
     const val2 = ref(0);
-    const selectedRole1 = ref();
-    const selectedRole2 = ref();
+    const userComment = ref(null)
     const role = ref([
       {
         name: 'سامانه',
@@ -45,7 +45,7 @@ export default {
         code: 'AD',},
       { name: 'مدیریت',
         code: 'MA',}]);
-    return {val1, val2 };
+    return {val1, val2 , userComment};
   }}
 </script>
 <style lang="scss" scoped>
@@ -84,6 +84,17 @@ export default {
         border-radius:8px;
         border: none;
       }
+      span{
+        color: rgba(75, 85, 99, 1);
+      }
+    }
+  }
+  .user-rate {
+    display: flex;
+    .first-child{
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
       span{
         color: rgba(75, 85, 99, 1);
       }
