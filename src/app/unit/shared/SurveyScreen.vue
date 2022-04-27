@@ -155,7 +155,30 @@ export default {
   width: 50%;
   border: 2px solid rgba(87, 204, 153, 1)
 }
-::v-deep(.p-dropdown-item.p-highlight) {
-  background: rgba(87, 204, 153, 1) !important;
+::v-deep(.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight) {
+  width: 50%;
+  border: 2px solid rgba(87, 204, 153, 1)
+}
+::v-deep(.p-rating:not(.p-disabled):not(.p-readonly) .p-rating-icon:hover){
+   color: yellow;
+}
+::v-deep(.p-dropdown:not(.p-disabled).p-focus){
+   border-color: rgba(87, 204, 153, 1);
+   box-shadow: none;
+}
+
+@media (max-width:450px) {
+  .main-controller{
+    padding: 20px;
+  }
+  .user-information {
+    display: flex;
+    flex-direction: column;
+    .first-child{
+      .user-name{
+        width: 100%;
+      }
+    }
+  }
 }
 </style>
