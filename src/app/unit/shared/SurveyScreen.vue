@@ -21,10 +21,11 @@
         <div class="last-child">
           <div class="controller">
             <div class="first-child">
-              <Rating class="star" v-model="val2" :cancel="false" />
+              <span>ارزیابی شما نسبت به:</span>
+              <Dropdown v-model="position" :options="positions" optionLabel="name" optionValue="code" placeholder="سامانه" />
             </div>
             <div class="last-child">
-
+              <Rating class="star" v-model="val2" :cancel="false" />
             </div>
           </div>
         </div>
@@ -35,23 +36,22 @@
 import {ref} from "vue";
 import Rating from 'primevue/rating';
 import Textarea from 'primevue/textarea';
+import Dropdown from 'primevue/dropdown';
 export default {
   components:
-  {Rating,Textarea},
+  {Rating,Textarea,Dropdown},
   setup() {
     const val1 = ref();
     const val2 = ref(0);
-    const userComment = ref(null)
-    const role = ref([
-      {
-        name: 'سامانه',
-        code: 'SA',},{ name: 'مدرس',
-        code: 'MO',},
-      { name: 'ادمین',
-        code: 'AD',},
-      { name: 'مدیریت',
-        code: 'MA',}]);
-    return {val1, val2 , userComment};
+    const userComment = ref(null);
+    const position = ref (null);
+    const positions = ref([
+            {name: 'سامانه', code: 'NY'},
+            {name: 'مدرس', code: 'RM'},
+            {name: 'ادمین', code: 'LDN'},
+            {name: 'مدیریت', code: 'IST'}
+        ]);
+    return {val1, val2 , userComment  , positions , position};
   }}
 </script>
 <style lang="scss" scoped>
@@ -122,6 +122,19 @@ export default {
         background: #ffff;
         width: 100%;
         border-radius: 8px;
+        .first-child {
+          width: 100%;
+          display: flex;
+          flex-direction: row !important;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .last-child{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          padding-top: 10px !important;
+        }
       }
     }
   }
@@ -137,5 +150,12 @@ export default {
    content:"\e937"!important;
    color: yellow;
    font-size: 30px;
+}
+::v-deep(.p-dropdown) {
+  width: 50%;
+  border: 2px solid rgba(87, 204, 153, 1)
+}
+::v-deep(.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight) {
+  background: rgba(87, 204, 153, 1) !important;
 }
 </style>
