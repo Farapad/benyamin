@@ -20,6 +20,7 @@
         </div>
         <div class="last-child">
             <!-- <span class="py-2">نام و نام خانوادگی</span> -->
+
         </div>
     </div>
     <Rating class="star" v-model="val2" :cancel="false" />
@@ -102,6 +103,10 @@ export default {
         border: none;
         border-radius: 8px;
       }
+    }
+    .last-child{
+      display: flex;
+      flex-direction: column;
     }
   }
 }
