@@ -1,6 +1,6 @@
 <template>
  <div class="main-controller">
-  <div>
+  <div class="controller">
    <carousel :items-to-show="1">
     <slide v-for="slide in products" :key="slide">
       <img class="w-100" :src="slide.image"> 
@@ -224,7 +224,7 @@ export default {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: -340px;
+  top: -424px;
   .card-1{
     max-width: 528px;
     background: rgba(244, 244, 244, 0.75);
@@ -233,6 +233,14 @@ export default {
     border-radius: 12px;
     text-align: center;
     font-weight: 600;
+  }
+}
+.controller{
+  height: 700px;
+}
+@media (max-width: 450px){
+  .controller {
+    height: 250px;
   }
 }
 </style>
