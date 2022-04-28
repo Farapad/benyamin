@@ -220,5 +220,26 @@ export default {
           padding: 10px;
       }
   }
+  ::v-deep(.p-fileupload-buttonbar .p-button:last-child) {
+    position: relative;
+    top: 144px;
+    z-index: 10;
+    margin-right: 180px;
+    background: rgba(87, 204, 153, 1);
+    border: none;
+    font-size: 14px;
+    padding: 7px 30px;
+  }
+  ::v-deep(.p-button.p-fileupload-choose){
+    position: relative;
+    overflow: hidden;
+    top: 144px;
+    z-index: 10;
+    background: rgba(253, 175, 59, 1);
+    border: none;
+    font-size: 14px;
+    padding: 7px 25px;
+    right: 100px;
+ }
 }
 </style>
