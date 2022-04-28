@@ -182,20 +182,7 @@ export default {
                   }
               }
           }
-          .bottom-box{
-              display: flex;
-              justify-content: center;
-              width:100% ;
-              .btn{
-                  width: 100%;
-                  background: rgba(87, 204, 153, 1);
-                  border: none;
-                  display: flex;
-                  justify-content: center;
-                  font-size: 14px;
-                  border-radius: 10px;
-              }
-          }
+       
       }
   }
 }
@@ -236,6 +223,20 @@ export default {
                       padding:0px 45px;
                       font-size: 12px;
                   }
+              }
+          }
+             .bottom-box{
+              display: flex;
+              justify-content: center;
+              width:100% ;
+              .btn{
+                  width: 100%;
+                  background: rgba(87, 204, 153, 1);
+                  border: none;
+                  display: flex;
+                  justify-content: center;
+                  font-size: 14px;
+                  border-radius: 10px;
               }
           }
 }
