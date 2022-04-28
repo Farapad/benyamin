@@ -262,6 +262,17 @@ export default {
     .second-child{
         display: flex !important;
         flex-direction:row !important;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .text {
+            display: none;
+        }
+    }
+    .second-child-card{
+        width: 370px !important;
+        margin-bottom: 20px !important;
+        margin-top:0px !important;
+        margin-right: 20px;
     }
 }
 </style>
