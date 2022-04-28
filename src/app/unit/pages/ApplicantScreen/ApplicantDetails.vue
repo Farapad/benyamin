@@ -34,32 +34,38 @@
                 <InputText  class="input"/>
               </div>
             </div>
-            <div class="child">
+            <div class="child-controller">
+              <div class="child">
                 <span class="label">کد پستی</span>
                 <InputText  class="input"/>
-            </div>
-            <div class="child">
+              </div>
+              <div class="child">
                 <span class="label">نام و نام خانوادگی مسؤل ارتباطات</span>
                 <InputText  class="input"/>
+              </div>
             </div>
-            <div class="child">
+            <div class="child-controller">
+              <div class="child">
                 <span class="label">شماره تلفن</span>
                 <InputText  class="input"/>
-            </div>
-            <div class="child">
+              </div>
+              <div class="child">
                 <span class="label">آدرس ایمیل</span>
                 <InputText  class="input"/>
+              </div>
             </div>
-            <div class="upload-box">
-             <div class="header-text mt-2"> بارگزاری فایل منبع تامین کننده جهت انعکاس در سامانه</div>
+            <div class="bottom-controller">
+             <div class="upload-box">
+              <div class="header-text mt-2"> بارگزاری فایل منبع تامین کننده جهت انعکاس در سامانه</div>
                  <FileUpload  :showCancelButton="false" name="demo[]" url="./upload.php" @upload="onUpload" :multiple="true" accept="image/*" :maxFileSize="1000000">
                       <template #empty>  
                           <img src="@/assets/img/svg/upload.svg" />
                       </template>
                  </FileUpload>
-            </div>
-            <div class="bottom-box">
+             </div>
+             <div class="bottom-box">
                 <img src="@/assets/img/svg/png/video-lab.png" >
+             </div>
             </div>
         </div>
     </div>
@@ -198,6 +204,21 @@ export default {
         width: 50%;
         padding: 5px 10px;
     }
-}
+  }
+  .bottom-controller{
+      display: flex;
+      .bottom-box{
+          width: 50%;
+          padding: 10px;
+          img{
+              width: 600px;
+              height: 200px;
+          }
+      }
+      .upload-box{
+          width: 50%;
+          padding: 10px;
+      }
+  }
 }
 </style>
