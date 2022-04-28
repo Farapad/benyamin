@@ -30,6 +30,9 @@
           </div>
         </div>
     </div>
+    <div class="bottom-btn">
+        <Button class="btn" :label="'ثبت نظر'"/>
+    </div>
   </div>
 </template>
 <script>
@@ -197,5 +200,17 @@ export default {
       width: 100% !important;
     }
   }
+}
+.bottom-btn{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
+ .btn{
+   background: rgba(87, 204, 153, 1);
+   border: none;
+   width: 200px;
+   font-size: 14px;
+ }
 }
 </style>
