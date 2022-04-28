@@ -88,7 +88,6 @@
                 <Button @click="nextStep" class="btn">تایید</Button>
             </div>
         </div> 
-        <div class="">
           <div  class="text-bar">
               <div class="main-box">
                  <p>
@@ -98,7 +97,6 @@
                 </p>
               </div>
             </div>
-        </div>
       </div>
    </div>
 </template>
@@ -271,6 +269,9 @@ export default {
     width: 10px;
 }
 @media (min-width:450px) {
+    .bottom{
+        display: none !important;
+    }
     .second-child{
         display: flex !important;
         flex-direction:row !important;
@@ -286,8 +287,10 @@ export default {
         margin-top:0px !important;
         margin-right: 20px;
     }
-    .bottom{
-        display: none !important;
+}
+@media (max-width:450px) {
+    .text-bar{
+        display: none;
     }
 }
 </style>
