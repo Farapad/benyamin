@@ -4,29 +4,35 @@
             <div class="header"> 
                 <p>مشخصات متقاضی حقوقی</p>
             </div>
-            <div class="child">
+            <div class="child-controller">
+              <div class="child">
                 <span class="label">نام متقاضی به فارسی</span>
                 <InputText  class="input"/>
-            </div>
-            <div class="child">
+              </div>
+              <div class="child">
                 <span class="label">نام متقاضی به انگلیسی </span>
                 <InputText  class="input"/>
+              </div>
             </div>
-            <div class="child">
+            <div class="child-controller">
+              <div class="child">
                 <span class="label">شماره ثبت</span>
                 <InputText  class="input"/>
-            </div>
-            <div class="child">
+              </div>
+              <div class="child">
                 <span class="label">شناسه ملی</span>
                 <InputText  class="input"/>
+              </div>
             </div>
-            <div class="child">
+            <div class="child-controller">
+              <div class="child">
                 <span class="label">نوع فعالیت</span>
                 <InputText  class="input"/>
-            </div>
-            <div class="child">
+              </div>
+              <div class="child">
                 <span class="label">نشانی</span>
                 <InputText  class="input"/>
+              </div>
             </div>
             <div class="child">
                 <span class="label">کد پستی</span>
@@ -183,5 +189,15 @@ export default {
     img{
         width: 100%;
     }
+}
+
+@media (min-width:450px){
+    .child-controller{
+    display: flex;
+    .child{
+        width: 50%;
+        padding: 5px 10px;
+    }
+}
 }
 </style>
