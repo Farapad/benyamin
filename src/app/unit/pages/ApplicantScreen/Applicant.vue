@@ -61,7 +61,7 @@
                 </div>
             </div>
         </div>
-       <div class="">
+       <div class="bottom">
                     <div class="bottom-card my-4">
                 <div class="top-bar">
                     <div>شروط و ضوابط حاکم بر استفاده از خدمات</div>
@@ -182,7 +182,29 @@ export default {
                   }
               }
           }
-          .bottom-card{
+          .bottom-box{
+              display: flex;
+              justify-content: center;
+              width:100% ;
+              .btn{
+                  width: 100%;
+                  background: rgba(87, 204, 153, 1);
+                  border: none;
+                  display: flex;
+                  justify-content: center;
+                  font-size: 14px;
+                  border-radius: 10px;
+              }
+          }
+      }
+  }
+}
+////
+.box{
+    justify-content: center;
+}
+.bottom {
+      .bottom-card{
               display: flex;
               flex-direction: column;
               align-items: center;
@@ -216,26 +238,6 @@ export default {
                   }
               }
           }
-          .bottom-box{
-              display: flex;
-              justify-content: center;
-              width:100% ;
-              .btn{
-                  width: 100%;
-                  background: rgba(87, 204, 153, 1);
-                  border: none;
-                  display: flex;
-                  justify-content: center;
-                  font-size: 14px;
-                  border-radius: 10px;
-              }
-          }
-      }
-  }
-}
-////
-.box{
-    justify-content: center;
 }
 .text-bar{
   display: flex;  
