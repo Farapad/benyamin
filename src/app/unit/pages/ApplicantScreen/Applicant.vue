@@ -60,7 +60,9 @@
 ساعت در خصوص هر درس طی یک بازه زمانی یک‏ماهه می‏باشد.</div>
                 </div>
             </div>
-            <div class="bottom-card my-4">
+        </div>
+       <div class="">
+                    <div class="bottom-card my-4">
                 <div class="top-bar">
                     <div>شروط و ضوابط حاکم بر استفاده از خدمات</div>
                 </div>
@@ -85,7 +87,7 @@
             <div class="bottom-box px-5">
                 <Button @click="nextStep" class="btn">تایید</Button>
             </div>
-        </div>
+        </div> 
       </div>
    </div>
 </template>
@@ -254,5 +256,10 @@ export default {
 .text-bar::-webkit-scrollbar {
     width: 10px;
 }
-
+@media (min-width:450px) {
+    .second-child{
+        display: flex !important;
+        flex-direction:row !important;
+    }
+}
 </style>
