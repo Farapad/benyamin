@@ -2,8 +2,7 @@
  <div>
 <h1 class="header1">دسترسی به زیر بخش های واسط کاربری اصلی دانش یاد</h1>
 <div class="sec1">
-  <PanelMenu class="sec1s" :model="items" style="border:white;background:#FFFFFF;
-border-radius: 6px;" />
+  <PanelMenu class="sec1s" :model="items" />
 </div>
 <h1 class="header1">دسترسی به بخش ورود به سامانه</h1>
    <div class="sec1">
@@ -23,7 +22,7 @@ import PanelMenu from 'primevue/panelmenu';
 import { ref } from 'vue';
 export default {
   components:{PanelMenu},
-  setup() {   const expandedKeys = ref({});
+  setup() {
     const items = ref([
       {
         key: '0',
@@ -68,6 +67,23 @@ export default {
       {
         key: '0',
         label: 'دسترسی به بانک های اطلاعاتی',
+        items: [{
+          key: '0_0',
+          label: 'لیست مدرسان',
+         },
+          {
+            key: '1_1',
+            label: 'لیست فراگیران',
+          },
+          {
+            key: '1_2',
+            label: 'لیست منابع عرضه کننده دوره/درس', items: [{
+              key: '0_0_0',
+              label: 'انجمن علمی حسابرسی فناوری اطلاعات ایران',
+            },
+
+            ]
+          },]
       },
       {
         key: '1',
@@ -91,15 +107,32 @@ export default {
 
 </script>
 <style lang="scss" scoped>
-
-
-
-
-
-
-
-
-
+h1{
+  font-weight: 500;
+  font-size: 20px;
+  color:#4B5563;
+  margin-right:212px;
+  margin-bottom:19px;
+  margin-top:36px;
+}
+.sec1{
+  width: 1016px;
+  height: 212px;
+  margin-right:212px;
+  background-color:#f5f5f5;
+  border:#f5f5f5;
+  border-radius: 18px;
+}
+.sec2{  width: 1016px;
+  height: 326px;
+  margin-right:212px;}
+.sec3{
+  width: 1016px;
+  height: 65px;
+  margin-right:212px;
+  margin-top:36px;
+  margin-bottom:36px;
+}
 @media only screen and (max-width: 768px)  {
   .header1{
     font-weight: bolder;
@@ -113,14 +146,16 @@ export default {
     width: 374px;
     height: 138px;
     margin-bottom:20px;
+    margin-right:20px;
   }
   .sec2{    width: 374px;
     height: 78px;
-    margin-bottom:20px;}
+    margin-bottom:20px;    margin-right:20px;}
   .sec3{    width: 374px;
     height: 56px;
     margin-bottom:20px;
-  margin-top: 40px}
+  margin-top: 40px;
+    margin-right:20px;}
 }
 
 </style>
