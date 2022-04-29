@@ -1,11 +1,11 @@
 <template>
    <div class="header">
       <span class="text">مرتب سازی :</span>
-      <div class="switch-button">
-        <div>همه</div>
-        <div>جدیدترین</div>
-        <div>محبوب ترین</div>
-        <div>ارزان ترین</div>
+        <div class="switch-button">
+        <div  id="all" class="all text">همه</div>
+        <div @click="newest" class="new text">جدیدترین</div>
+        <div @click="popularest" class="popular text">محبوب ترین</div>
+        <div class="inexpensive text">ارزان ترین</div>
         <div class="custom"></div>
       </div>
    </div>
@@ -52,6 +52,24 @@ export default {
     setup() {
 
       const layout = ref('grid');
+
+      
+      // document.getElementById('all').addEventListener('click' , () => {
+      //     document.querySelector('.custom').style.right = '5%'
+      // })
+     function newest () {
+          document.querySelector('.custom').style.right = '25%';
+          document.querySelector('.new').style.color = '#ffff';
+     }
+
+     function popularest () {
+         document.querySelector('.custom').style.right = '48%';
+         document.querySelector('.popular').style.color = '#ffff';
+     }
+
+    
+      
+
 
       const picture = ref(require('../../../../assets/img/svg/png/html.png'));
       const picturee = ref(require('../../../../assets/img/svg/png/js.png'));
@@ -100,7 +118,7 @@ export default {
       products,
       layout,
       onSortChange,
-      sortOrder,sortField,sortKey,sortOptions
+      sortOrder,sortField,sortKey,sortOptions,newest,popularest
     };
     },
 }
@@ -252,6 +270,21 @@ export default {
     border-radius: 14px;
     position: relative;
     margin: 0px 5px;
+    padding: 0px 10px;
+    .text{
+      z-index: 10;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .custom{
+      background: rgba(87, 204, 153, 1);
+      width: 80px;
+      position: absolute;
+      height: 40px;
+      right: 5%;
+      border-radius: 10px;
+      transition: 0.5s ;
+    }
   }
 }
 </style>
