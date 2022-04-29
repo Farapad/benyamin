@@ -1,4 +1,14 @@
 <template>
+   <div class="header">
+      <span class="text">مرتب سازی :</span>
+      <div class="switch-button">
+        <div>همه</div>
+        <div>جدیدترین</div>
+        <div>محبوب ترین</div>
+        <div>ارزان ترین</div>
+        <div class="custom"></div>
+      </div>
+   </div>
  <div class="card">
   <DataView :value="products"  :paginator="true" :layout="layout"  :rows="12" :sortOrder="sortOrder" :sortField="sortField">
     <!-- <template #header>
@@ -220,8 +230,28 @@ export default {
       margin-top: 28px;
       margin-bottom: 24px;
     }
-  }
-   
+  }  
  }
+}
+.header{
+  padding: 10px 57px;
+  display: flex;
+  align-items: center;
+  .text{
+    color: rgba(71, 85, 105, 1);
+    font-weight: 700;
+  }
+  .switch-button{
+    display:flex;
+    justify-content: space-evenly;
+    width: 450px;
+    border: 2px solid rgba(210, 210, 210, 1);
+    color:  rgba(71, 85, 105, 1);
+    height: 50px;
+    align-items: center;
+    border-radius: 14px;
+    position: relative;
+    margin: 0px 5px;
+  }
 }
 </style>
