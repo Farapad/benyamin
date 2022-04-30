@@ -311,5 +311,10 @@ export default {
     padding: 0px 35px;
     margin-bottom: 10px;
   }
+
+  ::v-deep(.p-button:enabled:active){
+      background: rgba(87, 204, 153, 1);
+      box-shadow: none;
+  }
 }
 </style>
