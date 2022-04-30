@@ -2,10 +2,10 @@
    <div class="header">
       <span class="text">مرتب سازی :</span>
         <div class="switch-button">
-        <div  id="all" class="all text">همه</div>
+        <div  @click="getall" class="all text">همه</div>
         <div @click="newest" class="new text">جدیدترین</div>
         <div @click="popularest" class="popular text">محبوب ترین</div>
-        <div class="inexpensive text">ارزان ترین</div>
+        <div @click="getinexpensive" class="inexpensive text">ارزان ترین</div>
         <div class="custom"></div>
       </div>
    </div>
@@ -51,20 +51,35 @@ export default {
     },
     setup() {
 
-      const layout = ref('grid');
+     const layout = ref('grid');
 
-      
-      // document.getElementById('all').addEventListener('click' , () => {
-      //     document.querySelector('.custom').style.right = '5%'
-      // })
      function newest () {
           document.querySelector('.custom').style.right = '25%';
           document.querySelector('.new').style.color = '#ffff';
+          document.querySelector('.popular').style.color = '#475569';
+          document.querySelector('.all').style.color = '#475569';
+
      }
 
      function popularest () {
          document.querySelector('.custom').style.right = '48%';
          document.querySelector('.popular').style.color = '#ffff';
+         document.querySelector('.new').style.color = '#475569';
+         document.querySelector('.all').style.color = '#475569';
+     }
+
+     function getall () {
+         document.querySelector('.custom').style.right = '5%';
+         document.querySelector('.all').style.color = '#ffff';
+         document.querySelector('.new').style.color = '#475569';
+         document.querySelector('.popular').style.color = '#475569';
+     }
+
+     function getinexpensive () {
+         document.querySelector('.custom').style.right = '5%';
+         document.querySelector('.all').style.color = '#ffff';
+         document.querySelector('.new').style.color = '#475569';
+         document.querySelector('.popular').style.color = '#475569';
      }
 
     
@@ -118,7 +133,7 @@ export default {
       products,
       layout,
       onSortChange,
-      sortOrder,sortField,sortKey,sortOptions,newest,popularest
+      sortOrder,sortField,sortKey,sortOptions,newest,popularest,getall,getinexpensive
     };
     },
 }
@@ -264,7 +279,7 @@ export default {
     justify-content: space-evenly;
     width: 450px;
     border: 2px solid rgba(210, 210, 210, 1);
-    color:  rgba(71, 85, 105, 1);
+    color:  #475569;
     height: 50px;
     align-items: center;
     border-radius: 14px;
