@@ -9,6 +9,9 @@
         <div class="custom"></div>
       </div>
    </div>
+   <div class="header-responsive"> 
+      <Button label="dkdfvk"></Button>
+   </div>
  <div class="card">
   <DataView :value="products"  :paginator="true" :layout="layout"  :rows="12" :sortOrder="sortOrder" :sortField="sortField">
       <template #grid="slotProps">
@@ -293,6 +296,20 @@ export default {
       border-radius: 10px;
       transition: 0.5s ;
     }
+  }
+}
+.header-responsive {
+  display: none;
+}
+@media (max-width:450px) {
+  .header {
+    display: none !important;
+  }
+
+  .header-responsive {
+    display: flex !important;
+    padding: 0px 35px;
+    margin-bottom: 10px;
   }
 }
 </style>
