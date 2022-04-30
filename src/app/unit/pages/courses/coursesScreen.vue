@@ -10,7 +10,7 @@
       </div>
    </div>
    <div class="header-responsive"> 
-      <Button label="dkdfvk"></Button>
+      <Button label="مرتب سازی"></Button>
    </div>
  <div class="card">
   <DataView :value="products"  :paginator="true" :layout="layout"  :rows="12" :sortOrder="sortOrder" :sortField="sortField">
@@ -315,6 +315,13 @@ export default {
   ::v-deep(.p-button:enabled:active){
       background: rgba(87, 204, 153, 1);
       box-shadow: none;
+  }
+
+  ::v-deep(.p-button) {
+    background: rgba(87, 204, 153, 1);
+    border: none;
+    color: #ffff;
+    font-size: 14px;
   }
 }
 </style>
