@@ -56,6 +56,7 @@ export default {
          document.querySelector('.popular').style.color = '#ffff';
          document.querySelector('.new').style.color = '#475569';
          document.querySelector('.all').style.color = '#475569';
+         document.querySelector('.inexpensive').style.color = '#475569';
      }
 
      function getall () {
@@ -63,11 +64,12 @@ export default {
          document.querySelector('.all').style.color = '#ffff';
          document.querySelector('.new').style.color = '#475569';
          document.querySelector('.popular').style.color = '#475569';
+         document.querySelector('.inexpensive').style.color = '#475569';
      }
 
      function getinexpensive () {
-         document.querySelector('.custom').style.right = '5%';
-         document.querySelector('.all').style.color = '#ffff';
+         document.querySelector('.custom').style.right = '72%';
+         document.querySelector('.inexpensive').style.color = '#ffff';
          document.querySelector('.new').style.color = '#475569';
          document.querySelector('.popular').style.color = '#475569';
      }
