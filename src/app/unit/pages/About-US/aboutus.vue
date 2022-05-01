@@ -277,4 +277,32 @@ gap:20px;
 .img-empty {
   width: 140px;
 }
+@media (max-width:450px) {
+
+  ::v-deep(.p-fileupload .p-fileupload-content){
+    height: 250px;
+    width: 380px;
+  }
+  ::v-deep(.p-button.p-fileupload-choose){
+    position: relative;
+    overflow: hidden;
+    top: 200px;
+    z-index: 10;
+    background: rgba(253, 175, 59, 1);
+    border: none;
+    font-size: 14px;
+    padding: 7px 25px;
+ }
+  ::v-deep(.p-fileupload-buttonbar .p-button:last-child) {
+    position: relative;
+    top: 200px;
+    z-index: 10;
+    margin-right: 70px;
+    background: rgba(87, 204, 153, 1);
+    border: none;
+    font-size: 14px;
+    padding: 7px 30px;
+    right: 140px;
+ }
+}
 </style>
