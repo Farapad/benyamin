@@ -12,21 +12,28 @@
         <img class="imgcard"  v-lazy="image2"  alt="image">
         <h5 style="color:#1F2937;font-size: 20px;font-weight:500;padding-right:37px;padding-top:18px">شروع دوره برنامه نویسی موبایل IOS از 24 اسفند </h5>
         <div class="card-content">
-          <p class="incard">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد</p>
+          <span class="incard">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد</span>
         </div>
+         <div class="last-child-bottom">
+                  <Button class=" " :label="'فعال سازی'"/>
+                  <Button class=" " :label="'غیر فعال سازی'"/>
+         </div>
       </div>
 
       <div class="card">
         <img v-lazy="image"  >
         <h5 style="color:#1F2937;font-size: 20px;font-weight:500;padding-right:37px;padding-top:18px">شروع دوره برنامه نویسی PHP از 20 اسفند </h5>
         <div class="card-content">
-          <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
-          </p>
+          <span class="incard">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+          </span>
         </div>
          <div class="last-child-bottom">
                   <Button class=" " :label="'فعال سازی'"/>
-                   <Button class=" " :label="'غیر فعال سازی'"/>
+                  <Button class=" " :label="'غیر فعال سازی'"/>
          </div>
+      </div>
+      <div class="bottom-btn">
+           <Button class=" " :label="'خبر ها و اطلاعیه های گذشته'"/>
       </div>
     </div>
 
@@ -90,9 +97,9 @@ a{
   line-height: 1.5rem;
   padding: 15px;
   width: 598px;
-  height: 180px;
+  height: auto;
 
-  p {
+  span {
     margin: 10px 0;
     color: #475569;
     font-size: 20px;
@@ -121,15 +128,15 @@ a{
 
   .card {
     width: 374px;
-    height: 550px;
+    height: auto;
   }
   .card-content {
     line-height: 1.5rem;
     padding: 15px;
     width: 342px;
-    height: 119px;
+    height: auto;
 
-    p {
+    span {
       color: #475569;
       font-size: 12px;
       padding-right: 15px;
@@ -161,12 +168,35 @@ a{
 }
  .last-child-bottom{
       display: flex;
-      justify-content: space-around;
       margin-top: 5px;
-      justify-content: space-evenly;
+      justify-content: center;
+      margin-bottom: 30px;
       button {
-        width: 100px;
+        width: 120px;
         font-size: 12px;
+        margin-left: 10px;
       }
     }
+
+::v-deep(.p-button) {
+  background: rgba(87, 204, 153, 1);
+  border: none;
+}   
+::v-deep(.p-button:hover) {
+  background: rgba(87, 204, 153, 1);
+  border: none;
+} 
+.bottom-btn{
+  display: none;
+}
+@media (max-width : 450px ) {
+  .bottom-btn{
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    button {
+      font-size: 12px;
+    }
+  }
+}
 </style>
