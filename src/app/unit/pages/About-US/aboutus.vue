@@ -292,6 +292,7 @@ gap:20px;
     border: none;
     font-size: 14px;
     padding: 7px 25px;
+    right: 20px;
  }
   ::v-deep(.p-fileupload-buttonbar .p-button:last-child) {
     position: relative;
@@ -302,7 +303,7 @@ gap:20px;
     border: none;
     font-size: 14px;
     padding: 7px 30px;
-    right: 140px;
+    right: 0px;
  }
 }
 </style>
