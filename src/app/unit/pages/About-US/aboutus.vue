@@ -42,10 +42,10 @@
       </div>
     </div>
     <div class="upload-box">
-       <div class="header-text mt-2"> بارگزاری فایل منبع تامین کننده جهت انعکاس در سامانه</div>
+       <div class="header-text mt-2"> بارگذاری اطلاعات جایگزین</div>
        <FileUpload  :showCancelButton="false" name="demo[]" url="./upload.php"  :multiple="true" accept="image/*" :maxFileSize="1000000">
                       <template #empty>  
-                          <img  src="@/assets/img/svg/upload.svg" />
+                          <img class="img-empty"  src="@/assets/img/svg/upload.svg" />
                       </template>
        </FileUpload>
     </div>   
@@ -231,34 +231,37 @@ gap:20px;
     background: #f2f3f5;
 }
 ::v-deep(.p-fileupload .p-fileupload-content){
-    height: 200px;
+    height: 250px;
+    width: 650px;
 }
 ::v-deep(.p-button.p-fileupload-choose){
     position: relative;
     overflow: hidden;
-    top: 144px;
+    top: 200px;
     z-index: 10;
     background: rgba(253, 175, 59, 1);
     border: none;
     font-size: 14px;
     padding: 7px 25px;
+    right: 150px;
  }
 ::v-deep(.p-button .p-button-icon-left){
     display: none;
 }
 ::v-deep(.p-fileupload-buttonbar .p-button:last-child) {
     position: relative;
-    top: 144px;
+    top: 200px;
     z-index: 10;
     margin-right: 70px;
     background: rgba(87, 204, 153, 1);
     border: none;
     font-size: 14px;
     padding: 7px 30px;
+    right: 140px;
 }
 ::v-deep(.p-fileupload .p-fileupload-content){
-    border: 2px dashed  rgba(222, 222, 222, 1);
     border-radius: 10px;
+    border: none;
 }
 ::v-deep(.p-fileupload-buttonbar) {
     height: 1px;
@@ -270,5 +273,8 @@ gap:20px;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+}
+.img-empty {
+  width: 140px;
 }
 </style>
