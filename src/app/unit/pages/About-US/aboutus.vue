@@ -22,7 +22,7 @@
     <div class="cards">
       <div class="col"><h1>درباره شرکت داده ورزی سامانه</h1>
         <div class="card">
-          <img src="@/assets/img/svg/aboutuspic2.svg" alt="image">
+          <img class="top" src="@/assets/img/svg/aboutuspic2.svg" alt="image">
           <div class="card-content">
             <p class="incard">شرکت «داده ورزی سامانه» با پشتوانه تحلیل،طراحی و پیاده سازی پروژه سیستم جامع اطلاعات در چند شرکت بزرگ تولیدی و انتقال دانش فنی و کارشناسان پروژه مربوطه در سال 1376 تاسیس گردید.</p>
             <button v-bind:href="dadevarzi">دانلود فایل PDF معرفی داده ورزی سامانه</button>
@@ -30,28 +30,48 @@
         </div></div>
 <div class="col"><h1 >درباره شرکت فناپ</h1>
   <div class="card">
-    <img src="@/assets/img/svg/aboutuspic1.svg" alt="image2">
+    <img class="top" src="@/assets/img/svg/aboutuspic1.svg" alt="image2">
     <div class="card-content">
       <p>  شرکت فناوری اطلاعات وارتباطات پاسارگادآرین (فناپ) در24 دی ماه سال1384 با سرمایه گذاری گروه ملی پاسارگاد وهمکاری جمعی از نخبگان و فارغ التحصیلان دانشگاه های برتر کشور تاسیس شد.
       </p>
       <button v-bind:href="Fanap" >دانلود فایل PDF معرفی فناپ</button>
-
-    </div></div>
+    </div>
 
       </div>
+        </div>
       </div>
     </div>
+    <div class="upload-box">
+       <div class="header-text mt-2"> بارگزاری فایل منبع تامین کننده جهت انعکاس در سامانه</div>
+       <FileUpload  :showCancelButton="false" name="demo[]" url="./upload.php"  :multiple="true" accept="image/*" :maxFileSize="1000000">
+                      <template #empty>  
+                          <img  src="@/assets/img/svg/upload.svg" />
+                      </template>
+       </FileUpload>
+    </div>   
 </template>
 ,<script>
 import { useRoute } from "vue-router";
 import { usePrimeVue } from "primevue/config";
 import FileUpload from 'primevue/fileupload';
+import {onMounted} from "vue";
 
 export default {
+  components : {FileUpload},
   el:'collapse',
   setup() {
     const route = useRoute();
     const isCollapsed = false
+
+      const changeToSpanish = () => {
+            const primevue = usePrimeVue();
+            primevue.config.locale.upload = 'بارگذاری';
+            primevue.config.locale.choose = 'انتخاب فایل';
+        }
+
+    onMounted(() => {
+        changeToSpanish();
+    });
     return {
       isCollapsed,
       Fanap:'',
@@ -60,7 +80,7 @@ export default {
   },
 };
 </script>
-<style lang="scss" >
+<style lang="scss" scoped>
 
 // :root {
 //   --bg-color: #f2f3f5;
@@ -91,7 +111,7 @@ h1{
   font-size: 24px;
 }
 
-  img{
+  .top{
     width: 100%;
 }
 
@@ -202,4 +222,53 @@ gap:20px;
   }
 }
 
+::v-deep(.p-fileupload-empty){
+    display: flex;
+    justify-content: center;
+}
+::v-deep(.p-fileupload .p-fileupload-buttonbar){
+    border: none;
+    background: #f2f3f5;
+}
+::v-deep(.p-fileupload .p-fileupload-content){
+    height: 200px;
+}
+::v-deep(.p-button.p-fileupload-choose){
+    position: relative;
+    overflow: hidden;
+    top: 144px;
+    z-index: 10;
+    background: rgba(253, 175, 59, 1);
+    border: none;
+    font-size: 14px;
+    padding: 7px 25px;
+ }
+::v-deep(.p-button .p-button-icon-left){
+    display: none;
+}
+::v-deep(.p-fileupload-buttonbar .p-button:last-child) {
+    position: relative;
+    top: 144px;
+    z-index: 10;
+    margin-right: 70px;
+    background: rgba(87, 204, 153, 1);
+    border: none;
+    font-size: 14px;
+    padding: 7px 30px;
+}
+::v-deep(.p-fileupload .p-fileupload-content){
+    border: 2px dashed  rgba(222, 222, 222, 1);
+    border-radius: 10px;
+}
+::v-deep(.p-fileupload-buttonbar) {
+    height: 1px;
+    // padding: 0px;
+}
+.upload-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
 </style>
