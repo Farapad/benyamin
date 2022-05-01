@@ -7,7 +7,7 @@
         «دانشیاد» درگاهی است برای ورود به فضای عملیاتی و بهره گیری از قابلیت های یک سامانه جامع خدماتی در حوزه «آموزش/یادگیری الکترونیکی»؛متشکل از اعضای یکپارچه ای چون سیستم مدیریت یادگیری
         (LMS"-Learning Management System") و سیستم مدیریت محتوای یادگیری
         (LCMS"-Learning Content Management System")
-        <a class="text-color" href="#"  v-on:click="isCollapsed=!isCollapsed" style="color: #2F80ED;text-decoration: none ">توضیحات بیشتر</a>
+        <a v-if="!isCollapsed" class="text-color" href="#"  v-on:click="isCollapsed=!isCollapsed" style="color: #2F80ED;text-decoration: none ">توضیحات بیشتر</a>
       </p>
 
       <div v-show='isCollapsed' class="outcard" >
