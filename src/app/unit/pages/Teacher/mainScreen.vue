@@ -24,11 +24,14 @@
        <span>ارسال گزارشات</span>
        <img src="@/assets/img/svg/arrow-icon.svg">
    </div>
- </div>    
+ </div> 
+ <details v-if="Step==2"/>   
 </template>
 <script>
 import { ref } from 'vue'
+import details from '@/app/unit/pages/Teacher/detailsLesson/DetailsLesson.vue'
 export default {
+    components : {details},
     setup () {
         const Step = ref(1)
         return {
