@@ -23,6 +23,10 @@
           <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
           </p>
         </div>
+         <div class="last-child-bottom">
+                  <Button class=" " :label="'فعال سازی'"/>
+                   <Button class=" " :label="'غیر فعال سازی'"/>
+         </div>
       </div>
     </div>
 
@@ -73,7 +77,7 @@ a{
 }
 .card{
   width:638px;
-  height: 646px;
+  height: auto;
   border: 1px solid #D2D2D2;
   border-radius: 18px
 }
@@ -155,4 +159,14 @@ a{
     padding-left: 10px;
   }
 }
+ .last-child-bottom{
+      display: flex;
+      justify-content: space-around;
+      margin-top: 5px;
+      justify-content: space-evenly;
+      button {
+        width: 100px;
+        font-size: 12px;
+      }
+    }
 </style>

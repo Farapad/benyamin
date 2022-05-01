@@ -164,7 +164,7 @@ export default {
  font-size: 14px;
  font-weight: 700;
  border: 1px solid rgba(87, 204, 153, 1);
- background: #fff;
+ background: rgba(87, 204, 153, 1);
  color: rgba(71, 85, 105, 1);
 }
 
@@ -262,9 +262,18 @@ export default {
       align-items: center;
       margin-top: 28px;
       margin-bottom: 24px;
+      button {
+        width: 100px;
+        font-size: 12px;
+      }
     }
     .last-child-bottom:last-child{
-      margin-top: 10px;
+      margin-top: 5px;
+      justify-content: space-evenly;
+      button {
+        width: 100px;
+        font-size: 12px;
+      }
     }
   }  
  }
