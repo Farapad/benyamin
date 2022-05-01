@@ -1,5 +1,5 @@
 <template>
- <div class="main-controller">
+ <div v-if="Step==1" class="main-controller">
    <div class="child">
        <span>درج اطلاعات درباره درس</span>
        <img src="@/assets/img/svg/arrow-icon.svg">
@@ -27,8 +27,14 @@
  </div>    
 </template>
 <script>
+import { ref } from 'vue'
 export default {
-    
+    setup () {
+        const Step = ref(1)
+        return {
+            Step
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
@@ -46,6 +52,7 @@ export default {
         padding: 15px;
         border-radius: 18px;
         margin-top: 30px;
+        cursor: pointer;
         span {
             color: rgba(107, 114, 128, 1);
         }
