@@ -28,6 +28,10 @@
                   <Button class=" " :label="'ثبت نام فردی'"/>
                    <Button class=" " :label="'ثبت نام گروهی'"/>
                </div>
+               <div class="last-child-bottom">
+                  <Button class=" " :label="'فعال سازی'"/>
+                   <Button class=" " :label="'غیر فعال سازی'"/>
+               </div>
             </div>
           </div>
       </div>    	
@@ -258,6 +262,9 @@ export default {
       align-items: center;
       margin-top: 28px;
       margin-bottom: 24px;
+    }
+    .last-child-bottom:last-child{
+      margin-top: 10px;
     }
   }  
  }
