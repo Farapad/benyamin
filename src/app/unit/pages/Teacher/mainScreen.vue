@@ -61,4 +61,9 @@ export default {
         }
     }
 }
+@media (max-width:450px) {
+    .main-controller {
+        padding: 10px;
+    }
+}
 </style>
