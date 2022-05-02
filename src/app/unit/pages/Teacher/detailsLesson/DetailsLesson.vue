@@ -34,7 +34,8 @@
                           <img class="img-empty"  src="@/assets/img/svg/upload.svg" />
                       </template>
        </FileUpload>
-    </div>  
+    </div>
+    <Button class="btn-submit" label="ثبت اطلاعات"/>  
  </div>
 </template>
 <script>
@@ -247,5 +248,12 @@ export default {
     padding: 7px 30px;
     right: 0px;
  }
+}
+.btn-submit {
+    margin-top: 20px;
+    width: 180px;
+    border-radius: 12px;
+    background: rgba(87, 204, 153, 1);
+    border: none;
 }
 </style>
