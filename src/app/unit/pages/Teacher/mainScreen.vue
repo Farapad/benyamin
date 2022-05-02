@@ -1,6 +1,6 @@
 <template>
  <div v-if="Step==1" class="main-controller">
-   <div class="child">
+   <div @click="getdetails" class="child">
        <span>درج اطلاعات درباره درس</span>
        <img src="@/assets/img/svg/arrow-icon.svg">
    </div>
@@ -25,17 +25,23 @@
        <img src="@/assets/img/svg/arrow-icon.svg">
    </div>
  </div> 
- <details v-if="Step==2"/>   
+ <!-- <details v-if="Step==2"/>    -->
 </template>
 <script>
 import { ref } from 'vue'
 import details from '@/app/unit/pages/Teacher/detailsLesson/DetailsLesson.vue'
+import router from '@/core/router/router';
 export default {
     components : {details},
     setup () {
-        const Step = ref(1)
+        const Step = ref(1);
+
+        function getdetails () {
+            router.push('/Teacher/Details')
+        }
         return {
-            Step
+            Step,
+            getdetails
         }
     }
 }

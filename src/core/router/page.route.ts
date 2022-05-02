@@ -13,6 +13,8 @@ const mylessons = () =>
 const admin = () => import("@/app/unit/pages/AdminScreen/admin.vue");
 const listScreen = () => import("@/app/unit/pages/ListScreen/listScreen.vue");
 const TeacherScreen = () => import("@/app/unit/pages/Teacher/mainScreen.vue");
+const Details = () =>
+  import("@/app/unit/pages/Teacher/detailsLesson/DetailsLesson.vue");
 
 export const pageRoutes: Array<RouteRecordRaw> = [
   { path: "/pages", component: Pages, beforeEnter: [canActivatedGuard] },
@@ -23,5 +25,12 @@ export const pageRoutes: Array<RouteRecordRaw> = [
   { path: "/mylessons", component: mylessons },
   { path: "/admin", component: admin },
   { path: "/list", component: listScreen },
-  { path: "/Teacher", component: TeacherScreen },
+  {
+    path: "/Teacher",
+    component: TeacherScreen,
+  },
+  {
+    path: "/Teacher/Details",
+    component: Details,
+  },
 ];
