@@ -9,44 +9,44 @@
 			            <span>معرفی مفاهیم پایه COBIT</span>      
                     </div>  
 		        </template>
+                 <div class="d-flex">
+                    <div class="w-50 first-button">
+                        <Button :label="'فهرست فراگیران موجود'"/>
+                    </div>
+                    <div class="w-50 last-button">
+                        <Button :label="'فهرست فراگیران قبلی '"/>
+                    </div>
+                </div>
+            </AccordionTab>
+            <AccordionTab>
+                <template #header>
+                    <div class="header">
+                        <span>AHI001</span>
+			            <span>معرفی مفاهیم پایه COBIT</span>      
+                    </div>  
+		        </template>
+                  <div class="d-flex">
+                    <div class="w-50 first-button">
+                        <Button :label="'فهرست فراگیران موجود'"/>
+                    </div>
+                    <div class="w-50 last-button">
+                        <Button :label="'فهرست فراگیران قبلی '"/>
+                    </div>
+                </div>
+            </AccordionTab>
+            <AccordionTab>
+                <template #header>
+                    <div class="header">
+                        <span>AHI001</span>
+			            <span>معرفی مفاهیم پایه COBIT</span>      
+                    </div>  
+		        </template>
                 <div class="d-flex">
                     <div class="w-50 first-button">
-                        <Button :label="'پرینت گواهینامه'"/>
+                        <Button :label="'فهرست فراگیران موجود'"/>
                     </div>
                     <div class="w-50 last-button">
-                        <Button :label="'بارگذاری گواهینامه'"/>
-                    </div>
-                </div>
-            </AccordionTab>
-            <AccordionTab>
-                <template #header>
-                    <div class="header">
-                        <span>AHI001</span>
-			            <span>معرفی مفاهیم پایه COBIT</span>      
-                    </div>  
-		        </template>
-                   <div class="d-flex">
-                    <div class="w-50 first-button">
-                        <Button :label="'پرینت گواهینامه'"/>
-                    </div>
-                    <div class="w-50 last-button">
-                        <Button :label="'بارگذاری گواهینامه'"/>
-                    </div>
-                </div>
-            </AccordionTab>
-            <AccordionTab>
-                <template #header>
-                    <div class="header">
-                        <span>AHI001</span>
-			            <span>معرفی مفاهیم پایه COBIT</span>      
-                    </div>  
-		        </template>
-                   <div class="d-flex">
-                    <div class="w-50 first-button">
-                        <Button :label="'پرینت گواهینامه'"/>
-                    </div>
-                    <div class="w-50 last-button">
-                        <Button :label="'گواهینامه رضا رضایی '"/>
+                        <Button :label="'فهرست فراگیران قبلی '"/>
                     </div>
                 </div>
             </AccordionTab>

@@ -24,7 +24,7 @@ export const pageRoutes: Array<RouteRecordRaw> = [
   { path: "/about", component: About },
   { path: "/Applicant", component: Applicant },
   { path: "/Applicant/details", component: ApplicantDetails },
-  { path: "/mylessons", component: mylessons },
+  { path: "/Management", component: mylessons },
   { path: "/admin", component: admin },
   { path: "/list", component: listScreen },
   {

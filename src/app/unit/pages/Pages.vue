@@ -31,9 +31,9 @@
   <div class="bottom-bar w-100 px-5 mb-3 mt-3 d-flex">
     <Button class="  child-one" label="ورود به سامانه"/>
     <div class="py-2">
-    <span  class="child-two font-16 font-weight-bold text-color px-3">فراگیر</span>
-    <span class="child-two font-16 font-weight-bold text-color px-3">مدرس</span>
-    <span class="child-two font-16 font-weight-bold text-color px-3">مدیریت</span>
+    <span  @click="getMangement"  class="child-two font-16 font-weight-bold text-color px-3">فراگیر</span>
+    <span @click="getTeacher" class="child-two font-16 font-weight-bold text-color px-3">مدرس</span>
+    <span @click="getlist" class="child-two font-16 font-weight-bold text-color px-3">مدیریت</span>
     <span class="child-two font-16 font-weight-bold text-color px-3">ادمین</span>
     <span @click="Applicant" class="hover-pointer child-two font-16 font-weight-bold text-color px-3">متقاضی برگزاری دوره یا درس</span>
      </div>
@@ -67,6 +67,18 @@ export default {
       router.push("/Applicant")
     }
 
+    function getTeacher () {
+      router.push('/Teacher')
+    }
+
+    function getMangement () {
+      router.push('/Management')
+    }
+
+    function getlist () {
+      router.push('/list')
+    }
+
       const picture = ref(require('../../../assets/img/svg/png/main-page.png'));
       const picturee = ref(require('../../../assets/img/svg/png/page.png'));
       const products = [
@@ -75,7 +87,10 @@ export default {
       ];
     return {
       products,
-      Applicant
+      Applicant,
+      getTeacher,
+      getMangement,
+      getlist
     };
   },
 };
