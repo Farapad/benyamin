@@ -1,9 +1,9 @@
 <template>
  <div class="main-controller">
-    <div class="header">درج اطلاعات درباره درس</div> 
+    <div class="header mb-5">درج اطلاعات درباره درس</div> 
     <div class="top-controller">
         <div class="first-child">
-            <div class="child mt-4">
+            <div class="child my-3">
                 <span class="my-2">عنوان گروه آموزشی</span>    
                 <Dropdown v-model="position" :options="positions" optionLabel="name" optionValue="code" placeholder="فناوری اطلاعات و ارتباطات" />
             </div>
@@ -72,6 +72,8 @@ export default {
         display: flex;
         width: 100%;
         justify-content: center;
+        color: black;
+        font-weight: 700;
     }
     .top-controller{
         display: flex;
@@ -79,7 +81,7 @@ export default {
         width: 100%;
         .first-child {
             width: 50%;
-            padding: 10px;
+            padding: 10px 20px;
             display: flex;
             flex-direction: column;
             .child {
@@ -87,12 +89,13 @@ export default {
                 flex-direction: column;
                 .input{
                     border: none;
+                    border-radius: 14px;
                 }
             }
         }
         .last-child {
             width: 50%;
-            padding: 10px;
+            padding: 10px 20px;
             display: flex;
             flex-direction: column;
             .child {
@@ -100,6 +103,7 @@ export default {
                 flex-direction: column;
                 .input{
                     border: none;
+                    border-radius: 14px;
                 }
             }
         }
