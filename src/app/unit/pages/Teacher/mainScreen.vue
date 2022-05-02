@@ -4,7 +4,7 @@
        <span>درج اطلاعات درباره درس</span>
        <img src="@/assets/img/svg/arrow-icon.svg">
    </div>
-   <div class="child">
+   <div @click="Getlessons" class="child">
        <span>درس های من</span>
        <img src="@/assets/img/svg/arrow-icon.svg">
    </div>
@@ -39,9 +39,14 @@ export default {
         function getdetails () {
             router.push('/Teacher/Details')
         }
+
+        function Getlessons () {
+            router.push ('/Teacher/Lessons');
+        }
         return {
             Step,
-            getdetails
+            getdetails,
+            Getlessons
         }
     }
 }
