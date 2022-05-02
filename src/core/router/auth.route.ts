@@ -14,4 +14,5 @@ export const authRoutes: Array<RouteRecordRaw> = [
   { path: "/otpcode", component: code },
   { path: "/newPassword", component: newPassword },
   { path: "/signup", component: signup },
+  { path: "/login", component: LoginScreen },
 ];
