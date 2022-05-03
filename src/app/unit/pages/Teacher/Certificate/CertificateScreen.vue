@@ -13,14 +13,16 @@
             </div>
         </div>
         <div class="upload-box">
-       <div class="header-text"> بارگذاری عکس</div>
-       <FileUpload  :showCancelButton="false" name="demo[]" url="./upload.php"  :multiple="true" accept="image/*" :maxFileSize="1000000">
+          <div class="header-text"> بارگذاری عکس</div>
+           <FileUpload  :showCancelButton="false" name="demo[]" url="./upload.php"  :multiple="true" accept="image/*" :maxFileSize="1000000">
                       <template #empty>  
                           <img class="img-empty"  src="@/assets/img/svg/upload.svg" />
                       </template>
-       </FileUpload>
-    </div>
+            </FileUpload>
+       </div>
     </div>   
+           <Button class="btn-submit" label="ارسال گواهینامه به مدیریت"/>  
+
 </div>
 </template>
 <script>
@@ -105,7 +107,7 @@ export default {
     border: none;
     font-size: 14px;
     padding: 7px 25px;
-    right: 150px;
+    right: 90px;
  }
 ::v-deep(.p-button .p-button-icon-left){
     display: none;
@@ -114,7 +116,6 @@ export default {
     position: relative;
     top: 200px;
     z-index: 10;
-    margin-right: 70px;
     background: rgba(87, 204, 153, 1);
     border: none;
     font-size: 14px;
@@ -136,6 +137,7 @@ export default {
   align-items: center;
   margin-bottom: 20px;
   width: 50%;
+  padding: 10px;
   .header-text {
       display: flex;
       justify-content: flex-start;
@@ -163,7 +165,7 @@ export default {
 
   ::v-deep(.p-fileupload .p-fileupload-content){
     height: 250px;
-    width: 380px;
+    width: 100%;
   }
   ::v-deep(.p-button.p-fileupload-choose){
     position: relative;
@@ -180,13 +182,22 @@ export default {
     position: relative;
     top: 200px;
     z-index: 10;
-    margin-right: 70px;
+    margin-right: 50px;
     background: rgba(87, 204, 153, 1);
     border: none;
     font-size: 14px;
     padding: 7px 30px;
     right: 0px;
  }
+ .upload-box {
+     width: 100%;
+ }
 }
-   
+.btn-submit {
+    margin-top: 20px;
+    border-radius: 12px;
+    background: rgba(87, 204, 153, 1);
+    border: none;
+    padding: 10px 20px;
+} 
 </style>
