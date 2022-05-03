@@ -32,8 +32,8 @@
     <Button @click="getlogin" class="child-one" label="ورود به سامانه"/>
     <div class="py-2">
     <span  @click="getMangement"  class="child-two hover-pointer font-16 font-weight-bold text-color px-3">فراگیر</span>
-    <span @click="getTeacher" class="child-two hover-pointer font-16 font-weight-bold text-color px-3">مدرس</span>
-    <span @click="getlist" class="child-two  hover-pointer font-16 font-weight-bold text-color px-3">مدیریت</span>
+    <span @click="getlist"  class="child-two hover-pointer font-16 font-weight-bold text-color px-3">مدرس</span>
+    <span @click="getTeacher" class="child-two  hover-pointer font-16 font-weight-bold text-color px-3">مدیریت</span>
     <span class="child-two hover-pointer font-16 font-weight-bold text-color px-3">ادمین</span>
     <span @click="Applicant" class="hover-pointer child-two font-16 font-weight-bold text-color px-3">متقاضی برگزاری دوره یا درس</span>
      </div>
