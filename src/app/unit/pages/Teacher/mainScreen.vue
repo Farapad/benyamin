@@ -12,7 +12,7 @@
        <span>ساخت درس</span>
        <img src="@/assets/img/svg/arrow-icon.svg">
    </div>
-   <div class="child">
+   <div @click="Getcertificate" class="child">
        <span>صدور گواهینامه</span>
        <img src="@/assets/img/svg/arrow-icon.svg">
    </div>
@@ -43,10 +43,15 @@ export default {
         function Getlessons () {
             router.push ('/Teacher/Lessons');
         }
+
+        function Getcertificate () {
+            router.push('/Teacher/Certificate')
+        }
         return {
             Step,
             getdetails,
-            Getlessons
+            Getlessons,
+            Getcertificate
         }
     }
 }

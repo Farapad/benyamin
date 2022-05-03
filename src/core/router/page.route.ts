@@ -17,6 +17,8 @@ const Details = () =>
   import("@/app/unit/pages/Teacher/detailsLesson/DetailsLesson.vue");
 const TeacherLesson = () =>
   import("@/app/unit/pages/Teacher/Teacherlessons/TeacherScreen.vue");
+const Certificate = () =>
+  import("@/app/unit/pages/Teacher/Certificate/CertificateScreen.vue");
 
 export const pageRoutes: Array<RouteRecordRaw> = [
   { path: "/pages", component: Pages, beforeEnter: [canActivatedGuard] },
@@ -38,5 +40,9 @@ export const pageRoutes: Array<RouteRecordRaw> = [
   {
     path: "/Teacher/Lessons",
     component: TeacherLesson,
+  },
+  {
+    path: "/Teacher/Certificate",
+    component: Certificate,
   },
 ];
