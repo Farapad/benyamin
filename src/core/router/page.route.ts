@@ -11,7 +11,8 @@ const ApplicantDetails = () =>
 const mylessons = () =>
   import("@/app/unit/pages/myLessonsScreen/MyLessons.vue");
 const admin = () => import("@/app/unit/pages/AdminScreen/admin.vue");
-const listScreen = () => import("@/app/unit/pages/ListScreen/listScreen.vue");
+const listScreen = () =>
+  import("@/app/unit/pages/managementscreen/ListScreen.vue");
 const TeacherScreen = () => import("@/app/unit/pages/Teacher/mainScreen.vue");
 const Details = () =>
   import("@/app/unit/pages/Teacher/detailsLesson/DetailsLesson.vue");
@@ -19,6 +20,8 @@ const TeacherLesson = () =>
   import("@/app/unit/pages/Teacher/Teacherlessons/TeacherScreen.vue");
 const Certificate = () =>
   import("@/app/unit/pages/Teacher/Certificate/CertificateScreen.vue");
+const Management = () =>
+  import("@/app/unit/pages/managementscreen/Management.vue");
 
 export const pageRoutes: Array<RouteRecordRaw> = [
   { path: "/pages", component: Pages, beforeEnter: [canActivatedGuard] },
@@ -28,7 +31,8 @@ export const pageRoutes: Array<RouteRecordRaw> = [
   { path: "/Applicant/details", component: ApplicantDetails },
   { path: "/Management", component: mylessons },
   { path: "/admin", component: admin },
-  { path: "/list", component: listScreen },
+  { path: "/management/list", component: listScreen },
+  { path: "/management", component: Management },
   {
     path: "/Teacher",
     component: TeacherScreen,
