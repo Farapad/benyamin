@@ -132,6 +132,11 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@media (min-width:720px) {
+  .main-controller{
+    padding: 80px 200px;
+  }  
+}
 .main-controller{
     .top-bar{
         .first-child {
@@ -173,6 +178,7 @@ export default {
         align-items: center;
         padding: 10px 4px;
         .item {
+            width: 100%;
             ul {
                 display: flex;
                 list-style: none;
@@ -182,7 +188,7 @@ export default {
                 border:1px solid rgba(87, 204, 153, 1);
                 border-radius: 8px;
                 color: rgba(107, 114, 128, 1);
-               
+                width: 100%;
                 li{
                     font-size: 12px;
                     padding: 18px 16px;
@@ -204,7 +210,7 @@ export default {
         .first-child{
             width: 50%;
             display: flex;
-            justify-content: flex-start;
+            justify-content:flex-end;
             .button{
                 font-size:12px;
                 color: rgba(71, 85, 105, 1);
@@ -213,11 +219,12 @@ export default {
                 padding: 14px 16px;
                 width: 172px;
                 border-radius:6px;
+                margin-left: 10px;
             }
         }
         .last-child{
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-start;
             width: 50%;
             .button{
                 font-size:12px;
@@ -227,6 +234,7 @@ export default {
                 padding: 14px 16px;
                 width: 172px;
                 border-radius:6px;
+                margin-right: 10px;
             }
         }
     }
