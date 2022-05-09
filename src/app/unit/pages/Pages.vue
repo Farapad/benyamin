@@ -31,7 +31,7 @@
   <div class="bottom-bar w-100 px-5 mb-3 mt-3 d-flex">
     <Button @click="getlogin" class="child-one" label="ورود به سامانه"/>
     <div class="py-2">
-    <span  @click="getMangement"  class="child-two hover-pointer font-16 font-weight-bold text-color px-3">فراگیر</span>
+    <span  @click="getpervasive"  class="child-two hover-pointer font-16 font-weight-bold text-color px-3">فراگیر</span>
     <span @click="getTeacher"  class="child-two hover-pointer font-16 font-weight-bold text-color px-3">مدرس</span>
     <span @click="getmanagement" class="child-two  hover-pointer font-16 font-weight-bold text-color px-3">مدیریت</span>
     <span class="child-two hover-pointer font-16 font-weight-bold text-color px-3">ادمین</span>
@@ -71,8 +71,8 @@ export default {
       router.push('/Teacher')
     }
 
-    function getMangement () {
-      router.push('/Management')
+    function getpervasive () {
+      router.push('/pervasive')
     }
 
     function getmanagement () {
@@ -93,7 +93,7 @@ export default {
       products,
       Applicant,
       getTeacher,
-      getMangement,
+      getpervasive,
       getmanagement,
       getlogin
     };

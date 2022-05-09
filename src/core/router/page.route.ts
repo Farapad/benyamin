@@ -12,7 +12,7 @@ const mylessons = () =>
   import("@/app/unit/pages/myLessonsScreen/MyLessons.vue");
 const admin = () => import("@/app/unit/pages/AdminScreen/admin.vue");
 const listScreen = () =>
-  import("@/app/unit/pages/managementscreen/ListScreen.vue");
+  import("@/app/unit/pages/managementscreen/listScreen.vue");
 const TeacherScreen = () => import("@/app/unit/pages/Teacher/mainScreen.vue");
 const Details = () =>
   import("@/app/unit/pages/Teacher/detailsLesson/DetailsLesson.vue");
@@ -29,7 +29,7 @@ export const pageRoutes: Array<RouteRecordRaw> = [
   { path: "/about", component: About },
   { path: "/Applicant", component: Applicant },
   { path: "/Applicant/details", component: ApplicantDetails },
-  { path: "/Management", component: mylessons },
+  { path: "/pervasive", component: mylessons },
   { path: "/admin", component: admin },
   { path: "/management/list", component: listScreen },
   { path: "/management", component: Management },
