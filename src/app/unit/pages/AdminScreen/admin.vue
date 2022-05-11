@@ -1,44 +1,66 @@
 <template>
  <div>
+   <a class="aimage" href="#"> <img class="adminimage" src="@/assets/img/svg/Adminicon.svg"></a>
 <h1 class="header1">دسترسی به زیر بخش های واسط کاربری اصلی دانش یاد</h1>
-<div class="sec1">
-  <PanelMenu class="sec1s" :model="items" />
+<!--  <MegaMenu  class="sec1s" :model="items" orientation="vertical"/>-->
+<div class="sec1s">
+  <div class="insidediv1">  <a href="#" class="text">دوره ها</a>
+    <img class="img11" src="@/assets/img/svg/Ladmin.svg"></div>
+  <div class="insidediv2">  <a href="#" class="text">خبر ها</a>
+    <img class="img12" src="@/assets/img/svg/Ladmin.svg"></div>
+  <div class="insidediv2">  <a href="#" class="text">اطلاعیه ها</a>
+    <img class="img13" src="@/assets/img/svg/Ladmin.svg"></div>
+  <div class="insidediv2">  <a href="#" class="text">درباره ی ما</a>
+    <img class="img14" src="@/assets/img/svg/Ladmin.svg"></div>
 </div>
 <h1 class="header1">دسترسی به بخش ورود به سامانه</h1>
-   <div class="sec1">
-     <PanelMenu  class="sec1s" :model="items2" />
+
+<!--     <MegaMenu   class="sec1s" :model="items2" orientation="vertical" />-->
+   <div class="sec1s">
+     <div class="insidediv1">  <a href="#" class="text">فراگیر</a>
+       <img class="img21" src="@/assets/img/svg/Ladmin.svg"></div>
+     <div class="insidediv2">  <a href="#" class="text">مدرس</a>
+       <img class="img22" src="@/assets/img/svg/Ladmin.svg"></div>
+     <div class="insidediv2">  <a href="#" class="text">مدیریت</a>
+       <img class="img23" src="@/assets/img/svg/Ladmin.svg"></div>
+     <div class="insidediv2">  <a href="#" class="text">درباره ی ما</a>
+       <img class="img24" src="@/assets/img/svg/Ladmin.svg"></div>
    </div>
+
    <h1 class="header1">دسترسی به اطلاعات متفرقه</h1>
-   <div class="sec2">
-     <PanelMenu class="sec2s" :model="items3" />
+
+     <PanelMenu style="direction: ltr" class="sec2s" :model="items3" orientation="vertical" />
+
+<!--  <MegaMenu  class="sec3s" :model="items4"  orientation="vertical"/>-->
+   <div class="sec3s">
+       <div class="insidediv1">  <a href="#" class="text">ارسال پیام به</a>
+         <img class="imgicon"  src="@/assets/img/svg/Ladmin.svg"></div>
    </div>
-<div class="sec3">
-  <PanelMenu class="sec3s" :model="items4" />
-</div>
  </div>
 </template>
 <script>
 import PanelMenu from 'primevue/panelmenu';
+import MegaMenu from 'primevue/megamenu';
 import { ref } from 'vue';
 export default {
-  components:{PanelMenu},
+  components:{PanelMenu,MegaMenu},
   setup() {
     const items = ref([
       {
         key: '0',
-        label: 'دوره ها',
+        label: 'دوره ها',items: []
       },
       {
         key: '1',
-        label: 'خبر ها',
+        label: 'خبر ها',items: []
       },
       {
         key: '2',
-        label: 'اطلاعیه ها',
+        label: 'اطلاعیه ها',items: []
       },
       {
         key: '3',
-        label: 'درباره ی ما',
+        label: 'درباره ی ما',items: []
 
       }
     ]);
@@ -46,19 +68,19 @@ export default {
     const items2 = ref([
       {
         key: '0',
-        label: 'فراگیر',
+        label: 'فراگیر',items: []
       },
       {
         key: '1',
-        label: 'مدرس',
+        label: 'مدرس',items: []
       },
       {
         key: '2',
-        label: 'مدیریت',
+        label: 'مدیریت',items: []
       },
       {
         key: '3',
-        label: 'متقاضی برگزاری درس/دوره',
+        label: 'متقاضی برگزاری درس/دوره',items: []
 
       }
     ]);
@@ -87,19 +109,19 @@ export default {
       },
       {
         key: '1',
-        label: 'دسترسی به اطلاعات مالی',
+        label: 'دسترسی به اطلاعات مالی',items: []
       }
     ]);
 
     const items4 = ref([
       {
         key: '0',
-        label: 'ارسال پیام به',
+        label: 'ارسال پیام به',items: []
       }
 
     ]);
 
-    return {  items,items2,items3,items4 }
+    return {  items,items2,items3,items4}
   }
 
 
@@ -115,47 +137,215 @@ h1{
   margin-bottom:19px;
   margin-top:36px;
 }
-.sec1{
+.adminimage{
+  margin-right: 116px;
+  margin-top: 40px;
+}
+.sec1s{
+  display: flex;
+  flex-direction: column;
   width: 1016px;
   height: 212px;
   margin-right:212px;
   background-color:#f5f5f5;
   border:#f5f5f5;
   border-radius: 18px;
+  margin-top:36px;
 }
-.sec2{  width: 1016px;
-  height: 326px;
-  margin-right:212px;}
-.sec3{
+
+.sec2s{  width: 1016px;
+  height:324px;
+  margin-right:212px;
+  border:#f5f5f5;
+  background-color:#F5F5F5;
+  border-radius: 18px;
+  margin-top:36px;
+  direction: ltr;
+}
+
+.sec3s{
   width: 1016px;
   height: 65px;
   margin-right:212px;
   margin-top:36px;
   margin-bottom:36px;
+  background-color:#f5f5f5;
+  border:#f5f5f5;
+  border-radius: 18px;
 }
-@media only screen and (max-width: 768px)  {
-  .header1{
-    font-weight: bolder;
-    font-size: 12px;
-    color:#4B5563;
-    margin-right:20px;
-    margin-bottom:10px;
-    margin-top:90px;
-  }
-  .sec1{
-    width: 374px;
-    height: 138px;
-    margin-bottom:20px;
-    margin-right:20px;
-  }
-  .sec2{    width: 374px;
-    height: 78px;
-    margin-bottom:20px;    margin-right:20px;}
-  .sec3{    width: 374px;
-    height: 56px;
-    margin-bottom:20px;
-  margin-top: 40px;
-    margin-right:20px;}
+.insidediv1{margin-top: 20px;
+margin-bottom:24px;
+margin-right: 20px;}
+.insidediv2{margin-bottom: 24px;margin-right: 20px
+}
+.img11{
+  margin-right: 906px;
+}.img12{margin-right: 912px;}.img13{margin-right: 886px;}.img14{margin-right: 880px;}
+.img21{margin-right: 918px;}.img22{margin-right: 910px;}.img23{margin-right: 898px;}.img24{margin-right: 880px;}
+.imgicon{margin-right: 944px;}
+.text{
+  font-weight: 500;
+  font-size: 18px;
+  color: #6B7280;
+cursor: pointer;
+  text-decoration: none;
+}
+.text:hover{
+  color:#57CC99;
+  cursor: pointer;
+  text-decoration: none;
+
 }
 
-</style>
+::v-deep(.sec2s) {
+  .p-menuitem-text {
+    font-weight: 500;
+    font-size: 18px;
+    color: #6B7280;
+    margin-left: 720px;
+  }
+  .p-panelmenu-content{
+    direction: rtl;
+  }
+
+  .p-menuitem-icon {
+    width: 16px;
+    height: 8px;
+    direction: rtl;
+  }
+}
+
+
+::v-deep(.sec2s:hover){
+  .p-menuitem-text{
+
+    color:#57CC99;
+  }
+  .p-panelmenu-icon{
+    color:#57CC99;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .adminimage {
+    width: 22px;
+    height: 22px;
+    margin-right:20px;
+  }
+  .header1 {
+    font-weight: bolder;
+    font-size: 12px;
+    color: #4B5563;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+
+  .sec1s {
+    width: 374px;
+    height: 138px;
+    margin-bottom: 90px;
+    margin-right: 20px;
+  }
+  .sec2s {
+    width: 374px;
+    height: 270px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+  .sec3s {
+    width: 374px;
+    height: 56px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-right: 20px;
+  }
+  .text {
+    font-weight: 500;
+    font-size: 12px;
+    color: #6B7280;
+    cursor: pointer;
+    text-decoration: none;
+
+  }
+  .insidediv1 {
+    margin-top: 12px;
+    margin-bottom: 3px;
+    margin-right: 16px;
+  }
+  .insidediv2 {
+    margin-bottom: 3px;
+    margin-right: 16px
+  }
+  .img11 {
+    width: 10px;
+    height: 10px;
+    margin-right: 297px;
+  }
+  .img12 {
+    margin-right: 302px;
+    width: 10px;
+    height: 10px
+  }
+  .img13 {
+    margin-right: 284px;
+    width: 10px;
+    height: 10px
+  }
+  .img14 {
+    margin-right: 280px;
+    width: 10px;
+    height: 10px
+  }
+  .img21 {
+    margin-right: 300px;
+    width: 10px;
+    height: 10px
+  }
+  .img22 {
+    margin-right: 295px;
+    width: 10px;
+    height: 10px
+  }
+  .img23 {
+    margin-right: 288px;
+    width: 10px;
+    height: 10px
+  }
+  .img24 {
+    margin-right: 274px;
+    width: 10px;
+    height: 10px
+  }
+  .imgicon {
+    width: 10px;
+    height: 10px
+  }
+  .imgicon {
+    margin-right: 270px;
+  }
+
+  .text:hover {
+    color: #57CC99;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  ::v-deep(.sec2s) {
+    .p-menuitem-text {
+      font-weight: 500;
+      font-size: 12px;
+      color: #6B7280;
+      margin-left: 195px;
+    }
+    .p-panelmenu-content{
+      direction: rtl;
+    }
+
+    .p-menuitem-icon {
+      width: 8px;
+      height: 4px;
+      direction: rtl;
+    }
+  }
+
+}</style>
