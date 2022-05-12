@@ -351,13 +351,25 @@ cursor: pointer;
       direction: rtl;
     }
   }
+}
 ::v-deep(.p-panelmenu .p-panelmenu-content .p-menuitem .p-menuitem-link .p-panelmenu-icon) {
     margin-right: 0.5rem;
     position: absolute;
-    left: 4%;
+    left: 10%;
+    font-size: 30px;
 }
-::v-deep(.p-panelmenu.p-panelmenu-header) {
-  border-radius: 18px !important;
-  background: white !important;
+::v-deep(.p-panelmenu .p-panelmenu-panel .p-panelmenu-header > a) {
+  border-radius: 18px 18px 6px 6px !important;
+  background: #ffff !important;
 }
-}</style>
+::v-deep(.p-panelmenu .p-panelmenu-header > a .p-panelmenu-icon) {
+  font-size: 30px;
+}
+::v-deep(.p-panelmenu .p-panelmenu-content) {
+  font-size: 12px;
+  color: rgba(107, 114, 128, 1) !important;
+}
+::v-deep(.p-panelmenu .p-panelmenu-content .p-menuitem .p-menuitem-link:focus) {
+  box-shadow: none;
+}
+</style>
