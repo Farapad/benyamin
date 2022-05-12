@@ -1,7 +1,8 @@
 <template>
+<div class="main-controller">
  <div>
    <a class="aimage" href="#"> <img class="adminimage" src="@/assets/img/svg/Adminicon.svg"></a>
-<h1 class="header1">دسترسی به زیر بخش های واسط کاربری اصلی دانش یاد</h1>
+ <h1 class="header1">دسترسی به زیر بخش های واسط کاربری اصلی دانش یاد</h1>
 <!--  <MegaMenu  class="sec1s" :model="items" orientation="vertical"/>-->
 <div class="sec1s">
   <div class="insidediv1">  <a href="#" class="text">دوره ها</a>
@@ -37,6 +38,7 @@
          <img class="imgicon"  src="@/assets/img/svg/Ladmin.svg"></div>
    </div>
  </div>
+</div> 
 </template>
 <script>
 import PanelMenu from 'primevue/panelmenu';
@@ -107,10 +109,6 @@ export default {
             ]
           },]
       },
-      {
-        key: '1',
-        label: 'دسترسی به اطلاعات مالی',items: []
-      }
     ]);
 
     const items4 = ref([
@@ -129,6 +127,9 @@ export default {
 
 </script>
 <style lang="scss" scoped>
+.main-controller {
+  padding: 100px;
+}
 h1{
   font-weight: 500;
   font-size: 20px;
@@ -144,16 +145,15 @@ h1{
 .sec1s{
   display: flex;
   flex-direction: column;
-  width: 1016px;
+  width: 100%;
   height: 212px;
-  margin-right:212px;
   background-color:#f5f5f5;
   border:#f5f5f5;
   border-radius: 18px;
-  margin-top:36px;
 }
 
-.sec2s{  width: 1016px;
+.sec2s{  
+  width:100%;
   height:324px;
   margin-right:212px;
   border:#f5f5f5;
@@ -164,11 +164,9 @@ h1{
 }
 
 .sec3s{
-  width: 1016px;
+  width:100%;
   height: 65px;
-  margin-right:212px;
   margin-top:36px;
-  margin-bottom:36px;
   background-color:#f5f5f5;
   border:#f5f5f5;
   border-radius: 18px;
@@ -176,13 +174,20 @@ h1{
 .insidediv1{margin-top: 20px;
 margin-bottom:24px;
 margin-right: 20px;}
-.insidediv2{margin-bottom: 24px;margin-right: 20px
+.insidediv2{
+  margin-bottom: 24px;
+  margin-right: 20px;
 }
-.img11{
-  margin-right: 906px;
-}.img12{margin-right: 912px;}.img13{margin-right: 886px;}.img14{margin-right: 880px;}
-.img21{margin-right: 918px;}.img22{margin-right: 910px;}.img23{margin-right: 898px;}.img24{margin-right: 880px;}
-.imgicon{margin-right: 944px;}
+// .img11{
+//   margin-right: 906px;
+// }.img12{margin-right: 912px;}
+// .img13{margin-right: 886px;}
+// .img14{margin-right: 880px;}
+// .img21{margin-right: 918px;}
+// .img22{margin-right: 910px;}
+// .img23{margin-right: 898px;}
+// .img24{margin-right: 880px;}
+// .imgicon{margin-right: 944px;}
 .text{
   font-weight: 500;
   font-size: 18px;
@@ -347,5 +352,9 @@ cursor: pointer;
       direction: rtl;
     }
   }
-
+::v-deep(.p-panelmenu .p-panelmenu-content .p-menuitem .p-menuitem-link .p-panelmenu-icon) {
+    margin-right: 0.5rem;
+    position: absolute;
+    left: 4%;
+}
 }</style>
