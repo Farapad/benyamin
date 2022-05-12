@@ -18,14 +18,14 @@
 
 <!--     <MegaMenu   class="sec1s" :model="items2" orientation="vertical" />-->
    <div class="sec1s">
-     <div class="insidediv1">  <a href="#" class="text">فراگیر</a>
-       <img class="img21" src="@/assets/img/svg/Ladmin.svg"></div>
+     <div class="insidediv2">  <a href="#" class="text">فراگیر</a>
+       <img class="img21 px-3" src="@/assets/img/svg/Ladmin.svg"></div>
      <div class="insidediv2">  <a href="#" class="text">مدرس</a>
-       <img class="img22" src="@/assets/img/svg/Ladmin.svg"></div>
+       <img class="img22 px-3" src="@/assets/img/svg/Ladmin.svg"></div>
      <div class="insidediv2">  <a href="#" class="text">مدیریت</a>
-       <img class="img23" src="@/assets/img/svg/Ladmin.svg"></div>
+       <img class="img23 px-3" src="@/assets/img/svg/Ladmin.svg"></div>
      <div class="insidediv2">  <a href="#" class="text">درباره ی ما</a>
-       <img class="img24" src="@/assets/img/svg/Ladmin.svg"></div>
+       <img class="img24 px-3" src="@/assets/img/svg/Ladmin.svg"></div>
    </div>
 
    <h1 class="header1">دسترسی به اطلاعات متفرقه</h1>
@@ -134,7 +134,6 @@ h1{
   font-weight: 500;
   font-size: 20px;
   color:#4B5563;
-  margin-right:212px;
   margin-bottom:19px;
   margin-top:36px;
 }
@@ -147,7 +146,7 @@ h1{
   flex-direction: column;
   width: 100%;
   height: 212px;
-  background-color:#f5f5f5;
+  background-color:#ffff;
   border:#f5f5f5;
   border-radius: 18px;
 }
@@ -155,9 +154,8 @@ h1{
 .sec2s{  
   width:100%;
   height:324px;
-  margin-right:212px;
+  // margin-right:212px;
   border:#f5f5f5;
-  background-color:#F5F5F5;
   border-radius: 18px;
   margin-top:36px;
   direction: ltr;
@@ -167,7 +165,7 @@ h1{
   width:100%;
   height: 65px;
   margin-top:36px;
-  background-color:#f5f5f5;
+  background-color:#ffff;
   border:#f5f5f5;
   border-radius: 18px;
 }
@@ -177,6 +175,9 @@ margin-right: 20px;}
 .insidediv2{
   margin-bottom: 24px;
   margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 // .img11{
 //   margin-right: 906px;
