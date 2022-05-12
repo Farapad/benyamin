@@ -5,7 +5,7 @@
  <h1 class="header1">دسترسی به زیر بخش های واسط کاربری اصلی دانش یاد</h1>
 <!--  <MegaMenu  class="sec1s" :model="items" orientation="vertical"/>-->
 <div class="sec1s">
-  <div class="insidediv1">  <a href="#" class="text">دوره ها</a>
+  <div class="insidediv2">  <a href="#" class="text">دوره ها</a>
     <img class="img11" src="@/assets/img/svg/Ladmin.svg"></div>
   <div class="insidediv2">  <a href="#" class="text">خبر ها</a>
     <img class="img12" src="@/assets/img/svg/Ladmin.svg"></div>
@@ -138,14 +138,14 @@ h1{
   margin-top:36px;
 }
 .adminimage{
-  margin-right: 116px;
+  // margin-right: 116px;
   margin-top: 40px;
 }
 .sec1s{
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 212px;
+  height: auto;
   background-color:#ffff;
   border:#f5f5f5;
   border-radius: 18px;
@@ -153,7 +153,7 @@ h1{
 
 .sec2s{  
   width:100%;
-  height:324px;
+  height:auto;
   // margin-right:212px;
   border:#f5f5f5;
   border-radius: 18px;
@@ -173,11 +173,9 @@ h1{
 margin-bottom:24px;
 margin-right: 20px;}
 .insidediv2{
-  margin-bottom: 24px;
-  margin-right: 20px;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 15px 20px;
 }
 // .img11{
 //   margin-right: 906px;
@@ -357,5 +355,9 @@ cursor: pointer;
     margin-right: 0.5rem;
     position: absolute;
     left: 4%;
+}
+::v-deep(.p-panelmenu.p-panelmenu-header) {
+  border-radius: 18px !important;
+  background: white !important;
 }
 }</style>
