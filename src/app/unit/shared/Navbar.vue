@@ -67,7 +67,7 @@
                         <img class="icon" alt="logo" src="@/assets/img/svg/about-us-icon.svg">
                         <span class="text-color font-16 hover-pointer px-1">درباره ما</span>
                     </div> -->
-                    <div class="mt-3 d-flex">>
+                    <div class="mt-3 d-flex">
                         <PanelMenu :model="items" />
                     </div>
              </div>
@@ -97,6 +97,7 @@ export default {
         document.getElementById("hamberger").style.display = "block";
     }
 
+
     function closehamburger(){
         document.getElementById("hamberger").style.right = "-100%";
         document.getElementById("close").style.display = "none";
@@ -113,6 +114,7 @@ export default {
 								// icon:'pi pi-fw pi-user-plus',
                                  command: () => {
                                     router.push('/news')
+                                    closehamburger();
                                 }
 							},
                             	{
@@ -164,6 +166,7 @@ export default {
 										label:'طراحی وب',
                                             command: () => {
                                     router.push('/courses')
+                                    closehamburger()
                                 }
 									},
 									{
@@ -324,10 +327,6 @@ export default {
     color:rgba(87, 204, 153, 1);
     transition: 0.7s;
 }
-/* // .nav-item:hover:before{
-//      content: url('../../../../src/assets/img/svg/Arrow.svg');
-//      transition: 0.9s;
-// } */
 .icon{
     width: 20px;
 }
@@ -379,5 +378,24 @@ export default {
 ::v-deep(.p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon){
     transform: rotate(180deg);
     margin-right: 20px;
+}
+::v-deep(.p-panelmenu .p-panelmenu-panel:first-child .p-panelmenu-header > a) {
+    border:none;
+    background: #f4f4f4;
+}
+::v-deep(.p-panelmenu .p-panelmenu-header > a) {
+    background:#f4f4f4;
+    border: none;
+}
+::v-deep(.p-panelmenu .p-panelmenu-panel .p-panelmenu-content) {
+    background: #f4f4f4;
+    border: none;
+}
+::v-deep(.p-panelmenu .p-panelmenu-header > a .p-panelmenu-icon) {
+    position:absolute;
+    margin:0px;
+    left: -40%;
+    //  transform: rotate(180deg);
+    display: none;
 }
 </style>
