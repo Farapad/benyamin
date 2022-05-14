@@ -195,7 +195,7 @@ export default {
                     },
                       {label:"درباره ما",
                      command: () => {
-                                    router.push('/news')
+                                    router.push('/about')
                                 }
                     },
 				]);
