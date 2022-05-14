@@ -51,7 +51,7 @@
                     <div>
                         <img class="logo-icon" alt="logo" src="@/assets/img/svg/png/logo-daneshyad.png">
                     </div>
-                    <div class="mt-3">
+                    <!-- <div class="mt-3">
                         <img class="icon"  alt="logo" src="@/assets/img/svg/letters-icon.svg">
                         <span class="text-color font-16 hover-pointer px-2">دوره ها / درس ها</span>
                     </div>
@@ -66,6 +66,9 @@
                     <div class="mt-3 d-flex">
                         <img class="icon" alt="logo" src="@/assets/img/svg/about-us-icon.svg">
                         <span class="text-color font-16 hover-pointer px-1">درباره ما</span>
+                    </div> -->
+                    <div class="mt-3 d-flex">>
+                        <PanelMenu :model="items" />
                     </div>
              </div>
         </div>
@@ -77,12 +80,12 @@
 import { useRoute } from "vue-router";
 import { ref, onMounted } from "vue";
 import Menu from 'primevue/menu';
-
+import PanelMenu from 'primevue/panelmenu';
 import Menubar from 'primevue/menubar';
 import router from '@/core/router/router';
 ``
 export default {
-  components:{Menubar,Menu},
+  components:{Menubar,Menu,PanelMenu},
   setup() {
     const route = useRoute();
     const Search = ref()
