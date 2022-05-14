@@ -15,18 +15,8 @@
 		        </template>
             </span>
           </div>
-          <!-- <div>  
-             <span class="text-color font-16 hover-pointer nav-item">خبر ها</span>
-          </div> 
-          <div>  
-             <span class="text-color font-16 hover-pointer nav-item">اطلاعیه ها</span>
-          </div> 
-          <div>
-             <span class="text-color font-16 hover-pointer nav-item">درباره ما</span>
-          </div> -->
         </div>  
         <div>
-           <div></div>
            <div>
                   <span  class="p-input-icon-left">
                     <i class="pi pi-search" />
@@ -42,8 +32,15 @@
         <div>
             <img class="res-logo" alt="logo" src="@/assets/img/svg/png/logo-daneshyad.png">
         </div>
-        <div>
-            <i id="search" class="pi text-color pi-search" />
+        <div  @click="openSearch">
+            <i id="search-icon-res" class="pi text-color pi-search" />
+        </div>
+        <div class="hidden res-search">
+                <img @click="closeSearch"  class="hover-pointer px-2" src="@/assets/img/svg/close.svg" alt="close">
+                <span  class="p-input-icon-left">
+                    <i class="pi pi-search" />
+                    <InputText type="text" v-model="Search" placeholder="جستجو کنید..." />
+                </span>
         </div>
      </div>
          <div id="hamberger" class="box-responsive-controller">
@@ -88,20 +85,34 @@ export default {
   components:{Menubar,Menu,PanelMenu},
   setup() {
     const route = useRoute();
-    const Search = ref()
+    const Search = ref();
+
+    function closeSearch () {
+        document.querySelector('.res-ham').classList.remove('hidden');
+        document.querySelector('.res-logo').classList.remove('hidden');
+        document.getElementById('search-icon-res').classList.remove('hidden');
+        document.querySelector('.res-search').classList.add('hidden');
+    }
 
     function hamburgerbar(){
         document.getElementById("hamberger").style.right = "-12%";
         document.getElementById("close").style.display = "block";
-        document.getElementById("search").style.display = "none";
+        document.getElementById("search-icon-res").style.display = "none";
         document.getElementById("hamberger").style.display = "block";
+    }
+
+    function openSearch() {
+        document.querySelector('.res-ham').classList.add('hidden');
+        document.querySelector('.res-logo').classList.add('hidden');
+        document.getElementById('search-icon-res').classList.add('hidden');
+        document.querySelector('.res-search').classList.remove('hidden');
     }
 
 
     function closehamburger(){
         document.getElementById("hamberger").style.right = "-100%";
         document.getElementById("close").style.display = "none";
-        document.getElementById("search").style.display = "block";
+        document.getElementById("search-icon-res").style.display = "block";
         document.getElementById("hamberger").style.display = "none";
     }
         const items = ref([
@@ -164,10 +175,10 @@ export default {
 									{
 										// icon:'pi pi-fw pi-bars',
 										label:'طراحی وب',
-                                            command: () => {
-                                    router.push('/courses')
-                                    closehamburger()
-                                }
+                                        command: () => {
+                                            router.push('/courses');
+                                            closehamburger();
+                                        }
 									},
 									{
 										// icon:'pi pi-fw pi-bars',
@@ -192,16 +203,19 @@ export default {
                     {label:"خبر ها",
                          command: () => {
                                     router.push('/news')
+                                    closehamburger();
                                 }
                      },
                     {label:"اطلاعیه ها",
                      command: () => {
                                     router.push('/news')
+                                    closehamburger();
                                 }
                     },
                       {label:"درباره ما",
                      command: () => {
                                     router.push('/about')
+                                    closehamburger();
                                 }
                     },
 				]);
@@ -213,11 +227,16 @@ export default {
       hamburgerbar,
       closehamburger,
       items,
+      openSearch,
+      closeSearch
     };
   },
 };
 </script>
 <style lang="scss"  scoped>
+.hidden{
+    display: none !important;
+}
 @media  (max-width:450px) {
     .controller{
         display: none !important;
@@ -395,7 +414,11 @@ export default {
     position:absolute;
     margin:0px;
     left: -40%;
-    //  transform: rotate(180deg);
     display: none;
+}
+.res-search{
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 </style>
