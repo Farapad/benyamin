@@ -3,39 +3,35 @@
  <div>
    <a class="aimage" href="#"> <img class="adminimage" src="@/assets/img/svg/Adminicon.svg"></a>
  <h1 class="header1">دسترسی به زیر بخش های واسط کاربری اصلی دانش یاد</h1>
-<!--  <MegaMenu  class="sec1s" :model="items" orientation="vertical"/>-->
 <div class="sec1s">
   <div class="insidediv2">  <a href="#" class="text">دوره ها</a>
-    <img class="img11" src="@/assets/img/svg/Ladmin.svg"></div>
+    <img class="img" src="@/assets/img/svg/Ladmin.svg"></div>
   <div class="insidediv2">  <a href="#" class="text">خبر ها</a>
-    <img class="img12" src="@/assets/img/svg/Ladmin.svg"></div>
+    <img class="img" src="@/assets/img/svg/Ladmin.svg"></div>
   <div class="insidediv2">  <a href="#" class="text">اطلاعیه ها</a>
-    <img class="img13" src="@/assets/img/svg/Ladmin.svg"></div>
+    <img class="img" src="@/assets/img/svg/Ladmin.svg"></div>
   <div class="insidediv2">  <a href="#" class="text">درباره ی ما</a>
-    <img class="img14" src="@/assets/img/svg/Ladmin.svg"></div>
+    <img class="img" src="@/assets/img/svg/Ladmin.svg"></div>
 </div>
 <h1 class="header1">دسترسی به بخش ورود به سامانه</h1>
-
-<!--     <MegaMenu   class="sec1s" :model="items2" orientation="vertical" />-->
    <div class="sec1s">
      <div class="insidediv2">  <a href="#" class="text">فراگیر</a>
-       <img class="img21 px-3" src="@/assets/img/svg/Ladmin.svg"></div>
+       <img class="img px-3" src="@/assets/img/svg/Ladmin.svg"></div>
      <div class="insidediv2">  <a href="#" class="text">مدرس</a>
-       <img class="img22 px-3" src="@/assets/img/svg/Ladmin.svg"></div>
+       <img class="img px-3" src="@/assets/img/svg/Ladmin.svg"></div>
      <div class="insidediv2">  <a href="#" class="text">مدیریت</a>
-       <img class="img23 px-3" src="@/assets/img/svg/Ladmin.svg"></div>
+       <img class="img px-3" src="@/assets/img/svg/Ladmin.svg"></div>
      <div class="insidediv2">  <a href="#" class="text">درباره ی ما</a>
-       <img class="img24 px-3" src="@/assets/img/svg/Ladmin.svg"></div>
+       <img class="img px-3" src="@/assets/img/svg/Ladmin.svg"></div>
    </div>
 
    <h1 class="header1">دسترسی به اطلاعات متفرقه</h1>
 
      <PanelMenu style="direction: ltr" class="sec2s" :model="items3" orientation="vertical" />
 
-<!--  <MegaMenu  class="sec3s" :model="items4"  orientation="vertical"/>-->
    <div class="sec3s">
-       <div class="insidediv1">  <a href="#" class="text">ارسال پیام به</a>
-         <img class="imgicon"  src="@/assets/img/svg/Ladmin.svg"></div>
+       <div class="insidediv2">  <a href="#" class="text">ارسال پیام به</a>
+         <img class="img24 px-3"  src="@/assets/img/svg/Ladmin.svg"></div>
    </div>
  </div>
 </div> 
@@ -154,11 +150,10 @@ h1{
 .sec2s{  
   width:100%;
   height:auto;
-  // margin-right:212px;
   border:#f5f5f5;
   border-radius: 18px;
   margin-top:36px;
-  direction: ltr;
+  direction:rtl;
 }
 
 .sec3s{
@@ -169,24 +164,12 @@ h1{
   border:#f5f5f5;
   border-radius: 18px;
 }
-.insidediv1{margin-top: 20px;
-margin-bottom:24px;
-margin-right: 20px;}
 .insidediv2{
   display: flex;
   justify-content: space-between;
   padding: 15px 20px;
+
 }
-// .img11{
-//   margin-right: 906px;
-// }.img12{margin-right: 912px;}
-// .img13{margin-right: 886px;}
-// .img14{margin-right: 880px;}
-// .img21{margin-right: 918px;}
-// .img22{margin-right: 910px;}
-// .img23{margin-right: 898px;}
-// .img24{margin-right: 880px;}
-// .imgicon{margin-right: 944px;}
 .text{
   font-weight: 500;
   font-size: 18px;
@@ -200,7 +183,6 @@ cursor: pointer;
   text-decoration: none;
 
 }
-
 ::v-deep(.sec2s) {
   .p-menuitem-text {
     font-weight: 500;
@@ -231,38 +213,32 @@ cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
-  .adminimage {
-    width: 22px;
-    height: 22px;
-    margin-right:20px;
+  .main-controller {
+    padding: 50px;
   }
   .header1 {
     font-weight: bolder;
     font-size: 12px;
     color: #4B5563;
-    margin-right: 20px;
     margin-bottom: 10px;
     margin-top: 30px;
   }
 
   .sec1s {
-    width: 374px;
-    height: 138px;
-    margin-bottom: 90px;
-    margin-right: 20px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
   }
   .sec2s {
-    width: 374px;
-    height: 270px;
+    width: 100%;
+    height: auto;
     margin-bottom: 20px;
-    margin-right: 20px;
   }
   .sec3s {
-    width: 374px;
-    height: 56px;
+    width: 100%;
+    height: auto;
     margin-bottom: 20px;
-    margin-top: 40px;
-    margin-right: 20px;
+    margin-top: 20px;
   }
   .text {
     font-weight: 500;
@@ -272,61 +248,8 @@ cursor: pointer;
     text-decoration: none;
 
   }
-  .insidediv1 {
-    margin-top: 12px;
-    margin-bottom: 3px;
-    margin-right: 16px;
-  }
   .insidediv2 {
     margin-bottom: 3px;
-    margin-right: 16px
-  }
-  .img11 {
-    width: 10px;
-    height: 10px;
-    margin-right: 297px;
-  }
-  .img12 {
-    margin-right: 302px;
-    width: 10px;
-    height: 10px
-  }
-  .img13 {
-    margin-right: 284px;
-    width: 10px;
-    height: 10px
-  }
-  .img14 {
-    margin-right: 280px;
-    width: 10px;
-    height: 10px
-  }
-  .img21 {
-    margin-right: 300px;
-    width: 10px;
-    height: 10px
-  }
-  .img22 {
-    margin-right: 295px;
-    width: 10px;
-    height: 10px
-  }
-  .img23 {
-    margin-right: 288px;
-    width: 10px;
-    height: 10px
-  }
-  .img24 {
-    margin-right: 274px;
-    width: 10px;
-    height: 10px
-  }
-  .imgicon {
-    width: 10px;
-    height: 10px
-  }
-  .imgicon {
-    margin-right: 270px;
   }
 
   .text:hover {
@@ -359,7 +282,7 @@ cursor: pointer;
     font-size: 30px;
 }
 ::v-deep(.p-panelmenu .p-panelmenu-panel .p-panelmenu-header > a) {
-  border-radius: 18px 18px 6px 6px !important;
+  border-radius: 18px 18px 18px 18px !important;
   background: #ffff !important;
 }
 ::v-deep(.p-panelmenu .p-panelmenu-header > a .p-panelmenu-icon) {
