@@ -10,7 +10,7 @@
     </div>
   <div class="bottom-bar">
     <p class="text">
-کلیه حقوق این سامانه متعلق به شرکت داده ورزی سامانه به عنوان شریک راهبردی  شرکت فناپ و طرف تعامل با جامعه هدف است.   
+کلیه حقوق این سامانه متعلق به شرکت داده ورزی سامانه به عنوان شریک راهبردی  شرکت فناپ در این خصوص و طرف تعامل با جامعه هدف است.
     </p>
     <div class="left">
       <img src="@/assets/img/svg/connect.svg" alt="connect">
@@ -53,7 +53,7 @@ export default {
   align-items: center;
   .text{
       color: white;
-      font-weight: 600;
+      font-weight: 510;
       width: 450px;
   }
   .left{
