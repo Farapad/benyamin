@@ -34,7 +34,7 @@
     <span  @click="getpervasive"  class="child-two hover-pointer font-16 font-weight-bold text-color px-3">فراگیر</span>
     <span @click="getTeacher"  class="child-two hover-pointer font-16 font-weight-bold text-color px-3">مدرس</span>
     <span @click="getmanagement" class="child-two  hover-pointer font-16 font-weight-bold text-color px-3">مدیریت</span>
-    <span class="child-two hover-pointer font-16 font-weight-bold text-color px-3">ادمین</span>
+    <span @click="getadmin" class="child-two hover-pointer font-16 font-weight-bold text-color px-3">ادمین</span>
     <span @click="Applicant" class="hover-pointer child-two font-16 font-weight-bold text-color px-3">متقاضی برگزاری دوره یا درس</span>
      </div>
   </div>
@@ -55,16 +55,13 @@ export default {
     Navigation,
     Button},
   setup() {
-    // function apiCall() {
-    //   ApiService.getInstance().business({
-    //     onReceive: (res) => {
-    //       console.log(res);
-    //     },
-    //   });
-    // }
 
     function Applicant(){
       router.push("/Applicant")
+    }
+    
+    function getadmin () {
+       router.push('/admin')
     }
 
     function getTeacher () {
@@ -86,8 +83,8 @@ export default {
       const picture = ref(require('../../../assets/img/svg/png/main-page.png'));
       const picturee = ref(require('../../../assets/img/svg/png/page.png'));
       const products = [
-        {id:1000,code: "f230fh0g3",name: 'Bamboo Watch',image: picture.value ,description: 'Product Description'},
-        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
+        {id:1000,code: "f230fh0g3",name: 'Bamboo Watch',image: picturee.value ,description: 'Product Description'},
+        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picture.value ,description: 'Product Description'},
       ];
     return {
       products,
@@ -95,7 +92,8 @@ export default {
       getTeacher,
       getpervasive,
       getmanagement,
-      getlogin
+      getlogin,
+      getadmin
     };
   },
 };

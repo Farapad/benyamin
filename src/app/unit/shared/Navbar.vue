@@ -2,7 +2,7 @@
    <div class="main-controller">
     <div class="controller">
         <div>   
-            <img class="logo" alt="logo" src="@/assets/img/svg/png/logo-daneshyad.png">
+            <img @click="getpage" class="logo hover-pointer" alt="logo" src="@/assets/img/svg/png/logo-daneshyad.png">
         </div>
         <div class="d-flex box-navbar">
           <div>   
@@ -86,6 +86,10 @@ export default {
   setup() {
     const route = useRoute();
     const Search = ref();
+
+    function getpage () {
+        router.push('/pages')
+    }
 
     function closeSearch () {
         document.querySelector('.res-ham').classList.remove('hidden');
@@ -228,7 +232,8 @@ export default {
       closehamburger,
       items,
       openSearch,
-      closeSearch
+      closeSearch,
+      getpage
     };
   },
 };

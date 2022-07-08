@@ -1,4 +1,5 @@
 <template>
+  <base-input label="'dd'" v-model="test"></base-input>
   <div class="main">
     <h2 style="padding-top: 20px;font-size:24px;padding-right:15px">درباره دانش یاد</h2>
 
@@ -44,35 +45,41 @@
     <div class="upload-box">
        <div class="header-text mt-2"> بارگذاری اطلاعات جایگزین</div>
        <FileUpload  :showCancelButton="false" name="demo[]" url="./upload.php"  :multiple="true" accept="image/*" :maxFileSize="1000000">
-                      <template #empty>  
+                      <template #empty>
                           <img class="img-empty"  src="@/assets/img/svg/upload.svg" />
                       </template>
        </FileUpload>
-    </div>   
+    </div>
 </template>
 ,<script>
 import { useRoute } from "vue-router";
 import { usePrimeVue } from "primevue/config";
 import FileUpload from 'primevue/fileupload';
-import {onMounted} from "vue";
+import {onMounted, ref} from "vue";
+import baseInput from "@/app/public/shared/components/base/baseInput";
 
 export default {
-  components : {FileUpload},
+  components : {
+    FileUpload,
+    baseInput
+  },
   el:'collapse',
   setup() {
     const route = useRoute();
     const isCollapsed = false
+    let test = ref('test');
 
-      const changeToSpanish = () => {
-            const primevue = usePrimeVue();
-            primevue.config.locale.upload = 'بارگذاری';
-            primevue.config.locale.choose = 'انتخاب فایل';
-        }
+    const changeToSpanish = () => {
+        const primevue = usePrimeVue();
+        primevue.config.locale.upload = 'بارگذاری';
+        primevue.config.locale.choose = 'انتخاب فایل';
+    }
 
     onMounted(() => {
         changeToSpanish();
     });
     return {
+      test,
       isCollapsed,
       Fanap:'',
       dadevarzi:''
