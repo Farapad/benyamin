@@ -1,8 +1,8 @@
 <template>
 <div class="main-controller">
     <div class="top-bar">
-      <div class="text-center">نمونه ای از قابلیت فراهم آمده:</div>
-      <p>     
+      <div class="text-center">نمونه ای از قابلیت های اضافه شده:</div>
+      <p style="letter-spacing: 3px; line-height: 41.3px">
       Learning Management System (LMS)    Learning Content Management System (LCMS)
       Pedagogical Support    SCORM-Conformant Content Authoring and Sequencing
       ePayment Services    Value-Added Services    Integration     scalability    Online and

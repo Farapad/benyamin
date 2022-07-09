@@ -30,12 +30,12 @@
   </div>   
   <div class="bottom-bar w-100 px-5 mb-3 mt-3 d-flex">
     <Button @click="getlogin" class="child-one" label="ورود به سامانه"/>
-    <div class="py-2">
-    <span  @click="getpervasive"  class="child-two hover-pointer font-16 font-weight-bold text-color px-3">فراگیر</span>
-    <span @click="getTeacher"  class="child-two hover-pointer font-16 font-weight-bold text-color px-3">مدرس</span>
-    <span @click="getmanagement" class="child-two  hover-pointer font-16 font-weight-bold text-color px-3">مدیریت</span>
-    <span class="child-two hover-pointer font-16 font-weight-bold text-color px-3">ادمین</span>
-    <span @click="Applicant" class="hover-pointer child-two font-16 font-weight-bold text-color px-3">متقاضی برگزاری دوره یا درس</span>
+    <div class="py-5 px-4">
+    <span  @click="getpervasive"  class="child-two hover-pointer font-16 font-weight-bold text-color px-4">فراگیر</span>
+    <span @click="getTeacher"      class="child-two hover-pointer font-16 font-weight-bold text-color px-4">مدرس</span>
+    <span @click="getmanagement"  class="child-two hover-pointer font-16 font-weight-bold text-color px-4">&nbsp&nbspمدیریت&nbsp</span>
+    <span @click="getadmin"         class="child-two hover-pointer font-16 font-weight-bold text-color px-4">&nbspادمین&nbsp</span>
+    <span @click="Applicant"      class="hover-pointer child-two font-16 font-weight-bold text-color px-4">متقاضی برگزاری دوره یا درس&nbsp</span>
      </div>
   </div>
  </div>  
@@ -82,6 +82,9 @@ export default {
     function getlogin () {
       router.push("/login")
     }
+    function getadmin () {
+      router.push("/admin")
+    }
 
       const picture = ref(require('../../../assets/img/svg/png/main-page.png'));
       const picturee = ref(require('../../../assets/img/svg/png/page.png'));
@@ -95,7 +98,8 @@ export default {
       getTeacher,
       getpervasive,
       getmanagement,
-      getlogin
+      getlogin,
+      getadmin
     };
   },
 };
