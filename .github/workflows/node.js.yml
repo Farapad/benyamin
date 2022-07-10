@@ -3,7 +3,7 @@ name: VuejsDeploy
 
 on:
   pull_request:
-    branches: [ "deploy" ]
+    branches: [ "main" ]
 
 jobs:
   build:
