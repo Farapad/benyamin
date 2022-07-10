@@ -1,39 +1,59 @@
 <template>
  <div class="main-controller">
-      <div>
-        <div class="card">
-            <Carousel :value="products" :numVisible="1" :numScroll="1" :responsiveOptions="responsiveOptions">
-                <!-- <template #header>
-                    <h5>Basic</h5>
-                </template> -->
-                <template #item="slotProps">
-                    <div class="product-item">
-                        <div class="product-item-content">
-                            <div class="mb-3">
-                                <img src="@/assets/img/svg/png/main-page.png" :alt="slotProps.name" class="product-image" />
-                            </div>
-                            <div>
-                                <h4 class="mb-1">{{slotProps.name}}</h4>
-                                <h6 class="mt-0 mb-3">{{slotProps.price}}</h6>
-                                <!-- <span :class="'product-badge status-'+slotProps.data.inventoryStatus.toLowerCase()">{{slotProps.data.inventoryStatus}}</span> -->
-                                <!-- <div class="car-buttons mt-5">
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-                </template>
-            </Carousel>
-        </div>
+  <div class="controller">
+   <carousel :items-to-show="1">
+    <slide v-for="slide in products" :key="slide">
+      <img class="w-100" :src="slide.image"> 
+    </slide>
+    <template #addons>
+      <navigation />
+      <pagination />
+    </template>
+  </carousel>
+      <div class="card-carousel">
+          <!-- <div class="card-1">
+         سامانه جامع آموزش و یادگیری الکترونیکی            
+      ثمره هم افزایی بین شرکت های فناپ و داده ورزی سامانه            
+      آمیزه ای از فناوری ها و قابلیت ها در قالب یک نظام یک پارچه            
+          </div> -->
+            <img src="@/assets/img/svg/png/pages-text.png">
+      </div>    
+  </div>
+  <div>
+
+    <!-- <img src="@/assets/img/svg/png/pages-text.png"> -->
+    <!-- <p class="text-between">
+    <br>  <span style="font-weight:700;">سامانه جامع آموزش \ یادگیری الکترونیکی</span> <br>   <br>  
+      ثمره هم افزایی بین شرکت های فناپ و داده ورزی سامانه      
+      آمیزه ای از فناوری ها و قابلیت ها در قالب یک نظام یک پارچه     
+    </p> -->
+  </div>   
+  <div class="bottom-bar w-100 px-5 mb-3 mt-3 d-flex">
+    <Button @click="getlogin" class="child-one" label="ورود به سامانه"/>
+    <div class="py-5 px-4">
+    <span  @click="getpervasive"  class="child-two hover-pointer font-16 font-weight-bold text-color px-4">فراگیر</span>
+    <span @click="getTeacher"      class="child-two hover-pointer font-16 font-weight-bold text-color px-4">مدرس</span>
+    <span @click="getmanagement"  class="child-two hover-pointer font-16 font-weight-bold text-color px-4">&nbsp&nbspمدیریت&nbsp</span>
+    <span @click="getadmin"         class="child-two hover-pointer font-16 font-weight-bold text-color px-4">&nbspادمین&nbsp</span>
+    <span @click="Applicant"      class="hover-pointer child-two font-16 font-weight-bold text-color px-4">متقاضی برگزاری دوره یا درس&nbsp</span>
+     </div>
   </div>
  </div>  
 </template>
 
 <script>
-// import { ApiService } from "@/core/repository/api.service";
-import Carousel from 'primevue/carousel';
-import {ref} from 'vue'
+import 'vue3-carousel/dist/carousel.css';
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+import {ref} from 'vue';
+import Button from 'primevue/button';
+import router from '@/core/router/router';
 export default {
-  components:{Carousel},
+  components:{  
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
+    Button},
   setup() {
     // function apiCall() {
     //   ApiService.getInstance().business({
@@ -42,38 +62,52 @@ export default {
     //     },
     //   });
     // }
-      const products = [
-        {id:1000,code: "f230fh0g3",name: 'Bamboo Watch',description: 'Product Description'},
-      ];
-      // const productService = ref(new ProductService());  
-		  const responsiveOptions = ref([
-			{
-				breakpoint: '1024px',
-				numVisible: 3,
-				numScroll: 3
-			},
-			{
-				breakpoint: '600px',
-				numVisible: 2,
-				numScroll: 2
-			},
-			{
-				breakpoint: '480px',
-				numVisible: 1,
-				numScroll: 1
-			}
-		]);
 
+    function Applicant(){
+      router.push("/Applicant")
+    }
+
+    function getTeacher () {
+      router.push('/Teacher')
+    }
+
+    function getpervasive () {
+      router.push('/pervasive')
+    }
+
+    function getmanagement () {
+      router.push('/management')
+    }
+
+    function getlogin () {
+      router.push("/login")
+    }
+    function getadmin () {
+      router.push("/admin")
+    }
+
+      const picture = ref(require('../../../assets/img/svg/png/main-page.png'));
+      const picturee = ref(require('../../../assets/img/svg/png/page.png'));
+      const products = [
+        {id:1000,code: "f230fh0g3",name: 'Bamboo Watch',image: picture.value ,description: 'Product Description'},
+        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
+      ];
     return {
       products,
-      // productService,
-      responsiveOptions
+      Applicant,
+      getTeacher,
+      getpervasive,
+      getmanagement,
+      getlogin,
+      getadmin
     };
   },
 };
 </script>
 <style lang="scss" scoped>
-
+.main-controller{
+  padding: 30px;
+}
 .product-item {
     .product-item-content {
         border: 1px solid var(--surface-border);
@@ -106,6 +140,22 @@ export default {
   transform: rotate(180deg);
   cursor: pointer;
 }
+::v-deep(.p-carousel .p-carousel-content .p-carousel-prev, .p-carousel .p-carousel-content .p-carousel-next){
+  background: white;
+  position: relative;
+  right: 4%;
+  z-index: 100;
+  padding: 20px;
+  border-radius: 11px;
+}
+::v-deep(.p-carousel .p-carousel-content .p-carousel-next){
+  background: white;
+  position: relative;
+  z-index: 100;
+  left: 4%;
+  padding: 20px;
+  border-radius: 11px;
+}
 ::v-deep(.p-carousel-next){
    transform: rotate(180deg);
    cursor: pointer;
@@ -115,5 +165,106 @@ export default {
     width:300px;
     border-radius: 47px;
     }
+}
+::v-deep(.p-button){
+  background: rgba(87, 204, 153, 1);
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+}
+::v-deep(.p-button:hover){
+  background: rgba(87, 204, 153, 1);
+  border: none;
+}
+.bottom-bar{
+  align-items: center;
+}
+@media (max-width:450px) {
+  .bottom-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px !important;
+    .child-one{
+      font-size: 14px !important;
+      padding: 10px 20px;
+    }
+    .child-two{
+      font-size: 14px !important;
+    }
+  }
+  .card-carousel{
+    display: none  !important;
+  }
+}
+
+::v-deep(.carousel__slide){
+  width: 100% !important;
+}
+::v-deep(.carousel__track){
+  transform: translateX(-100%); transition: all 0ms ease 0s;
+}
+::v-deep(.carousel__pagination){
+  display: none;
+}
+::v-deep(.carousel__next){
+  color: black;
+  background: #fff;
+  width: 46px;
+  height:46px;
+  border-radius: 12px;
+  font-size: 26px;
+}
+::v-deep(.carousel__prev){
+   color: black;
+   background: #fff;
+   width: 46px;
+   height:46px;
+   border-radius: 12px;
+   font-size: 26px;
+}
+.text-between{
+  color: #475569;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  padding: 31px;
+  text-align: center;
+}
+@media (min-width: 450px){
+    .text-between{
+      display: none;
+    }
+}
+.card-carousel{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -424px;
+  .card-1{
+    max-width: 528px;
+    background: rgba(244, 244, 244, 0.75);
+    color: rgba(22, 101, 52, 1);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+  }
+}
+.controller{
+  height: 700px;
+}
+@media (max-width: 450px){
+  .controller {
+    height: 250px;
+  }
 }
 </style>

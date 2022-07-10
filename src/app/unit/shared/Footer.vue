@@ -1,8 +1,8 @@
 <template>
 <div class="main-controller">
     <div class="top-bar">
-      <div class="text-center">نمونه ای از قابلیت فراهم آمده:</div>
-      <p>     
+      <div class="text-center">نمونه ای از قابلیت های اضافه شده:</div>
+      <p style="letter-spacing: 3px; line-height: 41.3px">
       Learning Management System (LMS)    Learning Content Management System (LCMS)
       Pedagogical Support    SCORM-Conformant Content Authoring and Sequencing
       ePayment Services    Value-Added Services    Integration     scalability    Online and
@@ -10,7 +10,7 @@
     </div>
   <div class="bottom-bar">
     <p class="text">
-کلیه حقوق این سامانه متعلق به شرکت داده ورزی سامانه به عنوان شریک راهبردی  شرکت فناپ و طرف تعامل با جامعه هدف است.   
+کلیه حقوق این سامانه متعلق به شرکت داده ورزی سامانه به عنوان شریک راهبردی  شرکت فناپ در این خصوص و طرف تعامل با جامعه هدف است.
     </p>
     <div class="left">
       <img src="@/assets/img/svg/connect.svg" alt="connect">
@@ -53,7 +53,7 @@ export default {
   align-items: center;
   .text{
       color: white;
-      font-weight: 600;
+      font-weight: 510;
       width: 450px;
   }
   .left{
