@@ -86,7 +86,7 @@ export default {
       const newPicture3 = ref(require('../../../assets/img/page3.jpeg'));
       const newPicture4 = ref(require('../../../assets/img/page4.jpeg'));
       const products = [
-        {id:1000,code: "f230fh0g3",name: 'Bamboo Watch',image: picturee.value ,description: 'Product Description'},
+        {id:1000,code: "f230fh0g3",name: 'fsfsf',image: picturee.value ,description: 'Product Description'},
         {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: newPicture1.value ,description: 'Product Description'},
         {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: newPicture2.value ,description: 'Product Description'},
         {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: newPicture3.value ,description: 'Product Description'},
