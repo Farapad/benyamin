@@ -45,5 +45,3 @@ testem.log
 .DS_Store
 Thumbs.db
 .vscode/settings.json
-.package-lock.json
-.yarn.lock
