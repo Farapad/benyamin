@@ -15,7 +15,7 @@
 		        </template>
             </span>
           </div>
-          <div>  
+          <!-- <div>  
              <span class="text-color font-16 hover-pointer nav-item">خبر ها</span>
           </div> 
           <div>  
@@ -23,7 +23,7 @@
           </div> 
           <div>
              <span class="text-color font-16 hover-pointer nav-item">درباره ما</span>
-          </div>
+          </div> -->
         </div>  
         <div>
            <div></div>
@@ -76,11 +76,13 @@
 
 import { useRoute } from "vue-router";
 import { ref, onMounted } from "vue";
-// import NodeService from '@/core/service/nodeServise';
+import Menu from 'primevue/menu';
+
 import Menubar from 'primevue/menubar';
+import router from '@/core/router/router';
 ``
 export default {
-  components:{Menubar},
+  components:{Menubar,Menu},
   setup() {
     const route = useRoute();
     const Search = ref()
@@ -89,70 +91,113 @@ export default {
         document.getElementById("hamberger").style.right = "-12%";
         document.getElementById("close").style.display = "block";
         document.getElementById("search").style.display = "none";
+        document.getElementById("hamberger").style.display = "block";
     }
 
     function closehamburger(){
         document.getElementById("hamberger").style.right = "-100%";
         document.getElementById("close").style.display = "none";
         document.getElementById("search").style.display = "block";
+        document.getElementById("hamberger").style.display = "none";
     }
-
         const items = ref([
-					{
+               
+					{   
 						label:'دوره ها و درس ها',
 						items:[
 							{
 								label:'امور حقوقی ',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
+                                 command: () => {
+                                    router.push('/news')
+                                }
 							},
                             	{
 								label:'ایمنی',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
                             	{
 								label:'بازاریابی و فروش',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
                             	{
 								label:'زبان',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
                             	{
 								label:'سلامت',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
                             	{
 								label:'کسب و کار',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
 							{
 								label:'فناوری اطلاعات و ارتباطات',
-								icon:'pi pi-fw pi-users',
+								// icon:'pi pi-fw pi-users',
 								items:[
 									{
-										label:'Filter',
-										icon:'pi pi-fw pi-filter',
+										label:'نرم افزار',
+										// icon:'pi pi-fw pi-filter',
 									},
 									{
-										icon:'pi pi-fw pi-bars',
-										label:'List'
+										// icon:'pi pi-fw pi-bars',
+										label:'سخت افزار'
+									},
+									{
+										// icon:'pi pi-fw pi-bars',
+										label:'شبکه'
+									},
+									{
+										// icon:'pi pi-fw pi-bars',
+										label:'علوم داده'
+									},
+									{
+										// icon:'pi pi-fw pi-bars',
+										label:'امنیت'
+									},
+									{
+										// icon:'pi pi-fw pi-bars',
+										label:'طراحی وب',
+                                            command: () => {
+                                    router.push('/courses')
+                                }
+									},
+									{
+										// icon:'pi pi-fw pi-bars',
+										label:'انیمیشن'
 									}
 								]
 							},
                             	{
 								label:'مالی و حسابداری',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
                             	{
 								label:'مدیریت',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							},
                             	{
 								label:'مهندسی',
-								icon:'pi pi-fw pi-user-plus',
+								// icon:'pi pi-fw pi-user-plus',
 							}
 						]
-					},
+					},      
+                    {label:"خبر ها",
+                         command: () => {
+                                    router.push('/news')
+                                }
+                     },
+                    {label:"اطلاعیه ها",
+                     command: () => {
+                                    router.push('/news')
+                                }
+                    },
+                      {label:"درباره ما",
+                     command: () => {
+                                    router.push('/news')
+                                }
+                    },
 				]);
     
 
@@ -161,7 +206,7 @@ export default {
       Search,
       hamburgerbar,
       closehamburger,
-      items
+      items,
     };
   },
 };
@@ -193,10 +238,12 @@ export default {
         max-width: 304px;
         right: -100%;
         transition: 0.9s;
+        display: none;
         .child{
             display: flex;
             flex-direction: column;
             padding: 25px;
+            transition: 0.9s;
         }
     }
     .close{
