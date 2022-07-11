@@ -1,49 +1,22 @@
 <template>
   <div class="main">
-    <h2 style="padding-top: 20px; font-size: 24px; padding-right: 15px">
-      درباره دانش یاد
-    </h2>
+    <h2 class="head1">درباره دانش یاد</h2>
 
     <div class="wrap-collabsible" id="collapse">
-      <p class="outcard">
-        «دانشیاد» درگاهی است برای ورود به فضای عملیاتی و بهره گیری از قابلیت های
-        یک سامانه جامع خدماتی در حوزه «آموزش/یادگیری الکترونیکی»؛متشکل از اعضای
-        یکپارچه ای چون سیستم مدیریت یادگیری (LMS"-Learning Management System") و
-        سیستم مدیریت محتوای یادگیری (LCMS"-Learning Content Management System")
-        <a
-          v-if="!isCollapsed"
-          class="text-color"
-          href="#"
-          v-on:click="isCollapsed = !isCollapsed"
-          style="color: #2f80ed; text-decoration: none"
-          >توضیحات بیشتر</a
-        >
+      <p  class="outcard">
+        «دانش یاد» درگاهی است برای ورود به فضای عملیاتی و بهره گیری از قابلیت های یک سامانه جامع خدماتی در حوزه «آموزش/یادگیری الکترونیکی»؛ متشکل از اجزای یکپارچه ای چون سیستم مدیریت یادگیری (Learning Management System –"LMS") و سیستم مدیریت محتواهای یادگیری (Learning Content Management System –"LCMS")،
+        <a v-if="!isCollapsed" class="text-color" href="#"  v-on:click="isCollapsed=!isCollapsed" style="color: #2F80ED;text-decoration: none ">توضیحات بیشتر</a>
       </p>
 
-      <div v-show="isCollapsed" class="outcard">
-        <p class="outcard">
-          ،از یک سو،و ابزار های ارتباطی و تعاملی بر خط و غیر برخط (Online and
-          Offline Communication and Collaboration Tools) و طیفی از امکانات و
-          ویژگی های تکمیلی،از سویی دیگر. از جمله امکانات فراهم آماده قابلیت
-          تولید،استاندارد سازی واجرای محتوا های الکترونیکی در تطبیق با آخرین
-          اصلاحیه استاندارد جهانی «اسکرم» (SCORM 2004, 4Th Edition) قابل ذکر
-          است.انتظار میرود این سامانه که به واسطه تشریک مساعی و هم افزایی بین
-          شرکت های «فناوری اطلاعات و ارتباطات پاسارگاد آریان» («شرکت
-          فناپ»،وابسته به «بانک پاسارگاد») و «شرکت داده ورزی سامانه» (به
-          نمایندگی از جانب جمعی از خبرگان کشور)ایجاد و راه اندازی گشته بتواند بر
-          بسیاری ازدغدغه ها،چالش ها و موانع فراوری این صنعت پایدار فائق
-          آید.افزایش میزان اثر بخشی ،کاهش چشمگیر هزینه ها،تسهیل درامر آموزش
-          /یادگیری و مهیا نمودن یک محیط امن و یک پارچه،از جمله ویژگی های بارز
-          این سامانه است.نقش فناپ در تولید سامانه مذکور که مبنی بر فناوری
-          «رایانش ابری یا کلاود» (Cloud Technology) توسعه یافته و ماهیت کاربری
-          آن از نوع «بنگاه به بنگاه» (B2B) قابل توصیف است،به عنوان فراهم کننده
-          سرویس دهنده های زیر ساختی (IaaS"-Infrastructure as a Service") و
-          پلتفرمی (PaaS"-Platform as a Service") مورد نیاز ،و نقش داده ورزی
-          سامانه به عنوان تامین کننده«سرویس دهنده نرم افزاری (SaaS"-Software as
-          a Service") و طرف تعامل با جامعه هدف قابل تعریف است.
-        </p>
-      </div>
-    </div>
+      <div v-show='isCollapsed' class="outcard" >
+        <p  class="outcard">از یک سو، و ابزارهای ارتباطی و تعاملی برخط و غیر برخط (Online and Offline Communication and Collaboration Tools) و طیفی از امکانات و ویژگی های تکمیلی، از سویی دیگر.  از جمله امکانات فراهم آمده قابلیت تولید، استانداردسازی و اجرای محتواهای الکترونیکی در تطبیق با آخرین اصلاحیه استاندارد جهانی «اسکرم» (SCORM 2004, 4Th Edition) قابل ذکر است.<br>
+
+           انتظار می رود این سامانه که به واسطه تشریک مساعی و هم افزایی بین شرکت های «فناوری اطلاعات و ارتباطات  پاسارگاد آریان» («شرکت فناپ»، وابسته به «بانک پاسارگاد») و «شرکت داده ورزی سامانه» (به نمایندگی از جانب جمعی از خبرگان کشور) ایجاد و راه اندازی گشته بتواند بر بسیاری از دغدغه ها، چالش ها و موانع فراروی این صنعت پایدار فائق آید.  افزایش میزان اثربخشی، کاهش چشگیر هزینه ها، تسهیل در امر آموزش/یادگیری و مهیا نمودن یک محیط امن و یکپارچه، از جمله ویژگی های بارز این سامانه است.<br>
+          نقش فناپ در تولید سامانه مذکور که مبتنی بر فناوری «رایانش ابری یا کلاود» (Cloud Technology) توسعه یافته و ماهیت کاربری آن از نوع «بنگاه به بنگاه» (B2B) قابل توصیف است، به عنوان فراهم کننده سرویس‌ دهنده های زیرساختی (Infrastructure as a Service –"IaaS”) و پلتفرمی (Platform as a Service –"PaaS”) مورد نیاز، و نقش داده ورزی سامانه به عنوان تامین کننده «سرویس دهنده نرم افزاری» (Software as a Service –"SaaS”) و طرف تعامل با جامعه هدف قابل تعریف است.
+
+        </p> <a  class="text-color" href="about"   style="color: #2F80ED;text-decoration: none ">توضیحات کمتر</a> </div>
+
+        </div>
 
     <div class="cards">
       <div class="col">
@@ -127,14 +100,24 @@ export default {
     return {
       test,
       isCollapsed,
-      Fanap: "",
-      dadevarzi: "",
+
+      Fanap:'',
+      dadevarzi:''
     };
   },
 };
 </script>
 <style lang="scss" scoped>
 
+// :root {
+//   --bg-color: #f2f3f5;
+//   // define global variable colors
+// }
+.head1{
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+}
 body {
   background: var(--bg-color) !important;
   font-family: IRANSans, serif !important;
@@ -198,6 +181,9 @@ button {
 
 .outcard {
   padding: 2px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 43.1px;
 }
 .buttonlink {
   cursor: pointer;
@@ -351,5 +337,8 @@ h1 {
     padding: 7px 30px;
     right: 0px;
   }
+}
+.test{
+  
 }
 </style>
