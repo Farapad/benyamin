@@ -6,7 +6,7 @@
         <div class="box">
         <div class="second-child">
             <span class="mobile-text">موبایل / ایمیل</span>
-            <Password :class=" validation == true ? 'p-invalid' : ''"  class="my-3 w-100" v-model="password" placeholder="رمز عبور خود را وارد کنید" toggleMask></Password>
+            <InputText :class=" validation == true ? 'p-invalid' : ''"  class="my-3 w-100" v-model="password" placeholder="ایمیل خود را وارد کنید" toggleMask></InputText>
             <div class="third-child">
                 <Button @click="apply()" label="بازیابی رمز عبور" class="p-button-raised p-button-success" />
                 <span class="bottom-text" @click="backstep">بازگشت به صفحه ورود</span>
