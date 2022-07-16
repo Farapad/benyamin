@@ -19,59 +19,86 @@
         </div>
 
     <div class="cards">
-      <div class="col"><h1>درباره شرکت داده ورزی سامانه</h1>
+      <div class="col">
+        <h1>درباره شرکت داده ورزی سامانه</h1>
         <div class="card">
-          <img class="top" src="@/assets/img/svg/aboutuspic2.svg" alt="image">
+          <img class="top" src="@/assets/img/svg/aboutuspic2.svg" alt="image" />
           <div class="card-content">
-            <p class="incard">شرکت «داده ورزی سامانه» با پشتوانه تحلیل،طراحی و پیاده سازی پروژه سیستم جامع اطلاعات در چند شرکت بزرگ تولیدی و انتقال دانش فنی و کارشناسان پروژه مربوطه در سال 1376 تاسیس گردید.</p>
-            <button v-bind:href="dadevarzi">دانلود فایل PDF معرفی داده ورزی سامانه</button>
+            <p class="incard">
+              شرکت «داده ورزی سامانه» با پشتوانه تحلیل،طراحی و پیاده سازی پروژه
+              سیستم جامع اطلاعات در چند شرکت بزرگ تولیدی و انتقال دانش فنی و
+              کارشناسان پروژه مربوطه در سال 1376 تاسیس گردید.
+            </p>
+            <button v-bind:href="dadevarzi">
+              دانلود فایل PDF معرفی داده ورزی سامانه
+            </button>
           </div>
-        </div></div>
-<div class="col"><h1 >درباره شرکت فناپ</h1>
-  <div class="card">
-    <img class="top" src="@/assets/img/svg/aboutuspic1.svg" alt="image2">
-    <div class="card-content">
-      <p>  شرکت فناوری اطلاعات وارتباطات پاسارگادآرین (فناپ) در24 دی ماه سال1384 با سرمایه گذاری گروه ملی پاسارگاد وهمکاری جمعی از نخبگان و فارغ التحصیلان دانشگاه های برتر کشور تاسیس شد.
-      </p>
-      <button v-bind:href="Fanap" >دانلود فایل PDF معرفی فناپ</button>
-    </div>
-
+        </div>
       </div>
+      <div class="col">
+        <h1>درباره شرکت فناپ</h1>
+        <div class="card">
+          <img
+            class="top"
+            src="@/assets/img/svg/aboutuspic1.svg"
+            alt="image2"
+          />
+          <div class="card-content">
+            <p>
+              شرکت فناوری اطلاعات وارتباطات پاسارگادآرین (فناپ) در24 دی ماه
+              سال1384 با سرمایه گذاری گروه ملی پاسارگاد وهمکاری جمعی از نخبگان و
+              فارغ التحصیلان دانشگاه های برتر کشور تاسیس شد.
+            </p>
+            <button v-bind:href="Fanap">دانلود فایل PDF معرفی فناپ</button>
+          </div>
         </div>
       </div>
     </div>
-    <div class="upload-box">
-       <div class="header-text mt-2"> بارگذاری اطلاعات جایگزین</div>
-       <FileUpload  :showCancelButton="false" name="demo[]" url="./upload.php"  :multiple="true" accept="image/*" :maxFileSize="1000000">
-                      <template #empty>  
-                          <img class="img-empty"  src="@/assets/img/svg/upload.svg" />
-                      </template>
-       </FileUpload>
-    </div>   
+  </div>
+  <div class="upload-box">
+    <div class="header-text mt-2">بارگذاری اطلاعات جایگزین</div>
+    <FileUpload
+      :showCancelButton="false"
+      name="demo[]"
+      url="./upload.php"
+      :multiple="true"
+      accept="image/*"
+      :maxFileSize="1000000"
+    >
+      <template #empty>
+        <img class="img-empty" src="@/assets/img/svg/upload.svg" />
+      </template>
+    </FileUpload>
+  </div>
 </template>
-,<script>
+,
+<script>
 import { useRoute } from "vue-router";
 import { usePrimeVue } from "primevue/config";
-import FileUpload from 'primevue/fileupload';
-import {onMounted} from "vue";
+import FileUpload from "primevue/fileupload";
+import { onMounted, ref } from "vue";
 
 export default {
-  components : {FileUpload},
-  el:'collapse',
+  components: {
+    FileUpload,
+  },
+  el: "collapse",
   setup() {
     const route = useRoute();
-    const isCollapsed = false
+    const isCollapsed = false;
+    let test = ref("test");
 
-      const changeToSpanish = () => {
-            const primevue = usePrimeVue();
-            primevue.config.locale.upload = 'بارگذاری';
-            primevue.config.locale.choose = 'انتخاب فایل';
-        }
+    const changeToSpanish = () => {
+      const primevue = usePrimeVue();
+      primevue.config.locale.upload = "بارگذاری";
+      primevue.config.locale.choose = "انتخاب فایل";
+    };
 
     onMounted(() => {
-        changeToSpanish();
+      changeToSpanish();
     });
     return {
+      test,
       isCollapsed,
 
       Fanap:'',
@@ -98,106 +125,105 @@ body {
 }
 .cards {
   display: flex;
-justify-content:flex-start;
+  justify-content: flex-start;
   flex-wrap: nowrap;
   margin-top: 64px;
   margin-bottom: 56px;
-  margin-right:10px;
+  margin-right: 10px;
 }
-.card{
+.card {
   width: 594px;
   height: 703px;
-  border: 1px solid #D2D2D2;
-  border-radius: 18px
+  border: 1px solid #d2d2d2;
+  border-radius: 18px;
 }
-h1{
+h1 {
   font-weight: 500;
   font-size: 24px;
 }
 
-  .top{
-    width: 100%;
+.top {
+  width: 100%;
 }
 
-  .card-content {
-    line-height: 1.5rem;
-    padding: 20px 32px 20px 32px;
-    width: 530px;
-    height: 139px;
+.card-content {
+  line-height: 1.5rem;
+  padding: 20px 32px 20px 32px;
+  width: 530px;
+  height: 139px;
 
-    p {
-      margin: 10px 0;
-      color: #475569;
-      font-size:20px;
-      padding-right: 15px;
-      font-weight: 500;
+  p {
+    margin: 10px 0;
+    color: #475569;
+    font-size: 20px;
+    padding-right: 15px;
+    font-weight: 500;
   }
-.text-show{
-  color: #2F80ED;
-  text-decoration: none;
-  cursor:pointer;
-}
-
-}
-  button{
-    width: 500px;
-    height: 100px;
+  .text-show {
+    color: #2f80ed;
+    text-decoration: none;
     cursor: pointer;
-    color:white;
-    border:white;
-    background: #57CC99;
-    border-radius: 18px;
-    align-items: center;
-    justify-content: center;
-    margin-top:25px;
-    margin-right:10px;
   }
+}
+button {
+  width: 500px;
+  height: 100px;
+  cursor: pointer;
+  color: white;
+  border: white;
+  background: #57cc99;
+  border-radius: 18px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  margin-right: 10px;
+}
 
-.outcard{
+.outcard {
   padding: 2px 20px;
   font-size: 20px;
   font-weight: 500;
   line-height: 43.1px;
 }
-.buttonlink{
+.buttonlink {
   cursor: pointer;
-  color: #57CC99;
+  color: #57cc99;
   text-decoration: none;
 }
-.col{
-  display:flex;
+.col {
+  display: flex;
   flex-direction: column;
 }
-h1{
-  margin-bottom:20px;font-weight: 500;
+h1 {
+  margin-bottom: 20px;
+  font-weight: 500;
   font-size: 24px;
 }
 @media only screen and (max-width: 768px) {
   .cards {
     display: flex;
     flex-direction: column;
-  margin-left:40px;
-gap:20px;
+    margin-left: 40px;
+    gap: 20px;
   }
   .card {
     width: 374px;
     height: 463px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
   }
   button {
     width: 250px;
     height: 46px;
-    display:flex;
+    display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    background: #57CC99;
+    background: #57cc99;
     border-radius: 6px;
     margin-right: 40px;
     margin-top: 20px;
     font-size: 12px;
-    font-weight:Bold;
-
+    font-weight: Bold;
   }
   .card-content {
     line-height: 1.5rem;
@@ -212,69 +238,69 @@ gap:20px;
       padding-right: 15px;
     }
   }
-  h2{
+  h2 {
     font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
   }
-  .buttonlink{
+  .buttonlink {
     font-size: 12px;
   }
-  h1{
-    font-weight:500;
+  h1 {
+    font-weight: 500;
     font-size: 16px;
     line-height: 22px;
   }
 }
 
-::v-deep(.p-fileupload-empty){
-    display: flex;
-    justify-content: center;
+::v-deep(.p-fileupload-empty) {
+  display: flex;
+  justify-content: center;
 }
-::v-deep(.p-fileupload .p-fileupload-buttonbar){
-    border: none;
-    background: #f2f3f5;
+::v-deep(.p-fileupload .p-fileupload-buttonbar) {
+  border: none;
+  background: #f2f3f5;
 }
-::v-deep(.p-fileupload .p-fileupload-content){
-    height: 250px;
-    width: 650px;
+::v-deep(.p-fileupload .p-fileupload-content) {
+  height: 250px;
+  width: 650px;
 }
-::v-deep(.p-button.p-fileupload-choose){
-    position: relative;
-    overflow: hidden;
-    top: 200px;
-    z-index: 10;
-    background: rgba(253, 175, 59, 1);
-    border: none;
-    font-size: 14px;
-    padding: 7px 25px;
-    right: 150px;
- }
-::v-deep(.p-button .p-button-icon-left){
-    display: none;
+::v-deep(.p-button.p-fileupload-choose) {
+  position: relative;
+  overflow: hidden;
+  top: 200px;
+  z-index: 10;
+  background: rgba(253, 175, 59, 1);
+  border: none;
+  font-size: 14px;
+  padding: 7px 25px;
+  right: 150px;
+}
+::v-deep(.p-button .p-button-icon-left) {
+  display: none;
 }
 ::v-deep(.p-fileupload-buttonbar .p-button:last-child) {
-    position: relative;
-    top: 200px;
-    z-index: 10;
-    margin-right: 70px;
-    background: rgba(87, 204, 153, 1);
-    border: none;
-    font-size: 14px;
-    padding: 7px 30px;
-    right: 140px;
+  position: relative;
+  top: 200px;
+  z-index: 10;
+  margin-right: 70px;
+  background: rgba(87, 204, 153, 1);
+  border: none;
+  font-size: 14px;
+  padding: 7px 30px;
+  right: 140px;
 }
-::v-deep(.p-fileupload .p-fileupload-content){
-    border-radius: 10px;
-    border: none;
+::v-deep(.p-fileupload .p-fileupload-content) {
+  border-radius: 10px;
+  border: none;
 }
 ::v-deep(.p-fileupload-buttonbar) {
-    height: 1px;
-    // padding: 0px;
+  height: 1px;
+  // padding: 0px;
 }
-.upload-box{
+.upload-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -284,13 +310,12 @@ gap:20px;
 .img-empty {
   width: 140px;
 }
-@media (max-width:450px) {
-
-  ::v-deep(.p-fileupload .p-fileupload-content){
+@media (max-width: 450px) {
+  ::v-deep(.p-fileupload .p-fileupload-content) {
     height: 250px;
     width: 380px;
   }
-  ::v-deep(.p-button.p-fileupload-choose){
+  ::v-deep(.p-button.p-fileupload-choose) {
     position: relative;
     overflow: hidden;
     top: 200px;
@@ -300,7 +325,7 @@ gap:20px;
     font-size: 14px;
     padding: 7px 25px;
     right: 20px;
- }
+  }
   ::v-deep(.p-fileupload-buttonbar .p-button:last-child) {
     position: relative;
     top: 200px;
@@ -311,6 +336,9 @@ gap:20px;
     font-size: 14px;
     padding: 7px 30px;
     right: 0px;
- }
+  }
+}
+.test{
+  
 }
 </style>

@@ -30,12 +30,12 @@
   </div>   
   <div class="bottom-bar w-100 px-5 mb-3 mt-3 d-flex">
     <Button @click="getlogin" class="child-one" label="ورود به سامانه"/>
-    <div class="py-5 px-4">
-    <span  @click="getpervasive"  class="child-two hover-pointer font-16 font-weight-bold text-color px-4">فراگیر</span>
-    <span @click="getTeacher"      class="child-two hover-pointer font-16 font-weight-bold text-color px-4">مدرس</span>
-    <span @click="getmanagement"  class="child-two hover-pointer font-16 font-weight-bold text-color px-4">&nbsp&nbspمدیریت&nbsp</span>
-    <span @click="getadmin"         class="child-two hover-pointer font-16 font-weight-bold text-color px-4">&nbspادمین&nbsp</span>
-    <span @click="Applicant"      class="hover-pointer child-two font-16 font-weight-bold text-color px-4">متقاضی برگزاری دوره یا درس&nbsp</span>
+    <div class="py-2">
+    <span  @click="getpervasive"  class="child-two hover-pointer font-16 font-weight-bold text-color px-3">فراگیر</span>
+    <span @click="getTeacher"  class="child-two hover-pointer font-16 font-weight-bold text-color px-3">مدرس</span>
+    <span @click="getmanagement" class="child-two  hover-pointer font-16 font-weight-bold text-color px-3">مدیریت</span>
+    <span @click="getadmin" class="child-two hover-pointer font-16 font-weight-bold text-color px-3">ادمین</span>
+    <span @click="Applicant" class="hover-pointer child-two font-16 font-weight-bold text-color px-3">متقاضی برگزاری دوره یا درس</span>
      </div>
   </div>
  </div>  
@@ -55,16 +55,13 @@ export default {
     Navigation,
     Button},
   setup() {
-    // function apiCall() {
-    //   ApiService.getInstance().business({
-    //     onReceive: (res) => {
-    //       console.log(res);
-    //     },
-    //   });
-    // }
 
     function Applicant(){
       router.push("/Applicant")
+    }
+    
+    function getadmin () {
+       router.push('/admin')
     }
 
     function getTeacher () {
@@ -82,15 +79,18 @@ export default {
     function getlogin () {
       router.push("/login")
     }
-    function getadmin () {
-      router.push("/admin")
-    }
 
-      const picture = ref(require('../../../assets/img/svg/png/main-page.png'));
       const picturee = ref(require('../../../assets/img/svg/png/page.png'));
+      const newPicture1 = ref(require('../../../assets/img/page1.jpeg'));
+      const newPicture2 = ref(require('../../../assets/img/page2.jpeg'));
+      const newPicture3 = ref(require('../../../assets/img/page3.jpeg'));
+      const newPicture4 = ref(require('../../../assets/img/page4.jpeg'));
       const products = [
-        {id:1000,code: "f230fh0g3",name: 'Bamboo Watch',image: picture.value ,description: 'Product Description'},
-        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: picturee.value ,description: 'Product Description'},
+        {id:1000,code: "f230fh0g3",name: 'fsfsf',image: picturee.value ,description: 'Product Description'},
+        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: newPicture1.value ,description: 'Product Description'},
+        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: newPicture2.value ,description: 'Product Description'},
+        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: newPicture3.value ,description: 'Product Description'},
+        {id:1001,code: "cdcdc",name: 'cdcdcd cdc',image: newPicture4.value ,description: 'Product Description'},
       ];
     return {
       products,
