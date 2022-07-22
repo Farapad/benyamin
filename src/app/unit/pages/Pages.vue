@@ -28,14 +28,17 @@
       آمیزه ای از فناوری ها و قابلیت ها در قالب یک نظام یک پارچه     
     </p> -->
   </div>   
-  <div class="bottom-bar w-100 px-5 mb-3 mt-3 d-flex">
-    <Button @click="getlogin" class="child-one" label="ورود به سامانه"/>
-    <div class="py-2">
+  <div class="bottom-bar w-100 px-5 mb-3 mt-5 d-flex">
+    <a @click="getlogin" class="btn-one" label="ورود به سامانه">ورود به سامانه</a>
+    <Button @click="getlogin" class="btn-two" label="عملیات اجرایی"/>
+    <Button @click="getlogin" class="btn-three" label="مشاهده امکانات"/>
+    <a class="px-4" href="#"><img src='@/assets/img/Pages/Icon.svg'></a>
+    <div class="py-2 ">
     <span  @click="getpervasive"  class="child-two hover-pointer font-16 font-weight-bold text-color px-3">فراگیر</span>
-    <span @click="getTeacher"  class="child-two hover-pointer font-16 font-weight-bold text-color px-3">مدرس</span>
-    <span @click="getmanagement" class="child-two  hover-pointer font-16 font-weight-bold text-color px-3">مدیریت</span>
-    <span @click="getadmin" class="child-two hover-pointer font-16 font-weight-bold text-color px-3">ادمین</span>
-    <span @click="Applicant" class="hover-pointer child-two font-16 font-weight-bold text-color px-3">متقاضی برگزاری دوره یا درس</span>
+    <span @click="getTeacher"  class="child-two hover-pointer font-16 font-weight-bold text-color px-3">مدرس&nbsp</span>
+    <span @click="getmanagement" class="child-two  hover-pointer font-16 font-weight-bold text-color px-3">مدیریت&nbsp</span>
+    <span @click="getadmin" class="child-two hover-pointer font-16 font-weight-bold text-color px-3">ادمین&nbsp</span>
+    <span @click="Applicant" class="hover-pointer child-two font-16 font-weight-bold text-color px-3">متقاضی برگزاری دوره یا درس&nbsp</span>
      </div>
   </div>
  </div>  
@@ -105,6 +108,19 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.btn-one{cursor: pointer;
+text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #4B5563;
+}
+button.btn-two{width: 125px;
+  height: 59px;background: #16A34A;
+  border-radius: 10px;cursor: pointer;color:#F9FAFB;margin-right: 10px}
+button.btn-three{width: 125px;
+  height: 59px;background: #D1D5DB;
+  border-radius: 10px;cursor: pointer;color: #111827;margin-right: 10px;margin-left: 10px}
 .main-controller{
   padding: 30px;
 }
